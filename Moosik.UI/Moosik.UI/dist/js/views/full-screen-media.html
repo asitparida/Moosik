@@ -1,9 +1,33 @@
 ﻿<div class="full-screen-media-page" id="fsm_container">
+    <div class="music-playlist-holder" ng-show="app.playlistShown" id="fsm_playlist_container">
+        <div class="music-playlist-label">
+            <i class="icon-png media-playlist"></i>
+            <label>PLaylist</label>
+        </div>
+        <div class="tracks-holder">
+            <div class="track-list">
+                <div class="track" ng-repeat="track in app.shared.playlistTracks" ng-class="{'active': track.active}">
+                    <div class="icon-container">
+                        <i class="icon-png media-play" ng-show="true && track.active == false"></i>
+                        <i class="icon-png media-pause" ng-show="false && track.active == false"></i>
+                        <div class="active-marker" ng-show="track.active == true">
+                            <div class="mark"></div>
+                            <div class="mark"></div>
+                            <div class="mark"></div>
+                        </div>
+                    </div>
+                    <div class="track-title" ng-bind="track.name"></div>
+                    <div class="track-duration" ng-bind="track.duration"></div>
+                </div>
+            </div>
+            <div class="track-opaqueHolder"></div>
+        </div>
+    </div>
     <div class="music-slection-start" ng-show="!app.shared.intialized" ng-click="app.getNewFile()">
         <i class="icon-png media-search big"></i>
         <label>choose a MP3 file to start with</label>
     </div>
-    <div class="music-play-unit-holder" ng-show="app.shared.intialized">
+    <div class="music-play-unit-holder" ng-show="app.shared.intialized" id="fsm_play_unit_holder">
         <div class="music-play-unit">
             <label class="music-play-title" ng-bind="app.trackMetaData.name"></label>
             <label class="music-play-desc" ng-bind="app.trackMetaData.desc"></label>
@@ -16,19 +40,19 @@
                 </md-slider-container>
             </div>
             <div class="music-play-controls">
-                <div class="pull-left">
+                <div class="pull-left controls-left">
                     <div class="icon-container disabled">
                         <i class="icon-png media-prev"></i>
                     </div>
                     <div class="icon-container" ng-click="app.musicPlayPause()">
-                        <i class="icon-png media-play x36"  ng-show="!app.musicPlayed"></i>
+                        <i class="icon-png media-play x36" ng-show="!app.musicPlayed"></i>
                         <i class="icon-png media-pause x36" ng-show="app.musicPlayed"></i>
                     </div>
                     <div class="icon-container disabled">
                         <i class="icon-png media-next"></i>
                     </div>
                 </div>
-                <div class="pull-right">
+                <div class="pull-right controls-right">
                     <div class="icon-container" ng-click="app.musicMuteUnmute()">
                         <i class="icon-png media-mute" ng-show="app.musicMuted"></i>
                         <i class="icon-png media-unmute" ng-show="!app.musicMuted"></i>
@@ -36,12 +60,15 @@
                     <div class="icon-container disabled">
                         <i class="icon-png media-repeat1"></i>
                     </div>
-                    <div class="icon-container disabled">
+                    <!--<div class="icon-container disabled">
                         <i class="icon-png media-shuffle"></i>
-                    </div>
+                    </div>-->
                     <div class="icon-container" ng-click="app.maximizeMinimize()">
                         <i class="icon-png media-back-to-window" ng-show="app.shared.maximized"></i>
                         <i class="icon-png media-maximize" ng-show="!app.shared.maximized"></i>
+                    </div>
+                    <div class="icon-container" ng-click="app.togglePlaylist()">
+                        <i class="icon-png media-playlist"></i>
                     </div>
                     <div class="icon-container" ng-click="app.getNewFile()">
                         <i class="icon-png media-search"></i>
