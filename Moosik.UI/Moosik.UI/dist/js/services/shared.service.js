@@ -1,4 +1,14 @@
-﻿angular.module('MusicUI')
+﻿String.prototype.replaceAll = function (find, replaceWith) {
+    var regex = new RegExp(find, 'g');
+    return this.replace(regex, replaceWith);
+}
+
+String.prototype.toPath = function () {
+    var str = this.replaceAll(' ', '%20');
+    return str;
+}
+
+angular.module('MusicUI')
 .service("SharedService", ["$http", "$q", "$uibModal", "$window", "$resource", "$state", "$timeout", function ($http, $q, $uibModal, $window, $resource, $state, $timeout) {
     var self = this;
     self.activeColor = 'rgb(130, 14, 184)';
@@ -78,7 +88,7 @@
                 _item.currentSeek = 0;
                 _item.current = _item.currentSeek.toMMSS();
                 if (track.filePath)
-                    _item.path = track.filePath;
+                    _item.path = track.filePath.replaceAll(' ', '%20');
                 _item.id = iter;
                 _item.active = false;
                 self.playlistTracks.push(_item);
