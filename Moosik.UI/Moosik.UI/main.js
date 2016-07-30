@@ -11,7 +11,7 @@ function createMainWindow(color, skipShades) {
     let waSize = electron.screen.getPrimaryDisplay().workAreaSize;
     let appWidth = waSize.width - 60;
     let appHeight = waSize.height - 60;
-    mainWindow = new BrowserWindow({ width: appWidth * 0.60, height: appHeight * 0.60, icon: 'images/icon@4x.ico', resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, title: 'Music', show: false, fullscreen: false });
+    mainWindow = new BrowserWindow({ width: appWidth, height: appHeight, icon: 'images/icon@4x.ico', resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, title: 'Music', show: false, fullscreen: false });
     mainWindow.loadURL('file://' + __dirname + '/index.html')
     //mainWindow.webContents.openDevTools()
     mainWindow.on('closed', function () {
