@@ -1197,11 +1197,11 @@ body {
   .music-play-unit-holder.playListActivated {
     width: calc(100% - 330px); }
   .music-playlist-holder .tracks-holder .track-opaqueHolder {
-    opacity: 0.70; } }
+    opacity: 1; } }
 
 @media (max-width: 881px) {
   .music-play-unit-holder.playListActivated {
     width: 100%;
     z-index: 5; }
   .music-playlist-holder .tracks-holder .track-opaqueHolder {
-    opacity: 0.90; } }
+    opacity: 1; } }

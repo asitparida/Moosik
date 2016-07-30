@@ -78,7 +78,7 @@ angular.module('MusicUI')
             self.playlistIntialized = true;
             self.playlistTracks = [];
             _.each(data, function (track, iter) {
-                var _item = { name: track.title, desc: '', durationSeek: 0, duration: '', currentSeek: 0, current: '00:00', path: '' };
+                var _item = { name: track.title, desc: '', durationSeek: 0, duration: '', currentSeek: 0, current: '00:00', path: '', playing: false };
                 if (track.artist.length > 0)
                     _item.desc = track.artist[0];
                 if (track.duration) {
@@ -104,12 +104,44 @@ angular.module('MusicUI')
 
     self.loadTrackToPlayer = function (track) {
         _.each(self.playlistTracks, function (tr) {
+            if (tr.active) {
+                if (tr.id !== track.id) {
+                    self.pauseTrack(tr);
+                    tr.active = false;
+                }
+            }
+            else {
+                if (tr.id == track.id) {
+                    self.loadTrack(track);
+                    tr.active = true;
+                    tr.playing = false;
+                }
+                else {
+                    tr.active = false;
+                    tr.playing = false;
+                }
+            }
+        });
+    }
+
+    self.musicPlaying = function (track) {
+        _.each(self.playlistTracks, function (tr) {
             if (tr.id == track.id) {
                 tr.active = true;
-                self.loadTrack(track);
+                tr.playing = true;
             }
-            else
+            else {
                 tr.active = false;
+                tr.playing = false;
+            }
+        });
+    }
+
+    self.musicPaused = function (track) {
+        _.each(self.playlistTracks, function (tr) {
+            if (tr.id == track.id) {
+                tr.playing = false;
+            }
         });
     }
 

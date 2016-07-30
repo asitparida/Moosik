@@ -14,9 +14,9 @@
                 </div>
                 <div class="track" ng-repeat="track in app.shared.playlistTracks" ng-class="{'active': track.active}" ng-click="app.shared.loadTrackToPlayer(track)">
                     <div class="icon-container">
-                        <i class="icon-png media-play" ng-show="true && track.active == false"></i>
-                        <i class="icon-png media-pause" ng-show="false && track.active == false"></i>
-                        <div class="active-marker" ng-show="track.active == true">
+                        <i class="icon-png media-play" ng-show="!(track.playing == true && track.active == true)"></i>
+                        <!--<i class="icon-png media-pause" ng-show="track.active == false"></i>-->
+                        <div class="active-marker" ng-show="track.playing == true && track.active == true">
                             <div class="mark"></div>
                             <div class="mark"></div>
                             <div class="mark"></div>
@@ -29,11 +29,11 @@
             <div class="track-opaqueHolder"></div>
         </div>
     </div>
-    <div class="music-slection-start" ng-show="!app.shared.intialized" ng-click="app.getNewFile()">
+    <div class="music-slection-start" ng-if="false">
         <i class="icon-png media-search big"></i>
         <label>choose a MP3 file to start with</label>
     </div>
-    <div class="music-play-unit-holder" ng-show="app.shared.intialized" id="fsm_play_unit_holder">
+    <div class="music-play-unit-holder" id="fsm_play_unit_holder" ng-show="app.shared.intialized">
         <div class="music-play-unit">
             <label class="music-play-title" ng-bind="app.trackMetaData.name"></label>
             <label class="music-play-desc" ng-bind="app.trackMetaData.desc"></label>

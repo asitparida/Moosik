@@ -92,11 +92,13 @@ angular.module('MusicUI')
         if (self.musicPlayed == true) {
             self.musicPlayed = false;
             self.audioElement.pause();
+            self.shared.musicPaused(self.trackMetaData);
             self.audioCtx.suspend();
         }
         else if (self.musicPlayed == false) {
             self.musicPlayed = true;
             self.audioElement.play();
+            self.shared.musicPlaying(self.trackMetaData);
             if (!self.renderCharted) {
                 renderChart();
                 updateTime();
@@ -130,14 +132,6 @@ angular.module('MusicUI')
         } catch (e) {
         }
     }
-
-    self.getNewFile = function () {
-        self.musicPlayed = false;
-        self.processConnectAnlayser();
-        if (!self.shared.intialized)
-            self.shared.intialized = true;
-    }
-
     self.searchAndLoadFile = function () {
         self.shared.openNewAudioFile()
             .then(function (data) {
@@ -223,6 +217,13 @@ angular.module('MusicUI')
             self.shared.intialized = true;
     }
 
+    self.shared.pauseTrack = function (track) {
+        self.musicPlayed = false;
+        self.audioElement.pause();
+        self.shared.musicPaused(self.trackMetaData);
+        self.audioCtx.suspend();
+    }
+
     function updateTime() {
         if (self.musicPlayed && self.audioCtx) {
             var _curr = self.audioCtx.currentTime || 0;
@@ -260,4 +261,10 @@ angular.module('MusicUI')
                return 'rgb(130, 14, 184)';
            });
     }
+
+    self.musicPlayed = false;
+    self.processConnectAnlayser();
+    if (!self.shared.intialized)
+        self.shared.intialized = true;
+
 }])
