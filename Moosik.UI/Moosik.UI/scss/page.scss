@@ -307,7 +307,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 144px;
+    width: 192px;
     height: 48px;
     z-index: 8;
 
@@ -323,7 +323,8 @@ body {
             opacity: 0.75;
 
             &.media-back-to-window,
-            &.media-maximize {
+            &.media-maximize,
+            &.app-settings {
                 background-size: 36px;
                 background-position: 9px 6px;
             }
@@ -392,6 +393,22 @@ body {
             text-transform: lowercase;
             font-style: italic;
             cursor: pointer;
+        }
+    }
+
+    .app-settings-holder {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 330px;
+        height: 100%;
+        transition: all 0.3s ease-in 0s;
+        background: #262626;
+
+        &.ng-hide {
+            opacity: 0;
+            transform: translateX(330px);
         }
     }
 
@@ -952,6 +969,10 @@ body {
         &.x36 {
             background-image: url(../../images/icons/media-pause-36.png);
         }
+    }
+
+    &.app-settings {
+        background-image: url(../../images/icons/app-settings.png);
     }
 
     &.app-move {

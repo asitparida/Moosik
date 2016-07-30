@@ -21,6 +21,7 @@ angular.module('MusicUI')
     self.http = $http;
     self.actions = [];
     self.resource = $resource;
+    self.settingsPaneShown = false;
     self.preLoadedThemeInEdit = false;
     self.preLoadedTheme = null;
     self.playlistIntialized = false;
@@ -262,6 +263,10 @@ angular.module('MusicUI')
         else
             _defer.resolve(_moosikImgArray[token]);
         return _defer.promise;
+    }
+
+    self.openSettings = function () {
+
     }
 
     self.initPlaylist = function () { }

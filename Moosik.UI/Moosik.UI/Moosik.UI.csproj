@@ -119,6 +119,7 @@
     <Content Include="images\icons\media-repeat-1.png" />
     <Content Include="images\icons\media-search-big.png" />
     <Content Include="images\icons\media-search.png" />
+    <Content Include="images\icons\app-settings.png" />
     <Content Include="images\icons\media-shuffle.png" />
     <Content Include="images\icons\media-unmute.png" />
     <Content Include="images\icons\moosik_200_blank.png" />

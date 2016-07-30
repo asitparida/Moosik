@@ -619,7 +619,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 144px;
+  width: 192px;
   height: 48px;
   z-index: 8; }
   .app-top-window-controls .icon-container {
@@ -631,7 +631,7 @@ body {
       width: 48px;
       height: 48px;
       opacity: 0.75; }
-      .app-top-window-controls .icon-container .icon-png.media-back-to-window, .app-top-window-controls .icon-container .icon-png.media-maximize {
+      .app-top-window-controls .icon-container .icon-png.media-back-to-window, .app-top-window-controls .icon-container .icon-png.media-maximize, .app-top-window-controls .icon-container .icon-png.app-settings {
         background-size: 36px;
         background-position: 9px 6px; }
     .app-top-window-controls .icon-container:active, .app-top-window-controls .icon-container:hover {
@@ -702,6 +702,18 @@ body {
       text-transform: lowercase;
       font-style: italic;
       cursor: pointer; }
+  .full-screen-media-page .app-settings-holder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 330px;
+    height: 100%;
+    transition: all 0.3s ease-in 0s;
+    background: #262626; }
+    .full-screen-media-page .app-settings-holder.ng-hide {
+      opacity: 0;
+      transform: translateX(330px); }
   .full-screen-media-page .music-playlist-holder {
     position: absolute;
     top: 0;
@@ -1106,6 +1118,8 @@ body {
     background-image: url(../../images/icons/media-pause-24.png); }
     .icon-png.media-pause.x36 {
       background-image: url(../../images/icons/media-pause-36.png); }
+  .icon-png.app-settings {
+    background-image: url(../../images/icons/app-settings.png); }
   .icon-png.app-move {
     background-image: url(../../images/icons/app-move.png); }
   .icon-png.app-close {
