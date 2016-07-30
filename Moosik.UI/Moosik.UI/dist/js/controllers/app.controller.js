@@ -10,7 +10,7 @@
 }
 
 angular.module('MusicUI')
-.controller('AppController', ["$scope", "$timeout", "$q", "$state", "SharedService", "$window", function ($scope, $timeout, $q, $state, SharedService, $window) {
+.controller('AppController', ["$scope", "$timeout", "$q", "$state", "SharedService", "$window", "$interval", function ($scope, $timeout, $q, $state, SharedService, $window, $interval) {
     var self = this;
     self.state = $state;
     self.window = $window;
@@ -32,32 +32,6 @@ angular.module('MusicUI')
     self.musicPlayed = false;
     self.maximized = false;
     self.playlistShown = false;
-    self.images = [
-            { id: _.uniqueId('img'), src: 'rock-of-ages-broadway-poster.jpg', },
-            { id: _.uniqueId('img'), src: '43f3df6ed544836b451f6f609a1faa64.jpg', },
-            { id: _.uniqueId('img'), src: '5f001de01e4d55b30de79a2ec97bbda7.jpg', },
-            { id: _.uniqueId('img'), src: '98e9816ecf939df3a6d098660c351c35.jpg', },
-            { id: _.uniqueId('img'), src: 'andrew-golub-interview-poster-2-376x555px.jpg', },
-            { id: _.uniqueId('img'), src: 'b40c45bb516115cae4386d1d556f9729.jpg', },
-            { id: _.uniqueId('img'), src: 'bluegal_flyer.jpg', },
-            { id: _.uniqueId('img'), src: 'BG169-PO.jpg' },
-            { id: _.uniqueId('img'), src: 'rock-of-ages-broadway-poster.jpg', },
-            { id: _.uniqueId('img'), src: '43f3df6ed544836b451f6f609a1faa64.jpg', },
-            { id: _.uniqueId('img'), src: '5f001de01e4d55b30de79a2ec97bbda7.jpg', },
-            { id: _.uniqueId('img'), src: '98e9816ecf939df3a6d098660c351c35.jpg', },
-            { id: _.uniqueId('img'), src: 'andrew-golub-interview-poster-2-376x555px.jpg', },
-            { id: _.uniqueId('img'), src: 'b40c45bb516115cae4386d1d556f9729.jpg', },
-            { id: _.uniqueId('img'), src: 'bluegal_flyer.jpg', },
-            { id: _.uniqueId('img'), src: 'BG169-PO.jpg' },
-            { id: _.uniqueId('img'), src: 'rock-of-ages-broadway-poster.jpg', },
-            { id: _.uniqueId('img'), src: '43f3df6ed544836b451f6f609a1faa64.jpg', },
-            { id: _.uniqueId('img'), src: '5f001de01e4d55b30de79a2ec97bbda7.jpg', },
-            { id: _.uniqueId('img'), src: '98e9816ecf939df3a6d098660c351c35.jpg', },
-            { id: _.uniqueId('img'), src: 'andrew-golub-interview-poster-2-376x555px.jpg', },
-            { id: _.uniqueId('img'), src: 'b40c45bb516115cae4386d1d556f9729.jpg', },
-            { id: _.uniqueId('img'), src: 'bluegal_flyer.jpg', },
-            { id: _.uniqueId('img'), src: 'BG169-PO.jpg' }
-    ];
 
     $timeout(function () {
         self.hideLoader = true;
@@ -215,6 +189,24 @@ angular.module('MusicUI')
         self.processConnectAnlayser();
         if (!self.shared.intialized)
             self.shared.intialized = true;
+        self.loadImages(track.token);
+    }
+
+    self.loadImages = function(token) {
+        self.shared.getBingSearchImages(token).then(function (data) {
+            if (data.length > 0)
+                self.images = data;
+            if (angular.isDefined(self.imageChangeInterval)) {
+                $interval.cancel(self.imageChangeInterval);
+                self.imageChangeInterval = undefined;
+            }
+            self.imageChangeInterval = $interval(function () {
+                var itr = _.sample(_.range(18));
+                var _src = _.sample(self.images).src;
+                if (typeof _src !== 'undefined' && _src != null & _src != '')
+                    self.images[itr].src = _src;
+            }, 2000);
+        });
     }
 
     self.shared.pauseTrack = function (track) {
@@ -266,5 +258,5 @@ angular.module('MusicUI')
     self.processConnectAnlayser();
     if (!self.shared.intialized)
         self.shared.intialized = true;
-
+    self.loadImages(null);
 }])

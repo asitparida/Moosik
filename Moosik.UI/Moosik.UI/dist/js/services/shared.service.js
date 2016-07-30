@@ -8,6 +8,9 @@ String.prototype.toPath = function () {
     return str;
 }
 
+var _moosikImgArray = {};
+var _emulate = true;
+
 angular.module('MusicUI')
 .service("SharedService", ["$http", "$q", "$uibModal", "$window", "$resource", "$state", "$timeout", function ($http, $q, $uibModal, $window, $resource, $state, $timeout) {
     var self = this;
@@ -15,6 +18,7 @@ angular.module('MusicUI')
     self.maximized = false;
     self.uibModal = $uibModal;
     self.state = $state;
+    self.http = $http;
     self.actions = [];
     self.resource = $resource;
     self.preLoadedThemeInEdit = false;
@@ -85,6 +89,7 @@ angular.module('MusicUI')
                     _item.durationSeek = track.duration;
                     _item.duration = track.duration.toMMSS();
                 }
+                _item.token = track.album;
                 _item.currentSeek = 0;
                 _item.current = _item.currentSeek.toMMSS();
                 if (track.filePath)
@@ -93,12 +98,6 @@ angular.module('MusicUI')
                 _item.active = false;
                 self.playlistTracks.push(_item);
             });
-            //$timeout(function myfunction() {
-            //    _.each(self.playlistTracks, function (track, iter) {
-            //        if (iter == 5)
-            //            track.active = true;
-            //    });
-            //}, 100 * (self.playlistTracks.length + 1));
         }
     }
 
@@ -161,6 +160,58 @@ angular.module('MusicUI')
         } catch (e) {
             _defer.resolve({});
         }
+        return _defer.promise;
+    }
+
+    self.getBingSearchImages = function (token) {
+        var _defer = $q.defer();
+        if (!_moosikImgArray[token]) {
+            if (_emulate || token == '' || token == null) {
+                var _tempImages = [
+                    { id: _.uniqueId('img'), src: 'url(images/rock-of-ages-broadway-poster.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/43f3df6ed544836b451f6f609a1faa64.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/5f001de01e4d55b30de79a2ec97bbda7.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/98e9816ecf939df3a6d098660c351c35.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/andrew-golub-interview-poster-2-376x555px.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/b40c45bb516115cae4386d1d556f9729.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/bluegal_flyer.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/BG169-PO.jpg)' },
+                    { id: _.uniqueId('img'), src: 'url(images/rock-of-ages-broadway-poster.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/43f3df6ed544836b451f6f609a1faa64.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/5f001de01e4d55b30de79a2ec97bbda7.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/98e9816ecf939df3a6d098660c351c35.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/andrew-golub-interview-poster-2-376x555px.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/b40c45bb516115cae4386d1d556f9729.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/bluegal_flyer.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/BG169-PO.jpg)' },
+                    { id: _.uniqueId('img'), src: 'url(images/rock-of-ages-broadway-poster.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/43f3df6ed544836b451f6f609a1faa64.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/5f001de01e4d55b30de79a2ec97bbda7.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/98e9816ecf939df3a6d098660c351c35.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/andrew-golub-interview-poster-2-376x555px.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/b40c45bb516115cae4386d1d556f9729.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/bluegal_flyer.jpg)', },
+                    { id: _.uniqueId('img'), src: 'url(images/BG169-PO.jpg)' }
+                ];
+                _defer.resolve(_tempImages);
+            }
+            else {
+                var bingUrl = 'https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=' + token;
+                self.http({ method: 'GET', url: bingUrl, headers: { 'Ocp-Apim-Subscription-Key': '17e7f18881e14e12bb448a4b1ba91e7a' } })
+                .then(function (success) {
+                    var _images = [];
+                    if (success.data) {
+                        _images = _.map(success.data.value, function (item) { return { id: _.uniqueId('img'), src: 'url(' + item.contentUrl + ')' } });
+                    }
+                    _moosikImgArray[token] = _images;
+                    _defer.resolve(_images);
+                }, function (error) {
+                    _defer.resolve([]);
+                });
+            }
+        }
+        else
+            _defer.resolve(_moosikImgArray[token]);
         return _defer.promise;
     }
 

@@ -5,7 +5,7 @@
             <label>PLaylist</label>
         </div>
         <div class="tracks-holder">
-            <div class="track-list">
+            <div class="track-list" ng-class="{'dispTable': app.shared.playlistIntialized == false }">
                 <div class="add-track-part" ng-show="app.shared.playlistIntialized == false" ng-click="app.shared.loadPlaylist()">
                     <div class="icon-container">
                         <i class="icon-png media-add"></i>
@@ -15,7 +15,6 @@
                 <div class="track" ng-repeat="track in app.shared.playlistTracks" ng-class="{'active': track.active}" ng-click="app.shared.loadTrackToPlayer(track)">
                     <div class="icon-container">
                         <i class="icon-png media-play" ng-show="!(track.playing == true && track.active == true)"></i>
-                        <!--<i class="icon-png media-pause" ng-show="track.active == false"></i>-->
                         <div class="active-marker" ng-show="track.playing == true && track.active == true">
                             <div class="mark"></div>
                             <div class="mark"></div>
@@ -66,9 +65,6 @@
                     <div class="icon-container disabled">
                         <i class="icon-png media-repeat1"></i>
                     </div>
-                    <!--<div class="icon-container disabled">
-                        <i class="icon-png media-shuffle"></i>
-                    </div>-->
                     <div class="icon-container" ng-click="app.maximizeMinimize()">
                         <i class="icon-png media-back-to-window" ng-show="app.shared.maximized"></i>
                         <i class="icon-png media-maximize" ng-show="!app.shared.maximized"></i>
@@ -85,7 +81,7 @@
     </div>
     <div class="opaque-screen"></div>
     <div class="bg-images">
-        <div class="bg-image col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="item in app.images" ng-style="{'background-image': 'url(images/' + item.src + ')'}"></div>
+        <div class="bg-image col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="item in app.images track by $index" ng-style="{'background-image': item.src}"></div>
     </div>
     <audio id="audioElement" ng-src="{{app.trackMetaData.path}}"></audio>
 </div>
