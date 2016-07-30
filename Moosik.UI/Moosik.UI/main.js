@@ -2,6 +2,8 @@
 const remote = electron.remote;
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+var dialog = electron.dialog;
+var fs = require('fs');
 
 let mainWindow;
 
@@ -50,8 +52,6 @@ electron.ipcMain.on('app-maximize', (event, arg) => {
 });
 
 electron.ipcMain.on('app-read-new-file', (event, arg) => {
-    var dialog = electron.dialog;
-    var fs = require('fs');
     dialog.showOpenDialog(null, { 'title': 'Choose new mp3 file ', 'filters': [{ name: 'mp3', extensions: ['mp3'] }] }, function (fileName) {
         if (fileName === undefined) {
             console.log("You didn't select the file");
@@ -67,13 +67,11 @@ electron.ipcMain.on('app-read-new-file', (event, arg) => {
     });
 });
 
-electron.ipcMain.on('app-load-new-playlist', (event, arg) => {
-    var dialog = electron.dialog;
-    var fs = require('fs');
+electron.ipcMain.on('app-load-new-playlist', (event, arg) => {    
+    console.log('app-load-new-playlist');
     dialog.showOpenDialog(null, { 'title': 'Choose new mp3 file(s) ', 'filters': [{ name: 'mp3', extensions: ['mp3'] }], 'properties': ['multiSelections'] }, function (fileName) {
         if (fileName === undefined) {
             console.log("You didn't select the file(s).");
-            return;
         }
         event.sender.send('app-load-new-playlist-reply', fileName);
     });

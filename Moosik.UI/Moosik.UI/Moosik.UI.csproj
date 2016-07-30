@@ -112,6 +112,8 @@
     <Content Include="images\icons\media-pause-36.png" />
     <Content Include="images\icons\media-play-24.png" />
     <Content Include="images\icons\media-play-36.png" />
+    <Content Include="images\icons\media-playlist-add.png" />
+    <Content Include="images\icons\media-playlist-clear.png" />
     <Content Include="images\icons\media-playlist.png" />
     <Content Include="images\icons\media-prev.png" />
     <Content Include="images\icons\media-repeat-1.png" />

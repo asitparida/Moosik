@@ -10,7 +10,7 @@
 }
 
 angular.module('MusicUI')
-.controller('AppController', ["$scope", "$timeout", "$q", "$state", "SharedService", "$window", function ($scope, $timeout, $q, $state, SharedService, $window) {
+.controller('AppController', ["$scope", "$timeout", "$q", "$state", "SharedService", "$window", "$interval", function ($scope, $timeout, $q, $state, SharedService, $window, $interval) {
     var self = this;
     self.state = $state;
     self.window = $window;
@@ -29,35 +29,8 @@ angular.module('MusicUI')
     self.musicAvailable = false;
     self.musicMuted = false;
     self.hideLoader = false;
-    self.musicPlayed = false;
     self.maximized = false;
     self.playlistShown = false;
-    self.images = [
-            { id: _.uniqueId('img'), src: 'rock-of-ages-broadway-poster.jpg', },
-            { id: _.uniqueId('img'), src: '43f3df6ed544836b451f6f609a1faa64.jpg', },
-            { id: _.uniqueId('img'), src: '5f001de01e4d55b30de79a2ec97bbda7.jpg', },
-            { id: _.uniqueId('img'), src: '98e9816ecf939df3a6d098660c351c35.jpg', },
-            { id: _.uniqueId('img'), src: 'andrew-golub-interview-poster-2-376x555px.jpg', },
-            { id: _.uniqueId('img'), src: 'b40c45bb516115cae4386d1d556f9729.jpg', },
-            { id: _.uniqueId('img'), src: 'bluegal_flyer.jpg', },
-            { id: _.uniqueId('img'), src: 'BG169-PO.jpg' },
-            { id: _.uniqueId('img'), src: 'rock-of-ages-broadway-poster.jpg', },
-            { id: _.uniqueId('img'), src: '43f3df6ed544836b451f6f609a1faa64.jpg', },
-            { id: _.uniqueId('img'), src: '5f001de01e4d55b30de79a2ec97bbda7.jpg', },
-            { id: _.uniqueId('img'), src: '98e9816ecf939df3a6d098660c351c35.jpg', },
-            { id: _.uniqueId('img'), src: 'andrew-golub-interview-poster-2-376x555px.jpg', },
-            { id: _.uniqueId('img'), src: 'b40c45bb516115cae4386d1d556f9729.jpg', },
-            { id: _.uniqueId('img'), src: 'bluegal_flyer.jpg', },
-            { id: _.uniqueId('img'), src: 'BG169-PO.jpg' },
-            { id: _.uniqueId('img'), src: 'rock-of-ages-broadway-poster.jpg', },
-            { id: _.uniqueId('img'), src: '43f3df6ed544836b451f6f609a1faa64.jpg', },
-            { id: _.uniqueId('img'), src: '5f001de01e4d55b30de79a2ec97bbda7.jpg', },
-            { id: _.uniqueId('img'), src: '98e9816ecf939df3a6d098660c351c35.jpg', },
-            { id: _.uniqueId('img'), src: 'andrew-golub-interview-poster-2-376x555px.jpg', },
-            { id: _.uniqueId('img'), src: 'b40c45bb516115cae4386d1d556f9729.jpg', },
-            { id: _.uniqueId('img'), src: 'bluegal_flyer.jpg', },
-            { id: _.uniqueId('img'), src: 'BG169-PO.jpg' }
-    ];
 
     $timeout(function () {
         self.hideLoader = true;
@@ -89,14 +62,16 @@ angular.module('MusicUI')
     }
 
     self.musicPlayPause = function () {
-        if (self.musicPlayed == true) {
-            self.musicPlayed = false;
+        if (self.shared.musicPlayed == true) {
+            self.shared.musicPlayed = false;
             self.audioElement.pause();
+            self.shared.musicIsPaused(self.trackMetaData);
             self.audioCtx.suspend();
         }
-        else if (self.musicPlayed == false) {
-            self.musicPlayed = true;
+        else if (self.shared.musicPlayed == false) {
+            self.shared.musicPlayed = true;
             self.audioElement.play();
+            self.shared.musicIsPlaying(self.trackMetaData);
             if (!self.renderCharted) {
                 renderChart();
                 updateTime();
@@ -130,14 +105,6 @@ angular.module('MusicUI')
         } catch (e) {
         }
     }
-
-    self.getNewFile = function () {
-        self.musicPlayed = false;
-        self.processConnectAnlayser();
-        if (!self.shared.intialized)
-            self.shared.intialized = true;
-    }
-
     self.searchAndLoadFile = function () {
         self.shared.openNewAudioFile()
             .then(function (data) {
@@ -153,7 +120,7 @@ angular.module('MusicUI')
                     self.trackMetaData.current = self.trackMetaData.currentSeek.toMMSS();
                     if (data.filePath)
                         self.trackMetaData.path = data.filePath.replaceAll(' ', '%20');
-                    self.musicPlayed = false;
+                    self.shared.musicPlayed = false;
                     self.musicAvailable = true;
                     self.processConnectAnlayser();
                     if (!self.shared.intialized)
@@ -168,6 +135,8 @@ angular.module('MusicUI')
     }
 
     self.processConnectAnlayser = function () {
+        if (self.audioCtx)
+            self.audioCtx.close();
         self.audioCtx = new ($window.AudioContext || $window.webkitAudioContext)();
         self.audioElement = new Audio(self.trackMetaData.path);
         if (self.audioSrc)
@@ -216,15 +185,50 @@ angular.module('MusicUI')
 
     self.shared.loadTrack = function (track) {
         self.trackMetaData = track;
-        self.musicPlayed = false;
+        self.trackMetaData.currentSeek = 0;
+        self.trackMetaData.current = self.trackMetaData.currentSeek.toMMSS();
+        angular.element(document.getElementById('fsm_music_current')).html(self.trackMetaData.current);
+        self.shared.musicPlayed = false;
         self.musicAvailable = true;
         self.processConnectAnlayser();
         if (!self.shared.intialized)
             self.shared.intialized = true;
+        self.loadImages(track.token);
+    }
+
+    self.loadImages = function (token) {
+        self.shared.getBingSearchImages(token).then(function (data) {
+            if (data.length > 0)
+                self.images = data;
+            if (angular.isDefined(self.imageChangeInterval)) {
+                $interval.cancel(self.imageChangeInterval);
+                self.imageChangeInterval = undefined;
+            }
+            self.imageChangeInterval = $interval(function () {
+                var itr = _.sample(_.range(18));
+                var _src = _.sample(self.images).src;
+                if (typeof _src !== 'undefined' && _src != null & _src != '')
+                    self.images[itr].src = _src;
+            }, 2000);
+        });
+    }
+
+    self.shared.pauseTrack = function (track) {
+        self.shared.musicPlayed = false;
+        self.audioElement.pause();
+        self.shared.musicIsPaused(self.trackMetaData);
+        self.audioCtx.suspend();
+    }
+
+    self.shared.playTrack = function (track) {
+        self.shared.musicPlayed = true;
+        self.audioElement.play();
+        self.shared.musicIsPlaying(self.trackMetaData);
+        self.audioCtx.resume();
     }
 
     function updateTime() {
-        if (self.musicPlayed && self.audioCtx) {
+        if (self.shared.musicPlayed && self.audioCtx) {
             var _curr = self.audioCtx.currentTime || 0;
             if (_curr < self.trackMetaData.durationSeek) {
                 self.trackMetaData.currentSeek = Math.floor(_curr);
@@ -233,7 +237,7 @@ angular.module('MusicUI')
             }
             else if (_curr > self.trackMetaData.durationSeek) {
                 self.musicEnded = false;
-                self.musicPlayed = false;
+                self.shared.musicPlayed = false;
                 self.trackMetaData.currentSeek = 0;
                 self.trackMetaData.current = self.trackMetaData.currentSeek.toMMSS();
                 angular.element(document.getElementById('fsm_music_current')).html(self.trackMetaData.current);
@@ -260,4 +264,8 @@ angular.module('MusicUI')
                return 'rgb(130, 14, 184)';
            });
     }
+    self.processConnectAnlayser();
+    if (!self.shared.intialized)
+        self.shared.intialized = true;
+    self.loadImages(null);
 }])
