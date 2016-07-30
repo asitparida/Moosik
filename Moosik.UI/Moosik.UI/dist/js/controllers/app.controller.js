@@ -37,7 +37,7 @@ angular.module('MusicUI')
         $timeout(function () {
             self.processSvg();
         }, 500)
-    }, 1000);
+    }, 2000);
 
     self.closeApp = function () {
         try {
@@ -236,12 +236,16 @@ angular.module('MusicUI')
                 angular.element(document.getElementById('fsm_music_current')).html(self.trackMetaData.current);
             }
             else if (_curr > self.trackMetaData.durationSeek) {
-                self.musicEnded = false;
-                self.shared.musicPlayed = false;
                 self.trackMetaData.currentSeek = 0;
                 self.trackMetaData.current = self.trackMetaData.currentSeek.toMMSS();
                 angular.element(document.getElementById('fsm_music_current')).html(self.trackMetaData.current);
-                self.processConnectAnlayser();
+                if (self.shared.nextTrackAvailable) {
+                    self.shared.loadNextTrack();
+                } else {
+                    self.musicEnded = false;
+                    self.shared.musicPlayed = false;
+                    self.processConnectAnlayser();
+                }
             }
         }
         $timeout(updateTime, 500);

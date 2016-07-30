@@ -29,10 +29,13 @@
     <script type="text/javascript" src="dist/js/directives/ng-mousewheel-down.directive.js"></script>
     <script type="text/javascript" src="dist/js/controllers/app.controller.js"></script>
 </head>
-<body ng-controller="AppController as app" style="height:540px;overflow-y:hidden;">
+<body ng-controller="AppController as app" style="height:540px;overflow-y:hidden;background:#262626">
     <div class="app-top-window-controls" ng-show="app.hideLoader">
         <div class="icon-container" ng-click="app.closeApp()">
             <i class="icon-png app-close"></i>
+        </div>
+        <div class="icon-container" ng-click="app.shared.openSettings()">
+            <i class="icon-png app-settings"></i>
         </div>
         <div class="icon-container" ng-click="app.maximizeMinimize()">
             <i class="icon-png media-back-to-window" ng-show="app.shared.maximized"></i>
@@ -43,7 +46,8 @@
         </div>
     </div>
     <div class="app-content">
-        <div class="spinner-holder" ng-hide="app.hideLoader" ng-style="{'background-color':app.shared.activeColor}">
+        <div class="moosik_logo_holder" ng-hide="app.hideLoader">
+            <div class="moosik_logo"></div>
             <div class="spinner">
                 <div class="double-bounce1"></div>
                 <div class="double-bounce2"></div>
