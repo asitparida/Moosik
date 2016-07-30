@@ -79,4 +79,4 @@ electron.ipcMain.on('app-load-new-playlist', (event, arg) => {
     });
 });
 
-//"package": "electron-packager . --platform=win32 --arch=all --prune --asar --out=releases/alpha --icon=images/icon@2x.ico"
+//"package": "electron-packager . --platform=win32 --arch=all --prune --asar --out=releases/alpha --icon=images/icon@4x.ico"
