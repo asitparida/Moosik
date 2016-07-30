@@ -6,7 +6,13 @@
         </div>
         <div class="tracks-holder">
             <div class="track-list">
-                <div class="track" ng-repeat="track in app.shared.playlistTracks" ng-class="{'active': track.active}">
+                <div class="add-track-part" ng-show="app.shared.playlistIntialized == false" ng-click="app.shared.loadPlaylist()">
+                    <div class="icon-container">
+                        <i class="icon-png media-add"></i>
+                    </div>
+                    <label class="add-track">Add Track(s)</label>
+                </div>
+                <div class="track" ng-repeat="track in app.shared.playlistTracks" ng-class="{'active': track.active}" ng-click="app.shared.loadTrackToPlayer(track)">
                     <div class="icon-container">
                         <i class="icon-png media-play" ng-show="true && track.active == false"></i>
                         <i class="icon-png media-pause" ng-show="false && track.active == false"></i>
@@ -44,7 +50,7 @@
                     <div class="icon-container disabled">
                         <i class="icon-png media-prev"></i>
                     </div>
-                    <div class="icon-container" ng-click="app.musicPlayPause()">
+                    <div class="icon-container" ng-click="app.musicPlayPause()" ng-class="{'disabled': app.musicAvailable == false}">
                         <i class="icon-png media-play x36" ng-show="!app.musicPlayed"></i>
                         <i class="icon-png media-pause x36" ng-show="app.musicPlayed"></i>
                     </div>
@@ -53,7 +59,7 @@
                     </div>
                 </div>
                 <div class="pull-right controls-right">
-                    <div class="icon-container" ng-click="app.musicMuteUnmute()">
+                    <div class="icon-container" ng-click="app.musicMuteUnmute()" ng-class="{'disabled': app.musicAvailable == false}">
                         <i class="icon-png media-mute" ng-show="app.musicMuted"></i>
                         <i class="icon-png media-unmute" ng-show="!app.musicMuted"></i>
                     </div>
@@ -70,7 +76,7 @@
                     <div class="icon-container" ng-click="app.togglePlaylist()">
                         <i class="icon-png media-playlist"></i>
                     </div>
-                    <div class="icon-container" ng-click="app.getNewFile()">
+                    <div class="icon-container" ng-click="app.searchAndLoadFile()">
                         <i class="icon-png media-search"></i>
                     </div>
                 </div>

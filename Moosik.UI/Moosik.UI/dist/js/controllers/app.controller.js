@@ -1,7 +1,9 @@
 ﻿Number.prototype.toMMSS = function () {
     var sec_num = this; // don't forget the second param
     var minutes = Math.floor(sec_num / 60);
+    minutes = Math.ceil(minutes);
     var seconds = sec_num - (minutes * 60);
+    seconds = Math.ceil(seconds);
     if (minutes < 10) { minutes = "0" + minutes; }
     if (seconds < 10) { seconds = "0" + seconds; }
     return minutes + ':' + seconds;
@@ -16,14 +18,15 @@ angular.module('MusicUI')
     self.showCurrentColor = false;
     self.direction = 'fwd';
     self.trackMetaData = {
-        name: 'Cheap Thrills',
-        desc: 'Sia Fulrer (2015)',
+        name: 'XXXX XXXXXX XXXXXX',
+        desc: 'XXXX XXXXXX XXXXXX',
         durationSeek: 0,
-        duration: '03:15',
+        duration: 'XX:XX',
         currentSeek: 0,
         current: '00:00',
-        path: 'assets/Cheap Thrills - Sia (320kbps).mp3'
+        path: ''
     };
+    self.musicAvailable = false;
     self.musicMuted = false;
     self.hideLoader = false;
     self.musicPlayed = false;
@@ -129,6 +132,13 @@ angular.module('MusicUI')
     }
 
     self.getNewFile = function () {
+        self.musicPlayed = false;
+        self.processConnectAnlayser();
+        if (!self.shared.intialized)
+            self.shared.intialized = true;
+    }
+
+    self.searchAndLoadFile = function () {
         self.shared.openNewAudioFile()
             .then(function (data) {
                 if (data != {}) {
@@ -144,6 +154,7 @@ angular.module('MusicUI')
                     if (data.filePath)
                         self.trackMetaData.path = data.filePath;
                     self.musicPlayed = false;
+                    self.musicAvailable = true;
                     self.processConnectAnlayser();
                     if (!self.shared.intialized)
                         self.shared.intialized = true;
@@ -204,6 +215,11 @@ angular.module('MusicUI')
         self.processSvg();
     });
 
+    self.shared.loadTrack = function (track) {
+        self.trackMetaData = track;
+        self.musicAvailable = true;
+    }
+
     function updateTime() {
         if (self.musicPlayed && self.audioCtx) {
             var _curr = self.audioCtx.currentTime || 0;
@@ -235,7 +251,7 @@ angular.module('MusicUI')
                return self.svgHeight - (d * multiplier);
            })
            .attr('height', function (d) {
-               return d ;
+               return d;
            })
            .attr('fill', function (d) {
                return 'rgb(130, 14, 184)';

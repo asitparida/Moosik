@@ -103,6 +103,7 @@
     <Content Include="images\icon%404x.png" />
     <Content Include="images\icons\app-close.png" />
     <Content Include="images\icons\app-move.png" />
+    <Content Include="images\icons\media-add.png" />
     <Content Include="images\icons\media-back-to-window.png" />
     <Content Include="images\icons\media-maximize.png" />
     <Content Include="images\icons\media-mute.png" />
@@ -179,7 +180,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>45654</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
