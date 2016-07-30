@@ -3,6 +3,8 @@
         <div class="music-playlist-label">
             <i class="icon-png media-playlist"></i>
             <label>PLaylist</label>
+            <i class="icon-png playlist-action media-playlist-add pull-right" ng-click="app.shared.loadPlaylist()"></i>
+            <i class="icon-png playlist-action media-playlist-clear pull-right" ng-click="app.shared.clearPlaylist()"></i>
         </div>
         <div class="tracks-holder">
             <div class="track-list" ng-class="{'dispTable': app.shared.playlistIntialized == false }">
@@ -46,14 +48,14 @@
             </div>
             <div class="music-play-controls">
                 <div class="pull-left controls-left">
-                    <div class="icon-container disabled">
+                    <div class="icon-container" ng-class="{'disabled': app.shared.previousTrackAvailable == false}" >
                         <i class="icon-png media-prev"></i>
                     </div>
                     <div class="icon-container" ng-click="app.musicPlayPause()" ng-class="{'disabled': app.musicAvailable == false}">
                         <i class="icon-png media-play x36" ng-show="!app.musicPlayed"></i>
                         <i class="icon-png media-pause x36" ng-show="app.musicPlayed"></i>
                     </div>
-                    <div class="icon-container disabled">
+                    <div class="icon-container" ng-class="{'disabled': app.shared.nextTrackAvailable == false}" >
                         <i class="icon-png media-next"></i>
                     </div>
                 </div>

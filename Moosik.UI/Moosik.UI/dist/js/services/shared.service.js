@@ -25,6 +25,8 @@ angular.module('MusicUI')
     self.preLoadedTheme = null;
     self.playlistIntialized = false;
     self.intialized = false;
+    self.previousTrackAvailable = false;
+    self.nextTrackAvailable = false;
     try {
         self.electron = require('electron');
     } catch (e) {
@@ -37,6 +39,7 @@ angular.module('MusicUI')
         _defer = $q.defer();
         try {
             if (self.electron != null) {
+                self.electron.ipcRenderer.removeAllListeners(['app-read-new-file-reply']);
                 self.electron.ipcRenderer.send('app-read-new-file');
                 self.electron.ipcRenderer.on('app-read-new-file-reply', (event, arg) => {
                     _defer.resolve(arg || {});
@@ -52,57 +55,76 @@ angular.module('MusicUI')
         return _defer.promise;
     }
 
+    self.clearPlaylist = function () {
+        self.playlistTracks = [];
+        self.playlistIntialized = false;
+    }
+
     self.loadPlaylist = function () {
+        if (self.loadPlaylistInProgress)
+            return;
         try {
             if (self.electron != null) {
+                self.loadPlaylistInProgress = true;
+                self.electron.ipcRenderer.removeAllListeners(['app-load-new-playlist-reply']);
                 self.electron.ipcRenderer.send('app-load-new-playlist');
                 self.electron.ipcRenderer.on('app-load-new-playlist-reply', (event, arg) => {
                     var _trackPromises = [];
                     _.each(arg, function (file) {
                         _trackPromises.push(self.getMetaInformation(file));
                     });
-                    $q.all(_trackPromises).then(function (data) {
-                        if (typeof data !== 'undefined' && data.length > 0) {
-                            self.loadFilesToPlaylist(data);
-                        }
-                    }, function (data) {
-                        /* ERROR */
-                    });
+                    if (_trackPromises.length > 0) {
+                        $q.all(_trackPromises).then(function (data) {
+                            if (typeof data !== 'undefined' && data.length > 0) {
+                                self.loadFilesToPlaylist(data);
+                            }
+                        }, function (data) {
+                            /* ERROR */
+                            self.loadPlaylistInProgress = false;
+                        });
+                    } else {
+                        self.loadPlaylistInProgress = false;
+                    }
 
                 });
             }
 
         } catch (e) {
             console.log(e);
+            self.loadPlaylistInProgress = false;
         }
     }
 
     self.loadFilesToPlaylist = function (data) {
         if (self.playlistIntialized != true) {
-            self.playlistIntialized = true;
             self.playlistTracks = [];
-            _.each(data, function (track, iter) {
-                var _item = { name: track.title, desc: '', durationSeek: 0, duration: '', currentSeek: 0, current: '00:00', path: '', playing: false };
-                if (track.artist.length > 0)
-                    _item.desc = track.artist[0];
-                if (track.duration) {
-                    _item.durationSeek = track.duration;
-                    _item.duration = track.duration.toMMSS();
-                }
-                _item.token = track.album;
-                _item.currentSeek = 0;
-                _item.current = _item.currentSeek.toMMSS();
-                if (track.filePath)
-                    _item.path = track.filePath.replaceAll(' ', '%20');
-                _item.id = iter;
-                _item.active = false;
-                self.playlistTracks.push(_item);
-            });
+            self.playlistIntialized = true;
         }
+        _.each(data, function (track, iter) {
+            var _item = { name: track.title, desc: '', durationSeek: 0, duration: '', currentSeek: 0, current: '00:00', path: '', playing: false };
+            if (track.artist.length > 0)
+                _item.desc = track.artist[0];
+            if (track.duration) {
+                _item.durationSeek = track.duration;
+                _item.duration = track.duration.toMMSS();
+            }
+            _item.token = track.album;
+            _item.currentSeek = 0;
+            _item.current = _item.currentSeek.toMMSS();
+            if (track.filePath)
+                _item.path = track.filePath.replaceAll(' ', '%20');
+            _item.id = _.uniqueId('track');
+            _item.active = false;
+            self.playlistTracks.push(_item);
+        });
+        self.loadPlaylistInProgress = false;
+        self.previousTrackAvailable = false;
+        self.nextTrackAvailable = false;
     }
 
     self.loadTrackToPlayer = function (track) {
-        _.each(self.playlistTracks, function (tr) {
+        var _activeIndex = 0;
+        _.each(self.playlistTracks, function (tr, iter) {
             if (tr.active) {
                 if (tr.id !== track.id) {
                     self.pauseTrack(tr);
@@ -113,6 +135,7 @@ angular.module('MusicUI')
                 if (tr.id == track.id) {
                     self.loadTrack(track);
                     tr.active = true;
+                    _activeIndex = iter;
                     tr.playing = false;
                 }
                 else {
@@ -121,6 +144,14 @@ angular.module('MusicUI')
                 }
             }
         });
+        if (_activeIndex == 0)
+            self.previousTrackAvailable = false;
+        else
+            self.previousTrackAvailable = true;
+        if (_activeIndex == self.playlistTracks.length - 1)
+            self.nextTrackAvailable = false;
+        else
+            self.nextTrackAvailable = true;
     }
 
     self.musicPlaying = function (track) {

@@ -2,6 +2,8 @@
 const remote = electron.remote;
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+var dialog = electron.dialog;
+var fs = require('fs');
 
 let mainWindow;
 
@@ -13,7 +15,7 @@ function createMainWindow(color, skipShades) {
     let appHeight = waSize.height - 60;
     mainWindow = new BrowserWindow({ width: appWidth, height: appHeight, icon: 'images/icon@4x.ico', resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, title: 'Music', show: false, fullscreen: false });
     mainWindow.loadURL('file://' + __dirname + '/index.html')
-    //mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
     mainWindow.on('closed', function () {
         mainWindow = null;
         app.quit();
@@ -50,8 +52,6 @@ electron.ipcMain.on('app-maximize', (event, arg) => {
 });
 
 electron.ipcMain.on('app-read-new-file', (event, arg) => {
-    var dialog = electron.dialog;
-    var fs = require('fs');
     dialog.showOpenDialog(null, { 'title': 'Choose new mp3 file ', 'filters': [{ name: 'mp3', extensions: ['mp3'] }] }, function (fileName) {
         if (fileName === undefined) {
             console.log("You didn't select the file");
@@ -67,13 +67,11 @@ electron.ipcMain.on('app-read-new-file', (event, arg) => {
     });
 });
 
-electron.ipcMain.on('app-load-new-playlist', (event, arg) => {
-    var dialog = electron.dialog;
-    var fs = require('fs');
+electron.ipcMain.on('app-load-new-playlist', (event, arg) => {    
+    console.log('app-load-new-playlist');
     dialog.showOpenDialog(null, { 'title': 'Choose new mp3 file(s) ', 'filters': [{ name: 'mp3', extensions: ['mp3'] }], 'properties': ['multiSelections'] }, function (fileName) {
         if (fileName === undefined) {
             console.log("You didn't select the file(s).");
-            return;
         }
         event.sender.send('app-load-new-playlist-reply', fileName);
     });
