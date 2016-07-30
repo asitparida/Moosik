@@ -780,7 +780,7 @@ body {
             -ms-transform: scale(0.98, 0.98);
             -o-transform: scale(0.98, 0.98);
             -webkit-transform: scale(0.98, 0.98);
-            transform: scale(0.98, 0.98); }
+            transform: scale(0.95, 0.95); }
           .full-screen-media-page .music-playlist-holder .tracks-holder .track-list .add-track-part .icon-container {
             width: 100%;
             text-align: center; }

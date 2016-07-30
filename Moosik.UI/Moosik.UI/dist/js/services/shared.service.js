@@ -25,6 +25,8 @@ angular.module('MusicUI')
     self.preLoadedTheme = null;
     self.playlistIntialized = false;
     self.intialized = false;
+    self.musicPlayed = false;
+    self.currentActiveIndex = null;
     self.previousTrackAvailable = false;
     self.nextTrackAvailable = false;
     try {
@@ -123,6 +125,7 @@ angular.module('MusicUI')
     }
 
     self.loadTrackToPlayer = function (track) {
+        var _initialMusicPlayedState = self.musicPlayed;
         var _activeIndex = 0;
         _.each(self.playlistTracks, function (tr, iter) {
             if (tr.active) {
@@ -136,7 +139,10 @@ angular.module('MusicUI')
                     self.loadTrack(track);
                     tr.active = true;
                     _activeIndex = iter;
+                    self.currentActiveIndex = _activeIndex;
                     tr.playing = false;
+                    if (_initialMusicPlayedState)
+                        self.playTrack(tr);
                 }
                 else {
                     tr.active = false;
@@ -154,7 +160,19 @@ angular.module('MusicUI')
             self.nextTrackAvailable = true;
     }
 
-    self.musicPlaying = function (track) {
+    self.loadNextTrack = function () {
+        if (self.nextTrackAvailable) {
+            self.loadTrackToPlayer(self.playlistTracks[self.currentActiveIndex + 1]);
+        }
+    }
+
+    self.loadPreviousTrack = function () {
+        if (self.previousTrackAvailable) {
+            self.loadTrackToPlayer(self.playlistTracks[self.currentActiveIndex - 1]);
+        }
+    }
+
+    self.musicIsPlaying = function (track) {
         _.each(self.playlistTracks, function (tr) {
             if (tr.id == track.id) {
                 tr.active = true;
@@ -167,7 +185,7 @@ angular.module('MusicUI')
         });
     }
 
-    self.musicPaused = function (track) {
+    self.musicIsPaused = function (track) {
         _.each(self.playlistTracks, function (tr) {
             if (tr.id == track.id) {
                 tr.playing = false;

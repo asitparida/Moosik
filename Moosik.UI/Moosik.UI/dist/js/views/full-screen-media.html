@@ -39,7 +39,7 @@
             <label class="music-play-title" ng-bind="app.trackMetaData.name"></label>
             <label class="music-play-desc" ng-bind="app.trackMetaData.desc"></label>
             <div class="music-slider-holder">
-                <span class="music-current-duration" id="fsm_music_current" ng-class="{'active': app.musicPlayed}">00:00</span>
+                <span class="music-current-duration" id="fsm_music_current" ng-class="{'active': app.shared.musicPlayed}">00:00</span>
                 <span class="music-total-duration" ng-bind="app.trackMetaData.duration"></span>
                 <md-slider-container>
                     <md-slider flex="" min="0" max="{{app.trackMetaData.durationSeek}}" ng-model="app.trackMetaData.currentSeek" aria-label="red" id="red-slider">
@@ -48,14 +48,14 @@
             </div>
             <div class="music-play-controls">
                 <div class="pull-left controls-left">
-                    <div class="icon-container" ng-class="{'disabled': app.shared.previousTrackAvailable == false}" >
+                    <div class="icon-container" ng-class="{'disabled': app.shared.previousTrackAvailable == false}" ng-click="app.shared.loadPreviousTrack()"  >
                         <i class="icon-png media-prev"></i>
                     </div>
                     <div class="icon-container" ng-click="app.musicPlayPause()" ng-class="{'disabled': app.musicAvailable == false}">
-                        <i class="icon-png media-play x36" ng-show="!app.musicPlayed"></i>
-                        <i class="icon-png media-pause x36" ng-show="app.musicPlayed"></i>
+                        <i class="icon-png media-play x36" ng-show="!app.shared.musicPlayed"></i>
+                        <i class="icon-png media-pause x36" ng-show="app.shared.musicPlayed"></i>
                     </div>
-                    <div class="icon-container" ng-class="{'disabled': app.shared.nextTrackAvailable == false}" >
+                    <div class="icon-container" ng-class="{'disabled': app.shared.nextTrackAvailable == false}" ng-click="app.shared.loadNextTrack()" >
                         <i class="icon-png media-next"></i>
                     </div>
                 </div>

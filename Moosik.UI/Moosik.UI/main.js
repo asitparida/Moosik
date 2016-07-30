@@ -15,7 +15,7 @@ function createMainWindow(color, skipShades) {
     let appHeight = waSize.height - 60;
     mainWindow = new BrowserWindow({ width: appWidth, height: appHeight, icon: 'images/icon@4x.ico', resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, title: 'Music', show: false, fullscreen: false });
     mainWindow.loadURL('file://' + __dirname + '/index.html')
-    mainWindow.webContents.openDevTools()
+    //mainWindow.webContents.openDevTools()
     mainWindow.on('closed', function () {
         mainWindow = null;
         app.quit();
