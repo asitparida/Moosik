@@ -8,7 +8,7 @@ var fs = require('fs');
 let mainWindow;
 
 function createMainWindow(color, skipShades) {
-    activeColor = color || '#0048ba';
+    activeColor = color || '#262626';
     skipShades = skipShades || false;
     let waSize = electron.screen.getPrimaryDisplay().workAreaSize;
     let appWidth = waSize.width - 60;

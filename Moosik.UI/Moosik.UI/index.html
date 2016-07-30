@@ -29,7 +29,7 @@
     <script type="text/javascript" src="dist/js/directives/ng-mousewheel-down.directive.js"></script>
     <script type="text/javascript" src="dist/js/controllers/app.controller.js"></script>
 </head>
-<body ng-controller="AppController as app" style="height:540px;overflow-y:hidden;">
+<body ng-controller="AppController as app" style="height:540px;overflow-y:hidden;background:#262626">
     <div class="app-top-window-controls" ng-show="app.hideLoader">
         <div class="icon-container" ng-click="app.closeApp()">
             <i class="icon-png app-close"></i>
@@ -43,12 +43,19 @@
         </div>
     </div>
     <div class="app-content">
-        <div class="spinner-holder" ng-hide="app.hideLoader" ng-style="{'background-color':app.shared.activeColor}">
+        <div class="moosik_logo_holder" ng-hide="app.hideLoader">
+            <div class="moosik_logo"></div>
             <div class="spinner">
                 <div class="double-bounce1"></div>
                 <div class="double-bounce2"></div>
             </div>
         </div>
+        <!--<div class="spinner-holder" ng-hide="app.hideLoader" ng-style="{'background-color':app.shared.activeColor}">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>-->
         <div class="app-current-color" ng-show="app.showCurrentColor" ng-style="{'background-color':app.shared.activeColor}"></div>
         <div class="ui-view-container-main enter-page anim-in-out anim-slide-left" ui-view data-anim-speed="340" data-anim-sync="true"></div>
     </div>

@@ -14,7 +14,7 @@ var _emulate = true;
 angular.module('MusicUI')
 .service("SharedService", ["$http", "$q", "$uibModal", "$window", "$resource", "$state", "$timeout", function ($http, $q, $uibModal, $window, $resource, $state, $timeout) {
     var self = this;
-    self.activeColor = 'rgb(130, 14, 184)';
+    self.activeColor = '#262626';
     self.maximized = false;
     self.uibModal = $uibModal;
     self.state = $state;

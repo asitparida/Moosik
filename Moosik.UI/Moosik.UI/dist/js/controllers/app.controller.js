@@ -37,7 +37,7 @@ angular.module('MusicUI')
         $timeout(function () {
             self.processSvg();
         }, 500)
-    }, 1000);
+    }, 2000);
 
     self.closeApp = function () {
         try {
