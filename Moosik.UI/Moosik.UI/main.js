@@ -66,3 +66,17 @@ electron.ipcMain.on('app-read-new-file', (event, arg) => {
         });
     });
 });
+
+electron.ipcMain.on('app-load-new-playlist', (event, arg) => {
+    var dialog = electron.dialog;
+    var fs = require('fs');
+    dialog.showOpenDialog(null, { 'title': 'Choose new mp3 file(s) ', 'filters': [{ name: 'mp3', extensions: ['mp3'] }], 'properties': ['multiSelections'] }, function (fileName) {
+        if (fileName === undefined) {
+            console.log("You didn't select the file(s).");
+            return;
+        }
+        event.sender.send('app-load-new-playlist-reply', fileName);
+    });
+});
+
+//"package": "electron-packager . --platform=win32 --arch=all --prune --asar --out=releases/alpha --icon=images/icon@2x.ico"
