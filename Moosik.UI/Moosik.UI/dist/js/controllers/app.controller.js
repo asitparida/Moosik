@@ -28,6 +28,7 @@ angular.module('MusicUI')
     self.hideLoader = false;
     self.musicPlayed = false;
     self.maximized = false;
+    self.playlistShown = false;
     self.images = [
             { id: _.uniqueId('img'), src: 'rock-of-ages-broadway-poster.jpg', },
             { id: _.uniqueId('img'), src: '43f3df6ed544836b451f6f609a1faa64.jpg', },
@@ -54,6 +55,7 @@ angular.module('MusicUI')
             { id: _.uniqueId('img'), src: 'bluegal_flyer.jpg', },
             { id: _.uniqueId('img'), src: 'BG169-PO.jpg' }
     ];
+
     $timeout(function () {
         self.hideLoader = true;
         $timeout(function () {
@@ -66,6 +68,20 @@ angular.module('MusicUI')
             let electron = require('electron');
             electron.ipcRenderer.send('close-main');
         } catch (e) {
+        }
+    }
+
+    self.togglePlaylist = function () {
+        if (self.playlistShown == false) {
+            document.getElementById('fsm_play_unit_holder').classList.add('playListActivated');
+            self.playlistShown = true;
+            self.shared.initPlaylist();
+        }
+        else {
+            self.playlistShown = false;
+            $timeout(function myfunction() {
+                document.getElementById('fsm_play_unit_holder').classList.remove('playListActivated');
+            }, 300);
         }
     }
 
@@ -162,7 +178,8 @@ angular.module('MusicUI')
             self.analyserConnected = true;
         }
         var _bounds = document.getElementById(containerId).getBoundingClientRect();
-        self.svgHeight = _bounds.height;
+        self.svgHeight = window.innerHeight;
+        console.log(self.svgHeight);
         var svgWidth = _bounds.width;
         var barPadding = '1';
         function createSvg(parent, height, width) {
@@ -214,11 +231,11 @@ angular.module('MusicUI')
         self.svg.selectAll('rect')
            .data(self.frequencyData)
            .attr('y', function (d) {
-               var multiplier = self.svgHeight < 500 ? 1 : 0.66;
+               var multiplier = self.svgHeight < 500 ? 0.33 : 0.66;
                return self.svgHeight - (d * multiplier);
            })
            .attr('height', function (d) {
-               return d;
+               return d ;
            })
            .attr('fill', function (d) {
                return 'rgb(130, 14, 184)';
