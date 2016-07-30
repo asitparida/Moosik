@@ -152,7 +152,7 @@ angular.module('MusicUI')
                     self.trackMetaData.currentSeek = 0;
                     self.trackMetaData.current = self.trackMetaData.currentSeek.toMMSS();
                     if (data.filePath)
-                        self.trackMetaData.path = data.filePath;
+                        self.trackMetaData.path = data.filePath.replaceAll(' ', '%20');
                     self.musicPlayed = false;
                     self.musicAvailable = true;
                     self.processConnectAnlayser();
@@ -190,7 +190,6 @@ angular.module('MusicUI')
         }
         var _bounds = document.getElementById(containerId).getBoundingClientRect();
         self.svgHeight = window.innerHeight;
-        console.log(self.svgHeight);
         var svgWidth = _bounds.width;
         var barPadding = '1';
         function createSvg(parent, height, width) {
@@ -217,7 +216,11 @@ angular.module('MusicUI')
 
     self.shared.loadTrack = function (track) {
         self.trackMetaData = track;
+        self.musicPlayed = false;
         self.musicAvailable = true;
+        self.processConnectAnlayser();
+        if (!self.shared.intialized)
+            self.shared.intialized = true;
     }
 
     function updateTime() {
