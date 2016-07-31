@@ -11,11 +11,22 @@ function createMainWindow(color, skipShades) {
     activeColor = color || '#262626';
     skipShades = skipShades || false;
     let waSize = electron.screen.getPrimaryDisplay().workAreaSize;
+
     let appWidth = waSize.width - 60;
     let appHeight = waSize.height - 60;
-    mainWindow = new BrowserWindow({ width: appWidth, height: appHeight, icon: 'images/icon@4x.ico', resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, title: 'Music', show: false, fullscreen: false });
+    let multipler = 1;
+    if (appWidth >= 1920)
+        multipler = 0.50;
+    else if (appWidth >= 1600)
+        multipler = 0.70;
+    else if (appWidth >= 1366)
+        multipler = 0.85;
+    else if (appWidth >= 1200)
+        multipler = 1;
+
+    mainWindow = new BrowserWindow({ width: appWidth * multipler, height: appHeight * multipler, icon: 'images/icon@4x.ico', resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, title: 'Music', show: false, fullscreen: false });
     mainWindow.loadURL('file://' + __dirname + '/index.html')
-    mainWindow.webContents.openDevTools()
+    //mainWindow.webContents.openDevTools()
     mainWindow.on('closed', function () {
         mainWindow = null;
         app.quit();
@@ -67,7 +78,7 @@ electron.ipcMain.on('app-read-new-file', (event, arg) => {
     });
 });
 
-electron.ipcMain.on('app-load-new-playlist', (event, arg) => {    
+electron.ipcMain.on('app-load-new-playlist', (event, arg) => {
     console.log('app-load-new-playlist');
     dialog.showOpenDialog(null, { 'title': 'Choose new mp3 file(s) ', 'filters': [{ name: 'mp3', extensions: ['mp3'] }], 'properties': ['multiSelections'] }, function (fileName) {
         if (fileName === undefined) {

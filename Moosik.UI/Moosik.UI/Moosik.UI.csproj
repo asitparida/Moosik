@@ -85,6 +85,8 @@
     <Content Include="dist\js\directives\ng-mousewheel-up.directive.js" />
     <Content Include="dist\js\directives\ng-long-press.directive.js" />
     <Content Include="dist\js\services\shared.service.js" />
+    <Content Include="dist\js\templates\app-playlist.html" />
+    <Content Include="dist\js\templates\app-settings.html" />
     <Content Include="dist\js\views\full-screen-media.html" />
     <Content Include="fonts\quicksand\Quicksand-Bold.svg" />
     <Content Include="fonts\quicksand\Quicksand-Light.svg" />
@@ -101,26 +103,44 @@
     <Content Include="images\icon%402x.png" />
     <Content Include="images\icon%404x.ico" />
     <Content Include="images\icon%404x.png" />
+    <Content Include="images\icons\app-close-dark.png" />
     <Content Include="images\icons\app-close.png" />
+    <Content Include="images\icons\app-move-dark.png" />
     <Content Include="images\icons\app-move.png" />
+    <Content Include="images\icons\app-settings-dark.png" />
+    <Content Include="images\icons\media-add-dark.png" />
     <Content Include="images\icons\media-add.png" />
+    <Content Include="images\icons\media-back-to-window-dark.png" />
     <Content Include="images\icons\media-back-to-window.png" />
+    <Content Include="images\icons\media-maximize-dark.png" />
     <Content Include="images\icons\media-maximize.png" />
+    <Content Include="images\icons\media-mute-dark.png" />
     <Content Include="images\icons\media-mute.png" />
+    <Content Include="images\icons\media-next-dark.png" />
     <Content Include="images\icons\media-next.png" />
+    <Content Include="images\icons\media-pause-24-dark.png" />
     <Content Include="images\icons\media-pause-24.png" />
+    <Content Include="images\icons\media-pause-36-dark.png" />
     <Content Include="images\icons\media-pause-36.png" />
+    <Content Include="images\icons\media-play-24-dark.png" />
     <Content Include="images\icons\media-play-24.png" />
+    <Content Include="images\icons\media-play-36-dark.png" />
     <Content Include="images\icons\media-play-36.png" />
     <Content Include="images\icons\media-playlist-add.png" />
     <Content Include="images\icons\media-playlist-clear.png" />
+    <Content Include="images\icons\media-playlist-dark.png" />
     <Content Include="images\icons\media-playlist.png" />
+    <Content Include="images\icons\media-prev-dark.png" />
     <Content Include="images\icons\media-prev.png" />
+    <Content Include="images\icons\media-repeat-1-dark.png" />
     <Content Include="images\icons\media-repeat-1.png" />
     <Content Include="images\icons\media-search-big.png" />
+    <Content Include="images\icons\media-search-dark.png" />
     <Content Include="images\icons\media-search.png" />
     <Content Include="images\icons\app-settings.png" />
+    <Content Include="images\icons\media-shuffle-dark.png" />
     <Content Include="images\icons\media-shuffle.png" />
+    <Content Include="images\icons\media-unmute-dark.png" />
     <Content Include="images\icons\media-unmute.png" />
     <Content Include="images\icons\moosik_200_blank.png" />
     <Content Include="images\icons\playlist-add.png" />
@@ -174,7 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\" />
-    <Folder Include="dist\js\templates\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

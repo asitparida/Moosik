@@ -1,0 +1,47 @@
+﻿<div class="music-playlist-holder" ng-show="app.playlistShown" id="fsm_playlist_container">
+    <div class="music-playlist-label">
+        <i class="icon-png media-playlist"></i>
+        <label>PLaylist</label>
+        <i class="icon-png playlist-action app-close pull-right" ng-click="app.closePlaylist()"></i>
+    </div>
+    <div class="tracks-holder">
+        <div class="track-list">
+            <div class="add-track-part" ng-show="app.shared.playlistIntialized == false && app.shared.loadPlaylistInProgress != true" ng-click="app.shared.loadPlaylist()">
+                <div class="icon-container">
+                    <i class="icon-png media-add"></i>
+                </div>
+                <label class="add-track">Add Track(s)</label>
+            </div>
+            <div class="track" ng-repeat="track in app.shared.playlistTracks" ng-class="{'active': track.active}" ng-click="app.shared.loadTrackToPlayer(track)">
+                <div class="icon-container">
+                    <i class="icon-png media-play" ng-show="!(track.playing == true && track.active == true)"></i>
+                    <div class="active-marker" ng-show="track.playing == true && track.active == true">
+                        <div class="mark"></div>
+                        <div class="mark"></div>
+                        <div class="mark"></div>
+                    </div>
+                </div>
+                <div class="track-title" ng-bind="track.name"></div>
+                <div class="track-duration" ng-bind="track.duration"></div>
+            </div>
+        </div>
+        <div class="music-playlist-controls">
+            <div class="actions-holder">
+                <div class="icon-container w33 pull-left" ng-click="app.shared.loadPlaylist()">
+                    <i class="icon-png playlist-action playlist-add"></i>
+                </div>
+                <div class="icon-container w33 pull-left" ng-click="app.shared.clearPlaylist()">
+                    <i class="icon-png playlist-action playlist-clear"></i>
+                </div>
+                <div class="icon-container w33 pull-left" ng-click="app.shared.shufflePlaylist()">
+                    <i class="icon-png playlist-action playlist-shuffle"></i>
+                </div>
+            </div>
+            <div class="track-opaqueHolder"></div>
+        </div>
+        <div class="load-playlist-spinner" ng-show="app.shared.loadPlaylistInProgress">
+            <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+        </div>
+        <div class="track-opaqueHolder"></div>
+    </div>
+</div>

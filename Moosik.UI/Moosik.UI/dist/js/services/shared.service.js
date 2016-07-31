@@ -30,6 +30,7 @@ angular.module('MusicUI')
     self.currentActiveIndex = null;
     self.previousTrackAvailable = false;
     self.nextTrackAvailable = false;
+    self.darkTheme = false;
     try {
         self.electron = require('electron');
     } catch (e) {
@@ -284,7 +285,15 @@ angular.module('MusicUI')
     }
 
     self.openSettings = function () {
+        self.settingsPaneShown = !self.settingsPaneShown;
+    }
 
+    self.closeSettings = function () {
+        self.settingsPaneShown = false;
+    }
+
+    self.themeToggle = function() {
+        console.log(self.darkTheme);
     }
 
     self.initPlaylist = function () { }
