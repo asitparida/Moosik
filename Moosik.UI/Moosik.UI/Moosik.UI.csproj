@@ -123,6 +123,9 @@
     <Content Include="images\icons\media-shuffle.png" />
     <Content Include="images\icons\media-unmute.png" />
     <Content Include="images\icons\moosik_200_blank.png" />
+    <Content Include="images\icons\playlist-add.png" />
+    <Content Include="images\icons\playlist-clear.png" />
+    <Content Include="images\icons\playlist-shuffle.png" />
     <Content Include="images\rock-of-ages-broadway-poster.jpg" />
     <Content Include="index.html" />
     <Content Include="lib\angular-animate.min.js" />
