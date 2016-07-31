@@ -1,0 +1,26 @@
+﻿<div class="app-settings-holder" ng-show="app.shared.settingsPaneShown" id="fsm_settings_container">
+    <div class="settings-header">
+        <div class="icon-container">
+            <i class="icon-png app-settings"></i>
+        </div>
+        <label>Settings</label>
+        <div class="icon-container pull-right">
+            <i class="icon-png playlist-action app-close" ng-click="app.shared.closeSettings()"></i>
+        </div>
+    </div>
+    <div class="settings-panel-holder">
+        <div class="theme-switcher">
+            <label class="settings-label">Enable Dark Theme</label>
+            <md-switch ng-model="app.shared.darkTheme" ng-change="app.shared.themeToggle()" aria-label="Enable Dark Theme"></md-switch>
+        </div>
+        <div class="theme-switcher">
+            <label class="settings-label">Background Image</label>
+            <md-switch ng-model="app.shared.bgImage" ng-change="app.shared.bgImageToggle()" aria-label="Background Image"></md-switch>
+            <div class="settings-theme-bg" ng-show="app.shared.bgImage" style="background-image: url('{{app.shared.bgImgSrc}}')" ng-click="app.shared.chooseBg()" ng-class="{'hasShadow': app.shared.showBgSelection == false && app.shared.bgImageAvailable == true}">
+                <div class="icon-container" ng-show="app.shared.showBgSelection">
+                    <i class="icon-png media-add"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

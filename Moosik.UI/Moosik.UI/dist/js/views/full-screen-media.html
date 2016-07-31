@@ -1,57 +1,6 @@
 ﻿<div class="full-screen-media-page" id="fsm_container">
-    <div class="app-settings-holder" ng-show="app.shared.settingsPaneShown" id="fsm_settings_container">
-    </div>
-    <div class="music-playlist-holder" ng-show="app.playlistShown" id="fsm_playlist_container">
-        <div class="music-playlist-label">
-            <i class="icon-png media-playlist"></i>
-            <label>PLaylist</label>
-            <i class="icon-png playlist-action app-close pull-right" ng-click="app.closePlaylist()"></i>
-        </div>
-        <div class="tracks-holder">
-            <div class="track-list">
-                <div class="load-playlist-spinner" ng-show="app.shared.loadPlaylistInProgress">
-                    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
-                </div>
-                <div class="add-track-part" ng-show="app.shared.playlistIntialized == false && app.shared.loadPlaylistInProgress != true" ng-click="app.shared.loadPlaylist()">
-                    <div class="icon-container">
-                        <i class="icon-png media-add"></i>
-                    </div>
-                    <label class="add-track">Add Track(s)</label>
-                </div>
-                <div class="track" ng-repeat="track in app.shared.playlistTracks" ng-class="{'active': track.active}" ng-click="app.shared.loadTrackToPlayer(track)">
-                    <div class="icon-container">
-                        <i class="icon-png media-play" ng-show="!(track.playing == true && track.active == true)"></i>
-                        <div class="active-marker" ng-show="track.playing == true && track.active == true">
-                            <div class="mark"></div>
-                            <div class="mark"></div>
-                            <div class="mark"></div>
-                        </div>
-                    </div>
-                    <div class="track-title" ng-bind="track.name"></div>
-                    <div class="track-duration" ng-bind="track.duration"></div>
-                </div>
-            </div>
-            <div class="music-playlist-controls">
-                <div class="actions-holder">
-                    <div class="icon-container w33 pull-left" ng-click="app.shared.loadPlaylist()">
-                        <i class="icon-png playlist-action playlist-add"></i>
-                    </div>
-                    <div class="icon-container w33 pull-left" ng-click="app.shared.clearPlaylist()">
-                        <i class="icon-png playlist-action playlist-clear"></i>
-                    </div>
-                    <div class="icon-container w33 pull-left" ng-click="app.shared.shufflePlaylist()">
-                        <i class="icon-png playlist-action playlist-shuffle"></i>
-                    </div>
-                </div>
-                <div class="track-opaqueHolder"></div>
-            </div>
-            <div class="track-opaqueHolder"></div>
-        </div>
-    </div>
-    <div class="music-slection-start" ng-if="false">
-        <i class="icon-png media-search big"></i>
-        <label>choose a MP3 file to start with</label>
-    </div>
+    <div ng-include="'dist/js/templates/app-settings.html'"></div>
+    <div ng-include="'dist/js/templates/app-playlist.html'"></div>
     <div class="music-play-unit-holder" id="fsm_play_unit_holder" ng-show="app.shared.intialized">
         <div class="music-play-unit">
             <label class="music-play-title" ng-bind="app.trackMetaData.name"></label>
@@ -101,6 +50,7 @@
     </div>
     <div class="opaque-screen"></div>
     <div class="bg-images">
-        <div class="bg-image col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="item in app.images track by $index" ng-style="{'background-image': item.src}"></div>
+        <div class="bg-image-full" ng-show="app.shared.bgImage && app.shared.bgImageAvailable" style="background-image: url('{{app.shared.bgImgSrc}}')"></div>
+        <div class="bg-image col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="item in app.images track by $index" ng-style="{'background-image': item.src}" ng-show="!(app.shared.bgImage && app.shared.bgImageAvailable)"></div>
     </div>
 </div>
