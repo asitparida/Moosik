@@ -114,11 +114,22 @@ body {
 
                     &.anim-fade {
                         opacity: 1;
+                        -moz-transition: all 0.5s ease-in-out 0s;
+                        -o-transition: all 0.5s ease-in-out 0s;
+                        -webkit-transition: all 0.5s ease-in-out 0s;
                         transition: all 0.5s ease-in-out 0s;
+                        -moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -o-transform: translateX(0);
+                        -webkit-transform: translateX(0);
                         transform: translateX(0);
 
                         &.ng-hide {
                             opacity: 0;
+                            -moz-transform: translateX(30px);
+                            -ms-transform: translateX(30px);
+                            -o-transform: translateX(30px);
+                            -webkit-transform: translateX(30px);
                             transform: translateX(30px);
                         }
                     }
@@ -351,11 +362,18 @@ body {
         z-index: 10;
         width: 330px;
         height: 100%;
+        -moz-transition: all 0.3s ease-in 0s;
+        -o-transition: all 0.3s ease-in 0s;
+        -webkit-transition: all 0.3s ease-in 0s;
         transition: all 0.3s ease-in 0s;
         background: #262626;
 
         &.ng-hide {
             opacity: 0;
+            -moz-transform: translateX(330px);
+            -ms-transform: translateX(330px);
+            -o-transform: translateX(330px);
+            -webkit-transform: translateX(330px);
             transform: translateX(330px);
         }
 
@@ -443,10 +461,17 @@ body {
         z-index: 10;
         width: 330px;
         height: 100%;
+        -moz-transition: all 0.3s ease-in 0s;
+        -o-transition: all 0.3s ease-in 0s;
+        -webkit-transition: all 0.3s ease-in 0s;
         transition: all 0.3s ease-in 0s;
 
         &.ng-hide {
             opacity: 0;
+            -moz-transform: translateX(330px);
+            -ms-transform: translateX(330px);
+            -o-transform: translateX(330px);
+            -webkit-transform: translateX(330px);
             transform: translateX(330px);
         }
 
@@ -601,7 +626,14 @@ body {
                     vertical-align: middle;
                     outline: none;
                     cursor: pointer;
+                    -moz-transition: all 0.3s linear;
+                    -o-transition: all 0.3s linear;
+                    -webkit-transition: all 0.3s linear;
                     transition: all 0.3s linear;
+                    -moz-transform: translateY(0px);
+                    -ms-transform: translateY(0px);
+                    -o-transform: translateY(0px);
+                    -webkit-transform: translateY(0px);
                     transform: translateY(0px);
                     position: absolute;
                     top: 0;
@@ -609,6 +641,10 @@ body {
 
                     &.ng-hide {
                         opacity: 0;
+                        -moz-transform: translateY(-100px);
+                        -ms-transform: translateY(-100px);
+                        -o-transform: translateY(-100px);
+                        -webkit-transform: translateY(-100px);
                         transform: translateY(-100px);
                     }
 
@@ -652,6 +688,9 @@ body {
                     width: 100%;
                     height: 48px;
                     outline: none;
+                    -moz-transition: all 0.3s linear 0s;
+                    -o-transition: all 0.3s linear 0s;
+                    -webkit-transition: all 0.3s linear 0s;
                     transition: all 0.3s linear 0s;
 
                     &.ng-enter-stagger {
@@ -728,6 +767,9 @@ body {
                             width: 3px;
                             background-color: #d613b5;
                             border-radius: 2%;
+                            -moz-animation: anim_up_down_fill 1s linear infinite;
+                            -o-animation: anim_up_down_fill 1s linear infinite;
+                            -webkit-animation: anim_up_down_fill 1s linear infinite;
                             animation: anim_up_down_fill 1s linear infinite;
                             position: absolute;
                             left: 0;
@@ -735,11 +777,17 @@ body {
                             padding: 0;
 
                             &:nth-child(1) {
+                                -moz-animation-delay: 0.3s;
+                                -o-animation-delay: 0.3s;
+                                -webkit-animation-delay: 0.3s;
                                 animation-delay: 0.3s;
                                 left: 6px;
                             }
 
                             &:nth-child(2) {
+                                -moz-animation-delay: 0.6s;
+                                -o-animation-delay: 0.6s;
+                                -webkit-animation-delay: 0.6s;
                                 animation-delay: 0.6s;
                                 left: 12px;
                             }
@@ -756,6 +804,8 @@ body {
                         font-size: small;
                         color: #909090;
                         line-height: 48px;
+                        -ms-text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
                         text-overflow: ellipsis;
                         overflow-x: hidden;
                         white-space: nowrap;
@@ -807,14 +857,24 @@ body {
         width: 100%;
         height: 100%;
         opacity: 1;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        -webkit-transition: all 0.3s ease-in;
         transition: all 0.3s ease-in;
 
         &.ng-hide-active {
+            -moz-transition: all 0.3s ease-in 0.3s;
+            -o-transition: all 0.3s ease-in 0.3s;
+            -webkit-transition: all 0.3s ease-in 0.3s;
             transition: all 0.3s ease-in 0.3s;
         }
 
         &.ng-hide {
             opacity: 0;
+            -moz-transform: translateX(100px);
+            -ms-transform: translateX(100px);
+            -o-transform: translateX(100px);
+            -webkit-transform: translateX(100px);
             transform: translateX(100px);
         }
     }
@@ -831,6 +891,8 @@ body {
             width: 100%;
             color: #fff;
             letter-spacing: 1px;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
             text-overflow: ellipsis;
             overflow-x: hidden;
             white-space: nowrap;
@@ -845,6 +907,8 @@ body {
             width: 100%;
             color: #909090;
             letter-spacing: 1px;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
             text-overflow: ellipsis;
             overflow-x: hidden;
             white-space: nowrap;
@@ -975,6 +1039,9 @@ body {
         .bg-image {
             height: 33%;
             padding: 0;
+            -moz-transition: background 2s linear;
+            -o-transition: background 2s linear;
+            -webkit-transition: background 2s linear;
             transition: background 2s linear;
             margin: 0;
             background-size: cover;
@@ -1400,7 +1467,6 @@ body {
     }
 }
 
-
 @keyframes circle-anim {
     0%, 25%, 75%, 100% {
         -moz-transform: scale(0.0);
@@ -1475,7 +1541,6 @@ body {
     }
 }
 
-
 @keyframes anim_up_down_fill {
     0%, 100% {
         height: 0;
@@ -1497,6 +1562,11 @@ body {
 }
 
 @media (max-width: 580px) {
+
+    .app-top-window-controls {
+        display: none;
+    }
+
     .music-play-unit {
         width: calc(100% - 60px);
 
