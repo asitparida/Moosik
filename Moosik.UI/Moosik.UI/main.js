@@ -4,6 +4,7 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 var dialog = electron.dialog;
 var fs = require('fs');
+var path = require('path');
 
 let mainWindow;
 
@@ -85,6 +86,16 @@ electron.ipcMain.on('app-load-new-playlist', (event, arg) => {
             console.log("You didn't select the file(s).");
         }
         event.sender.send('app-load-new-playlist-reply', fileName);
+    });
+});
+
+electron.ipcMain.on('app-load-new-bg', (event, arg) => {
+    dialog.showOpenDialog(null, { 'title': 'Choose new background image ', 'filters': [{ name: 'Images', extensions: ['jpg', 'png'] }] }, function (fileName) {
+        if (fileName === undefined) {
+            console.log("You didn't select the file");
+        }
+        var _fileParts = fileName[0].split('\\');
+        event.sender.send('app-load-new-bg-reply', _fileParts);
     });
 });
 

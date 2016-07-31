@@ -12,7 +12,7 @@ var _moosikImgArray = {};
 var _emulate = true;
 
 angular.module('MusicUI')
-.service("SharedService", ["$http", "$q", "$uibModal", "$window", "$resource", "$state", "$timeout", function ($http, $q, $uibModal, $window, $resource, $state, $timeout) {
+.service("SharedService", ["$http", "$q", "$uibModal", "$window", "$resource", "$state", "$timeout", "$sce", function ($http, $q, $uibModal, $window, $resource, $state, $timeout, $sce) {
     var self = this;
     self.activeColor = '#262626';
     self.maximized = false;
@@ -30,14 +30,17 @@ angular.module('MusicUI')
     self.currentActiveIndex = null;
     self.previousTrackAvailable = false;
     self.nextTrackAvailable = false;
-    self.darkTheme = false;
+    self.darkTheme = true;
+    self.bgImage = false;
+    self.bgImgSrc = null;
+    self.bgImageAvailable = false;
     self.gainModes = [
         { id: 1, value: -1, mute: true },
         { id: 2, value: -0.33, mute: false },
         { id: 3, value: 0.33, mute: false },
         { id: 4, value: 1, mute: false }
     ];
-    self.activeGainMode = 3;
+    self.activeGainMode = 1;
     try {
         self.electron = require('electron');
     } catch (e) {
@@ -301,6 +304,33 @@ angular.module('MusicUI')
 
     self.themeToggle = function () {
         console.log(self.darkTheme);
+    }
+
+    self.bgImageToggle = function () {
+        if (self.bgImage) {
+            if (self.bgImgSrc == null) {
+                self.showBgSelection = true;
+            }
+        }
+    }
+
+    self.chooseBg = function () {
+        try {
+            if (self.electron != null) {
+                self.electron.ipcRenderer.removeAllListeners(['app-load-new-bg-reply']);
+                self.electron.ipcRenderer.send('app-load-new-bg');
+                self.electron.ipcRenderer.on('app-load-new-bg-reply', (event, arg) => {
+                    if (typeof arg !== 'undefined' && arg != null && arg != '' && arg.length >= 1) {
+                        self.bgImgSrc = arg.join('\\\\');
+                        self.showBgSelection = false;
+                        self.bgImageAvailable = true;
+                    }
+                });
+            }
+
+        } catch (e) {
+
+        }
     }
 
     self.initPlaylist = function () { }
