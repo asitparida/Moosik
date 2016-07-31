@@ -94,8 +94,10 @@ electron.ipcMain.on('app-load-new-bg', (event, arg) => {
         if (fileName === undefined) {
             console.log("You didn't select the file");
         }
-        var _fileParts = fileName[0].split('\\');
-        event.sender.send('app-load-new-bg-reply', _fileParts);
+        if (fileName && fileName != '') {
+            var _fileParts = fileName[0].split('\\');
+            event.sender.send('app-load-new-bg-reply', _fileParts);
+        }
     });
 });
 
