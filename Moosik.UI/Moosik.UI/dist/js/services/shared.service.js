@@ -63,6 +63,24 @@ angular.module('MusicUI')
         self.playlistIntialized = false;
     }
 
+    self.shufflePlaylist = function () {
+        self.playlistTracks = _.shuffle(self.playlistTracks);
+        var _activeIndex = null;
+        _.each(self.playlistTracks, function (tr, iter) {
+            if (tr.active) {
+                self.currentActiveIndex = _activeIndex;
+            }
+        });
+        if (_activeIndex == 0)
+            self.previousTrackAvailable = false;
+        else
+            self.previousTrackAvailable = true;
+        if (_activeIndex == self.playlistTracks.length - 1)
+            self.nextTrackAvailable = false;
+        else
+            self.nextTrackAvailable = true;
+    }
+
     self.loadPlaylist = function () {
         if (self.loadPlaylistInProgress)
             return;

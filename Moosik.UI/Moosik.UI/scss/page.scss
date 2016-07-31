@@ -453,6 +453,13 @@ body {
                     background-position: 3px;
                 }
 
+                &.app-close {
+                    width: 48px;
+                    height: 48px;
+                    background-size: 24px;
+                    background-position-x: 12px;
+                }
+
                 &:active {
                     -moz-transform: scale(0.98, 0.98);
                     -ms-transform: scale(0.98, 0.98);
@@ -495,9 +502,64 @@ body {
                 left: 0;
             }
 
+            .music-playlist-controls {
+                top: calc(100vh - 96px);
+                left: 0;
+                width: 100%;
+                height: 48px;
+                z-index: 15;
+                position: absolute;
+
+                .actions-holder {
+                    width: 100%;
+                    height: 48px;
+                    position: relative;
+                    z-index: 16;
+
+
+                    .icon-container {
+                        height: 48px;
+
+                        i {
+                            &.icon-png {
+                                width: 36px;
+                                height: 36px;
+                                top: 6px;
+                                left: 6px;
+                            }
+                        }
+
+                        &.w33 {
+                            width: 33%;
+                        }
+
+                        &.w25 {
+                            width: 25%;
+                        }
+
+                        &:active {
+                            -moz-transform: scale(0.98, 0.98);
+                            -ms-transform: scale(0.98, 0.98);
+                            -o-transform: scale(0.98, 0.98);
+                            -webkit-transform: scale(0.98, 0.98);
+                            transform: scale(0.98, 0.98);
+                        }
+                    }
+                }
+
+                .track-opaqueHolder {
+                    opacity: 0.75;
+                }
+
+                i.playlist-action {
+                    outline: none;
+                }
+            }
+
             .track-list {
                 width: 100%;
                 height: calc(100vh - 48px);
+                padding-bottom: 48px;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -506,10 +568,31 @@ body {
                 -webkit-overflow-scrolling: touch;
                 -ms-overflow-style: -ms-autohiding-scrollbar;
 
+                .load-playlist-spinner {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 15;
+                    width: 100%;
+                    height: 5px;
+
+                    md-progress-linear {
+
+                        ._md-container._md-mode-indeterminate {
+                            background: #262626;
+
+                            ._md-bar {
+                                background: #464646;
+                            }
+                        }
+                    }
+                }
+
                 .add-track-part {
                     width: 100%;
-                    height: 100px;
-                    margin: calc(0.33 * (100vh - 148px)) auto;
+                    padding: calc(0.50 * (100vh - 196px)) 0;
                     opacity: 0.50;
                     display: block;
                     vertical-align: middle;
@@ -883,6 +966,18 @@ body {
     background-size: contain;
     position: relative;
     display: inline-block;
+
+    &.playlist-add {
+        background-image: url(../../images/icons/playlist-add.png);
+    }
+
+    &.playlist-clear {
+        background-image: url(../../images/icons/playlist-clear.png);
+    }
+
+    &.playlist-shuffle {
+        background-image: url(../../images/icons/playlist-shuffle.png);
+    }
 
     &.media-back-to-window {
         background-image: url(../../images/icons/media-back-to-window.png);

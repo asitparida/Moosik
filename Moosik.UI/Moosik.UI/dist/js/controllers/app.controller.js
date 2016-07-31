@@ -61,6 +61,13 @@ angular.module('MusicUI')
         }
     }
 
+    self.closePlaylist = function () {
+        self.playlistShown = false;
+        $timeout(function myfunction() {
+            document.getElementById('fsm_play_unit_holder').classList.remove('playListActivated');
+        }, 300);
+    }
+
     self.musicPlayPause = function () {
         if (self.shared.musicPlayed == true) {
             self.shared.musicPlayed = false;
