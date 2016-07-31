@@ -1339,9 +1339,11 @@ body {
     width: 100%;
     height: 48px; }
     .lightThemed .full-screen-media-page .app-settings-holder .settings-header label {
-      color: #363636; }
+      color: #161616;
+      opacity: 1; }
   .lightThemed .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher label.settings-label {
-    color: #363636; }
+    color: #161616;
+    opacity: 1; }
 
 .lightThemed .full-screen-media-page .opaque-screen {
   background: #fff; }
