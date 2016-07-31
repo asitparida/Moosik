@@ -456,6 +456,465 @@ body {
   background: #fff;
   color: #222222;
   overflow: hidden; }
+  body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #1abc9c; }
+  body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #1abc9c;
+    border-color: #1abc9c; }
+  body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(26, 188, 156, 0.5); }
+  body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(26, 188, 156, 0.5); }
+  body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #1abc9c; }
+  body.turquoise .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #148f77 0%, #81eed8 100%); }
+  body.turquoise .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.turquoise .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #1abc9c; }
+  body.turquoise .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #1abc9c; }
+  body.turquoise .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #1abc9c; }
+  body.turquoise .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #1abc9c; }
+  body.turquoise .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.turquoise .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #1abc9c;
+    border-color: #1abc9c; }
+  body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #2ecc71; }
+  body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #2ecc71;
+    border-color: #2ecc71; }
+  body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(46, 204, 113, 0.5); }
+  body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(46, 204, 113, 0.5); }
+  body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #2ecc71; }
+  body.emerland .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #25a25a 0%, #a8ebc4 100%); }
+  body.emerland .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.emerland .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #2ecc71; }
+  body.emerland .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #2ecc71; }
+  body.emerland .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #2ecc71; }
+  body.emerland .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #2ecc71; }
+  body.emerland .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.emerland .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #2ecc71;
+    border-color: #2ecc71; }
+  body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #3498db; }
+  body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #3498db;
+    border-color: #3498db; }
+  body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(52, 152, 219, 0.5); }
+  body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(52, 152, 219, 0.5); }
+  body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #3498db; }
+  body.peterRiver .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #217dbb 0%, #b6daf2 100%); }
+  body.peterRiver .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.peterRiver .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #3498db; }
+  body.peterRiver .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #3498db; }
+  body.peterRiver .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #3498db; }
+  body.peterRiver .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #3498db; }
+  body.peterRiver .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.peterRiver .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #3498db;
+    border-color: #3498db; }
+  body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #9b59b6; }
+  body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #9b59b6;
+    border-color: #9b59b6; }
+  body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(155, 89, 182, 0.5); }
+  body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(155, 89, 182, 0.5); }
+  body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #9b59b6; }
+  body.amethyst .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #804399 0%, #dbc3e5 100%); }
+  body.amethyst .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.amethyst .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #9b59b6; }
+  body.amethyst .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #9b59b6; }
+  body.amethyst .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #9b59b6; }
+  body.amethyst .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #9b59b6; }
+  body.amethyst .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.amethyst .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #9b59b6;
+    border-color: #9b59b6; }
+  body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #820EB8; }
+  body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #820EB8;
+    border-color: #820EB8; }
+  body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(130, 14, 184, 0.5); }
+  body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(130, 14, 184, 0.5); }
+  body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #820EB8; }
+  body.moosikPurple .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #610a89 0%, #c86bf4 100%); }
+  body.moosikPurple .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.moosikPurple .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #820EB8; }
+  body.moosikPurple .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #820EB8; }
+  body.moosikPurple .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #820EB8; }
+  body.moosikPurple .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #820EB8; }
+  body.moosikPurple .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.moosikPurple .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #820EB8;
+    border-color: #820EB8; }
+  body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #34495e; }
+  body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #34495e;
+    border-color: #34495e; }
+  body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(52, 73, 94, 0.5); }
+  body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(52, 73, 94, 0.5); }
+  body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #34495e; }
+  body.wetAsphalt .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #22303d 0%, #7796b4 100%); }
+  body.wetAsphalt .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.wetAsphalt .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #34495e; }
+  body.wetAsphalt .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #34495e; }
+  body.wetAsphalt .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #34495e; }
+  body.wetAsphalt .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #34495e; }
+  body.wetAsphalt .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.wetAsphalt .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #34495e;
+    border-color: #34495e; }
+  body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #16a085; }
+  body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #16a085;
+    border-color: #16a085; }
+  body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(22, 160, 133, 0.5); }
+  body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(22, 160, 133, 0.5); }
+  body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #16a085; }
+  body.greenSea .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #107360 0%, #65ead0 100%); }
+  body.greenSea .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.greenSea .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #16a085; }
+  body.greenSea .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #16a085; }
+  body.greenSea .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #16a085; }
+  body.greenSea .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #16a085; }
+  body.greenSea .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.greenSea .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #16a085;
+    border-color: #16a085; }
+  body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #27ae60; }
+  body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #27ae60;
+    border-color: #27ae60; }
+  body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(39, 174, 96, 0.5); }
+  body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(39, 174, 96, 0.5); }
+  body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #27ae60; }
+  body.nephritis .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #1e8449 0%, #89e5b0 100%); }
+  body.nephritis .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.nephritis .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #27ae60; }
+  body.nephritis .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #27ae60; }
+  body.nephritis .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #27ae60; }
+  body.nephritis .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #27ae60; }
+  body.nephritis .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.nephritis .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #27ae60;
+    border-color: #27ae60; }
+  body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #2980b9; }
+  body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #2980b9;
+    border-color: #2980b9; }
+  body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(41, 128, 185, 0.5); }
+  body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(41, 128, 185, 0.5); }
+  body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #2980b9; }
+  body.belizeHole .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #20638f 0%, #94c6e7 100%); }
+  body.belizeHole .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.belizeHole .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #2980b9; }
+  body.belizeHole .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #2980b9; }
+  body.belizeHole .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #2980b9; }
+  body.belizeHole .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #2980b9; }
+  body.belizeHole .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.belizeHole .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #2980b9;
+    border-color: #2980b9; }
+  body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #8e44ad; }
+  body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #8e44ad;
+    border-color: #8e44ad; }
+  body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(142, 68, 173, 0.5); }
+  body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(142, 68, 173, 0.5); }
+  body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #8e44ad; }
+  body.wisteria .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #703688 0%, #cfacde 100%); }
+  body.wisteria .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.wisteria .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #8e44ad; }
+  body.wisteria .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #8e44ad; }
+  body.wisteria .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #8e44ad; }
+  body.wisteria .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #8e44ad; }
+  body.wisteria .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.wisteria .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #8e44ad;
+    border-color: #8e44ad; }
+  body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #2c3e50; }
+  body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #2c3e50;
+    border-color: #2c3e50; }
+  body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(44, 62, 80, 0.5); }
+  body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(44, 62, 80, 0.5); }
+  body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #2c3e50; }
+  body.midnightBlue .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #1a252f 0%, #698bac 100%); }
+  body.midnightBlue .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.midnightBlue .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #2c3e50; }
+  body.midnightBlue .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #2c3e50; }
+  body.midnightBlue .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #2c3e50; }
+  body.midnightBlue .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #2c3e50; }
+  body.midnightBlue .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.midnightBlue .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #2c3e50;
+    border-color: #2c3e50; }
+  body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #f1c40f; }
+  body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #f1c40f;
+    border-color: #f1c40f; }
+  body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(241, 196, 15, 0.5); }
+  body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(241, 196, 15, 0.5); }
+  body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #f1c40f; }
+  body.sunDlower .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #c29d0b 0%, #f9e8a0 100%); }
+  body.sunDlower .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.sunDlower .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #f1c40f; }
+  body.sunDlower .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #f1c40f; }
+  body.sunDlower .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #f1c40f; }
+  body.sunDlower .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #f1c40f; }
+  body.sunDlower .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.sunDlower .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #f1c40f;
+    border-color: #f1c40f; }
+  body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #e67e22; }
+  body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #e67e22;
+    border-color: #e67e22; }
+  body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(230, 126, 34, 0.5); }
+  body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(230, 126, 34, 0.5); }
+  body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #e67e22; }
+  body.carrot .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #bf6516 0%, #f6ceab 100%); }
+  body.carrot .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.carrot .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #e67e22; }
+  body.carrot .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #e67e22; }
+  body.carrot .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #e67e22; }
+  body.carrot .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #e67e22; }
+  body.carrot .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.carrot .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #e67e22;
+    border-color: #e67e22; }
+  body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #e74c3c; }
+  body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #e74c3c;
+    border-color: #e74c3c; }
+  body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(231, 76, 60, 0.5); }
+  body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(231, 76, 60, 0.5); }
+  body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #e74c3c; }
+  body.alizarin .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #d62c1a 0%, #f8c9c4 100%); }
+  body.alizarin .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.alizarin .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #e74c3c; }
+  body.alizarin .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #e74c3c; }
+  body.alizarin .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #e74c3c; }
+  body.alizarin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #e74c3c; }
+  body.alizarin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.alizarin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #e74c3c;
+    border-color: #e74c3c; }
+  body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #f39c12; }
+  body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #f39c12;
+    border-color: #f39c12; }
+  body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(243, 156, 18, 0.5); }
+  body.orange .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(243, 156, 18, 0.5); }
+  body.orange .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #f39c12; }
+  body.orange .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #c87f0a 0%, #fad9a4 100%); }
+  body.orange .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.orange .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #f39c12; }
+  body.orange .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #f39c12; }
+  body.orange .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #f39c12; }
+  body.orange .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #f39c12; }
+  body.orange .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.orange .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #f39c12;
+    border-color: #f39c12; }
+  body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #d35400; }
+  body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #d35400;
+    border-color: #d35400; }
+  body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(211, 84, 0, 0.5); }
+  body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(211, 84, 0, 0.5); }
+  body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #d35400; }
+  body.pumpkin .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #a04000 0%, #ffa76d 100%); }
+  body.pumpkin .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.pumpkin .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #d35400; }
+  body.pumpkin .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #d35400; }
+  body.pumpkin .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #d35400; }
+  body.pumpkin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #d35400; }
+  body.pumpkin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.pumpkin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #d35400;
+    border-color: #d35400; }
+  body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #c0392b; }
+  body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #c0392b;
+    border-color: #c0392b; }
+  body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
+    background-color: rgba(192, 57, 43, 0.5); }
+  body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
+    background-color: rgba(192, 57, 43, 0.5); }
+  body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
+    background-color: #c0392b; }
+  body.pomegranate .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
+    background: linear-gradient(to right, #962d22 0%, #e9a39b 100%); }
+  body.pomegranate .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+  body.pomegranate .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+    color: #c0392b; }
+  body.pomegranate .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
+    background-color: #c0392b; }
+  body.pomegranate .music-play-unit .music-slider-holder .music-current-duration.active {
+    color: #c0392b; }
+  body.pomegranate .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+    background-color: #c0392b; }
+  body.pomegranate .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
+  body.pomegranate .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+    background-color: #c0392b;
+    border-color: #c0392b; }
   body .h100 {
     height: 100%; }
   body.start {
@@ -504,12 +963,7 @@ body {
               height: 24px;
               width: 24px;
               position: relative;
-              top: 18px;
-              /*&.jumptoMain48 {
-                                height: 24px;
-                                width: 24px;
-                                top: 18px;
-                            }*/ }
+              top: 18px; }
               body.start.launch .icon-hodlers .nsg-action-holder .icon-container .icon.noPos {
                 top: 2px;
                 height: 18px;
@@ -637,7 +1091,9 @@ body {
     width: 48px;
     height: 48px;
     float: right;
-    background: #000; }
+    background: transparent; }
+    .app-top-window-controls .icon-container:hover {
+      background: #000; }
     .app-top-window-controls .icon-container .icon-png {
       width: 48px;
       height: 48px;
@@ -723,10 +1179,13 @@ body {
         opacity: 0.60; }
     .full-screen-media-page .app-settings-holder .settings-panel-holder {
       width: 100%;
-      height: calc(100vh - 48px); }
+      height: calc(100vh - 48px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar; }
       .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher {
         width: 100%;
-        margin: 30px 0 30px 0;
+        margin: 30px 0 50px 0;
         padding: 0 15px; }
         .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container {
           padding: 0; }
@@ -753,16 +1212,37 @@ body {
             background-color: rgba(148, 15, 209, 0.5); }
           .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
             background-color: #940fd1; }
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher md-switch.md-checked.md-focused ._md-thumb:before {
+            background: rgba(0, 0, 0, 0.5); }
         .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher .settings-theme-bg {
           border: none;
           height: 200px;
           background-color: #565656;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           background-position: center;
           background-size: cover;
           margin-top: 15px;
           cursor: pointer;
-          outline: none; }
+          outline: none;
+          -moz-transition: all 0.3s ease-out 0s;
+          -o-transition: all 0.3s ease-out 0s;
+          -webkit-transition: all 0.3s ease-out 0s;
+          transition: all 0.3s ease-out 0s;
+          -moz-transform: translateY(0px);
+          -ms-transform: translateY(0px);
+          -o-transform: translateY(0px);
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+          opacity: 1; }
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher .settings-theme-bg.ng-hide {
+            opacity: 0;
+            -moz-transform: translateY(-30px);
+            -ms-transform: translateY(-30px);
+            -o-transform: translateY(-30px);
+            -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
           .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher .settings-theme-bg.hasShadow {
             -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.33);
             -moz-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.33);
@@ -776,6 +1256,9 @@ body {
           .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher .settings-theme-bg .icon-container {
             width: 100%;
             height: 100%;
+            -moz-transition: all linear 0.3s;
+            -o-transition: all linear 0.3s;
+            -webkit-transition: all linear 0.3s;
             transition: all linear 0.3s; }
             .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher .settings-theme-bg .icon-container i.icon-png {
               width: 48px;
@@ -783,6 +1266,50 @@ body {
               margin: 76px auto;
               display: block;
               float: none; }
+        .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.accent-picker {
+          height: 200px;
+          margin: -15px 0 30px 0;
+          overflow: hidden; }
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.accent-picker .settings-color-picker {
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            -moz-transform: rotate(-20deg);
+            -ms-transform: rotate(-20deg);
+            -o-transform: rotate(-20deg);
+            -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg); }
+            .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.accent-picker .settings-color-picker .color-plate {
+              width: 120px;
+              height: 48px;
+              position: absolute;
+              left: 127px;
+              -moz-transform-origin: 0 24px;
+              -ms-transform-origin: 0 24px;
+              -o-transform-origin: 0 24px;
+              -webkit-transform-origin: 0 24px;
+              transform-origin: 0 24px;
+              top: 140px;
+              border-radius: 7%;
+              border: 2px solid #262626;
+              -moz-transform: rotate(-150deg) scale(1, 1);
+              -ms-transform: rotate(-150deg) scale(1, 1);
+              -o-transform: rotate(-150deg) scale(1, 1);
+              -webkit-transform: rotate(-150deg) scale(1, 1);
+              transform: rotate(-150deg) scale(1, 1);
+              outline: none; }
+              .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.accent-picker .settings-color-picker .color-plate:active {
+                -moz-transform: scale(0.9, 0.9);
+                -ms-transform: scale(0.9, 0.9);
+                -o-transform: scale(0.9, 0.9);
+                -webkit-transform: scale(0.9, 0.9);
+                transform: scale(0.9, 0.9); }
+              .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.accent-picker .settings-color-picker .color-plate.ng-enter {
+                -moz-animation: color_track_pl_enter 0.3s linear;
+                -o-animation: color_track_pl_enter 0.3s linear;
+                -webkit-animation: color_track_pl_enter 0.3s linear;
+                animation: color_track_pl_enter 0.3s linear; }
   .full-screen-media-page .music-playlist-holder {
     position: absolute;
     top: 0;
@@ -875,10 +1402,12 @@ body {
           .full-screen-media-page .music-playlist-holder .tracks-holder .music-playlist-controls .actions-holder .icon-container {
             height: 48px; }
             .full-screen-media-page .music-playlist-holder .tracks-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-              width: 36px;
-              height: 36px;
+              width: 24px;
+              height: 24px;
               top: 6px;
               left: 6px; }
+              .full-screen-media-page .music-playlist-holder .tracks-holder .music-playlist-controls .actions-holder .icon-container i.icon-png.playlist-shuffle {
+                top: 12px; }
             .full-screen-media-page .music-playlist-holder .tracks-holder .music-playlist-controls .actions-holder .icon-container.w33 {
               width: 33%; }
             .full-screen-media-page .music-playlist-holder .tracks-holder .music-playlist-controls .actions-holder .icon-container.w25 {
@@ -1146,7 +1675,7 @@ body {
         text-align: left;
         left: 2px; }
         .full-screen-media-page .music-play-unit .music-slider-holder .music-current-duration.active {
-          color: #820eb8; }
+          color: #940fd1; }
       .full-screen-media-page .music-play-unit .music-slider-holder .music-total-duration {
         text-align: right;
         right: 2px; }
@@ -1155,11 +1684,11 @@ body {
         .full-screen-media-page .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track:not(._md-track-fill) {
           background-color: #303030; }
         .full-screen-media-page .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-          background-color: #820eb8; }
+          background-color: #940fd1; }
         .full-screen-media-page .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
         .full-screen-media-page .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
-          background-color: #820eb8;
-          border-color: #820eb8; }
+          background-color: #940fd1;
+          border-color: #940fd1; }
     .full-screen-media-page .music-play-unit .music-play-controls {
       width: 100%;
       height: 48px;
@@ -1275,11 +1804,20 @@ body {
   position: relative;
   display: inline-block; }
   .icon-png.playlist-add {
-    background-image: url(../../images/icons/playlist-add.png); }
+    width: 24px;
+    height: 24px;
+    -webkit-mask: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAACdGdVrAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEUAAAD///////8AAAA4fh26AAAAA3RSTlMAu+669XzSAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABxJREFUCNdjYGBgdGAAAWpQoaFhU0NDYRQ1jQYATHEKFbzJbGEAAAAASUVORK5CYII=) no-repeat;
+    mask: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAACdGdVrAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEUAAAD///////8AAAA4fh26AAAAA3RSTlMAu+669XzSAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABxJREFUCNdjYGBgdGAAAWpQoaFhU0NDYRQ1jQYATHEKFbzJbGEAAAAASUVORK5CYII=) no-repeat; }
   .icon-png.playlist-clear {
-    background-image: url(../../images/icons/playlist-clear.png); }
+    width: 24px;
+    height: 24px;
+    -webkit-mask: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYBAMAAAAIZcBFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEUAAAD///////////////////////////////////////8AAAC0t6v7AAAACnRSTlMAIt13u0TMiGYz6cSUqwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABLSURBVBjTY2BgYBBatWoxAwRYGRt7wZhgBCRWwQBD8BJjMLByZmCA6uAyQGMGsxoEQ5lWzAusBoSJ5AZsjlSD+KKqgYFhEsRnyxkAKdwwKaV0RlcAAAAASUVORK5CYII=) no-repeat;
+    mask: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYBAMAAAAIZcBFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEUAAAD///////////////////////////////////////8AAAC0t6v7AAAACnRSTlMAIt13u0TMiGYz6cSUqwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABLSURBVBjTY2BgYBBatWoxAwRYGRt7wZhgBCRWwQBD8BJjMLByZmCA6uAyQGMGsxoEQ5lWzAusBoSJ5AZsjlSD+KKqgYFhEsRnyxkAKdwwKaV0RlcAAAAASUVORK5CYII=) no-repeat; }
   .icon-png.playlist-shuffle {
-    background-image: url(../../images/icons/playlist-shuffle.png); }
+    width: 24px;
+    height: 24px;
+    -webkit-mask: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASBAMAAACzwgOtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEUAAAD///////////////////////////////////////////////////////8AAAA78yIiAAAADnRSTlMAZswR7ruIM1V3RN2qIsN5fnkAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAd0lEQVQI12NggAFGAQYEYHqIxGHWE2B4ElYAZpeFvHvBMC3u0QIgu+ldmJ4yUFr6jQGDzWthxkcGIBVT3NldJjAwKYOVsweXuANVGEAMYne6gDD1tjuCze5SHA5XhmQAs/RTAwZTiNFASxvglqI4B8Wh2L0A9BwAMHwjegNJKwoAAAAASUVORK5CYII=) no-repeat;
+    mask: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASBAMAAACzwgOtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEUAAAD///////////////////////////////////////////////////////8AAAA78yIiAAAADnRSTlMAZswR7ruIM1V3RN2qIsN5fnkAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAd0lEQVQI12NggAFGAQYEYHqIxGHWE2B4ElYAZpeFvHvBMC3u0QIgu+ldmJ4yUFr6jQGDzWthxkcGIBVT3NldJjAwKYOVsweXuANVGEAMYne6gDD1tjuCze5SHA5XhmQAs/RTAwZTiNFASxvglqI4B8Wh2L0A9BwAMHwjegNJKwoAAAAASUVORK5CYII=) no-repeat; }
   .icon-png.media-back-to-window {
     background-image: url(../../images/icons/media-back-to-window.png);
     background-size: 36px 36px;
@@ -1340,7 +1878,7 @@ body {
     background-size: 30px;
     background-position: 9px; }
 
-.lightThemed .app-top-window-controls .icon-container {
+.lightThemed .app-top-window-controls .icon-container:hover {
   background: #e6e6e6; }
 
 .lightThemed .full-screen-media-page .app-settings-holder {
@@ -1575,6 +2113,28 @@ body {
     -webkit-transform: scale(0.5);
     transform: scale(0.5); } }
 
+@keyframes color_track_pl_enter {
+  0% {
+    opacity: 0;
+    -moz-transform: rotate(-150deg) scale(0.5);
+    -ms-transform: rotate(-150deg) scale(0.5);
+    -o-transform: rotate(-150deg) scale(0.5);
+    -webkit-transform: rotate(-150deg) scale(0.5);
+    transform: rotate(-150deg) scale(0.5); }
+  70% {
+    -moz-transform: rotate(-150deg) scale(1.02);
+    -ms-transform: rotate(-150deg) scale(1.02);
+    -o-transform: rotate(-150deg) scale(1.02);
+    -webkit-transform: rotate(-150deg) scale(1.02);
+    transform: rotate(-150deg) scale(1.02); }
+  100% {
+    opacity: 1;
+    -moz-transform: rotate(-150deg) scale(1);
+    -ms-transform: rotate(-150deg) scale(1);
+    -o-transform: rotate(-150deg) scale(1);
+    -webkit-transform: rotate(-150deg) scale(1);
+    transform: rotate(-150deg) scale(1); } }
+
 @keyframes anim_up_down_fill {
   0%, 100% {
     height: 0; }
@@ -1588,7 +2148,7 @@ body {
       font-size: xx-large; } }
 
 @media (max-width: 580px) {
-  .app-top-window-controls {
+  .app-top-window-controls .xsHidden {
     display: none; }
   .music-play-unit {
     width: calc(100% - 60px); }

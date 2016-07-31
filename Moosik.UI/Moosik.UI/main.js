@@ -27,7 +27,7 @@ function createMainWindow(color, skipShades) {
 
     mainWindow = new BrowserWindow({ width: appWidth * multipler, height: appHeight * multipler, icon: 'images/icon@4x.ico', resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, title: 'Music', show: false, fullscreen: false });
     mainWindow.loadURL('file://' + __dirname + '/index.html')
-    mainWindow.webContents.openDevTools()
+    //mainWindow.webContents.openDevTools()
     mainWindow.on('closed', function () {
         mainWindow = null;
         app.quit();
@@ -98,5 +98,15 @@ electron.ipcMain.on('app-load-new-bg', (event, arg) => {
         }
     });
 });
+
+/* COLOR EXTARCTION SNIPPET FROM FLATUI */
+//var colors = [];
+//$('.color').each(function (c) {
+//    console.log(c);
+//    var name = $(this).attr('class');
+//    var code = $(this).attr('data-clipboard-text');
+//    colors.push({ name: name, code: code });
+//});
+//console.log(JSON.stringify(colors));
 
 //"package": "electron-packager . --platform=win32 --arch=all --prune --asar --out=releases/alpha --icon=images/icon@4x.ico"

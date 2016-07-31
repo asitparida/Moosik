@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="dist/css/anim-in-out.css" />
     <script type="text/javascript" src="lib/hammer.min.js"></script>
     <script type="text/javascript" src="lib/d3.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.svgInject.js"></script>
     <script type="text/javascript" src="lib/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-material.js"></script>
     <script type="text/javascript" src="lib/angular-resource.min.js"></script>
@@ -29,15 +31,15 @@
     <script type="text/javascript" src="dist/js/directives/ng-mousewheel-down.directive.js"></script>
     <script type="text/javascript" src="dist/js/controllers/app.controller.js"></script>
 </head>
-<body ng-controller="AppController as app" style="height:540px;overflow-y:hidden;background:#262626" ng-class="{'lightThemed': app.shared.darkTheme == false}">
+<body class="{{app.shared.activeColorMode.colorId}}" ng-controller="AppController as app" style="height:540px;overflow-y:hidden;background:#262626" ng-class="{'lightThemed': app.shared.darkTheme == false}">
     <div class="app-top-window-controls" ng-show="app.hideLoader">
-        <div class="icon-container" ng-click="app.closeApp()">
+        <div class="icon-container xsHidden" ng-click="app.closeApp()">
             <i class="icon-png app-close"></i>
         </div>
-        <div class="icon-container" ng-click="app.shared.openSettings()">
+        <div class="icon-container xsHidden" ng-click="app.shared.openSettings()">
             <i class="icon-png app-settings"></i>
         </div>
-        <div class="icon-container" ng-click="app.maximizeMinimize()">
+        <div class="icon-container xsHidden" ng-click="app.maximizeMinimize()">
             <i class="icon-png media-back-to-window" ng-show="app.shared.maximized"></i>
             <i class="icon-png media-maximize" ng-show="!app.shared.maximized"></i>
         </div>

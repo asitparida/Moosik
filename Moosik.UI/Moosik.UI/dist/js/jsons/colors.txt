@@ -1,0 +1,17 @@
+﻿&.turquoise         {@include color-defines-css(     $turquoise     );          }
+&.emerland          {@include color-defines-css(     $emerland      );          }
+&.peterRiver        {@include color-defines-css(     $peterRiver    );          }
+&.amethyst          {@include color-defines-css(     $amethyst      );          }
+&.moosikPurple      {@include color-defines-css(     $moosikPurple   );         }
+&.wetAsphalt        {@include color-defines-css(     $wetAsphalt    );          }
+&.greenSea          {@include color-defines-css(     $greenSea      );          }
+&.nephritis         {@include color-defines-css(     $nephritis     );          }
+&.belizeHole        {@include color-defines-css(     $belizeHole   );           }
+&.wisteria          {@include color-defines-css(     $wisteria     );           }
+&.midnightBlue      {@include color-defines-css(     $midnightBlue   );         }
+&.sunDlower         {@include color-defines-css(     $sunDlower    );           }
+&.carrot            {@include color-defines-css(     $carrot       );           }
+&.alizarin          {@include color-defines-css(     $alizarin      );          }
+&.orange            {@include color-defines-css(     $orange        );          }
+&.pumpkin           {@include color-defines-css(     $pumpkin        );         }
+&.pomegranate       {@include color-defines-css(     $pomegranate       );      }

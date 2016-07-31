@@ -34,7 +34,21 @@ angular.module('MusicUI')
     self.bgImage = false;
     self.bgImgSrc = null;
     self.bgImageAvailable = false;
-    self.bgOpacity = 900;
+    self.bgOpacity = 900
+    self.colorModes =
+    [
+        { id: _.uniqueId('col'), colorId: "turquoise", name: "turquoise", code: "#1abc9c" },
+        { id: _.uniqueId('col'), colorId: "emerland", name: "emerland", code: "#2ecc71" },
+        { id: _.uniqueId('col'), colorId: "peterRiver", name: "peter river", code: "#3498db" },
+        { id: _.uniqueId('col'), colorId: "moosikPurple", name: "moosik purple", code: "#820EB8" },
+        { id: _.uniqueId('col'), colorId: "wetAsphalt", name: "wet asphalt", code: "#34495e" },
+        { id: _.uniqueId('col'), colorId: "nephritis", name: "nephritis", code: "#27ae60" },
+        { id: _.uniqueId('col'), colorId: "sunDlower", name: "sun flower", code: "#f1c40f" },
+        { id: _.uniqueId('col'), colorId: "carrot", name: "carrot", code: "#e67e22" },
+        { id: _.uniqueId('col'), colorId: "alizarin", name: "alizarin", code: "#e74c3c" },
+        { id: _.uniqueId('col'), colorId: "orange", name: "orange", code: "#f39c12" }
+    ];
+    self.activeColorMode = self.colorModes[3];
     self.gainModes = [
         { id: 1, value: -1, mute: true },
         { id: 2, value: -0.33, mute: false },
@@ -297,6 +311,22 @@ angular.module('MusicUI')
 
     self.openSettings = function () {
         self.settingsPaneShown = !self.settingsPaneShown;
+        if (self.settingsPaneShown == true && self.settingsPaneColorsInitalized != true) {
+            self.settingsPaneColorsInitalized = true;
+            self.shownColorModes = [];
+            $timeout(function () {
+                _.each(self.colorModes, function (cm, iter) {
+                    self.shownColorModes.push(cm);
+                    cm.transition = 'all ' + (50 + (150 * (iter + 1))) + 'ms' + ' ease-out';
+                });
+                _.each(self.colorModes, function (cm, iter) {
+                    $timeout(function () {
+                        var _elem = document.getElementById('color_' + cm.colorId);
+                        _elem.style.transform = 'rotate(' + (-150 + (iter * 18)) + 'deg)';
+                    }, 400);
+                });
+            }, 100);
+        }
     }
 
     self.closeSettings = function () {
@@ -332,6 +362,10 @@ angular.module('MusicUI')
         } catch (e) {
 
         }
+    }
+
+    self.choseColor = function (colorBar) {
+        self.activeColorMode = colorBar;
     }
 
     self.initPlaylist = function () { }
