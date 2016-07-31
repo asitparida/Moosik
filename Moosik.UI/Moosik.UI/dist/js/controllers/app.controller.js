@@ -31,7 +31,6 @@ angular.module('MusicUI')
     self.hideLoader = false;
     self.maximized = false;
     self.playlistShown = false;
-
     $timeout(function () {
         self.hideLoader = true;
         $timeout(function () {
@@ -267,7 +266,7 @@ angular.module('MusicUI')
                return d;
            })
            .attr('fill', function (d) {
-               return 'rgb(130, 14, 184)';
+               return self.shared.activeColorMode.code || '#820EB8';
            });
     }
     self.processConnectAnlayser();

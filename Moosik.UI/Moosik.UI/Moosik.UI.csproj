@@ -84,6 +84,7 @@
     <Content Include="dist\js\directives\ng-mousewheel-down.directive.js" />
     <Content Include="dist\js\directives\ng-mousewheel-up.directive.js" />
     <Content Include="dist\js\directives\ng-long-press.directive.js" />
+    <Content Include="dist\js\jsons\colors.txt" />
     <Content Include="dist\js\services\shared.service.js" />
     <Content Include="dist\js\templates\app-playlist.html" />
     <Content Include="dist\js\templates\app-settings.html" />
@@ -144,6 +145,7 @@
     <Content Include="images\icons\media-unmute.png" />
     <Content Include="images\icons\moosik_200_blank.png" />
     <Content Include="images\icons\playlist-add.png" />
+    <Content Include="images\icons\playlist-add.svg" />
     <Content Include="images\icons\playlist-clear.png" />
     <Content Include="images\icons\playlist-shuffle.png" />
     <Content Include="images\rock-of-ages-broadway-poster.jpg" />
@@ -161,6 +163,8 @@
     <Content Include="lib\buffaudio.js" />
     <Content Include="lib\d3.min.js" />
     <Content Include="lib\hammer.min.js" />
+    <Content Include="lib\jquery-2.2.4.min.js" />
+    <Content Include="lib\jquery.svgInject.js" />
     <Content Include="lib\ui-bootstrap-tpls-1.1.1.min.js" />
     <Content Include="lib\underscore-min.js" />
     <Content Include="packages.config" />
