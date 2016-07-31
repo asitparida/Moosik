@@ -728,6 +728,16 @@ body {
         width: 100%;
         margin: 30px 0 30px 0;
         padding: 0 15px; }
+        .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container {
+          padding: 0; }
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track:not(._md-track-fill) {
+            background-color: #303030; }
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+            background-color: #940fd1; }
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+            background-color: #940fd1;
+            border-color: #940fd1; }
         .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher label.settings-label {
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           font-weight: 100;
@@ -1344,6 +1354,8 @@ body {
   .lightThemed .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher label.settings-label {
     color: #161616;
     opacity: 1; }
+  .lightThemed .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track:not(._md-track-fill) {
+    background-color: #B6b6b6; }
 
 .lightThemed .full-screen-media-page .opaque-screen {
   background: #fff; }

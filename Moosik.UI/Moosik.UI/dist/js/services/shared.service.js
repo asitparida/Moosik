@@ -34,6 +34,7 @@ angular.module('MusicUI')
     self.bgImage = false;
     self.bgImgSrc = null;
     self.bgImageAvailable = false;
+    self.bgOpacity = 900;
     self.gainModes = [
         { id: 1, value: -1, mute: true },
         { id: 2, value: -0.33, mute: false },
