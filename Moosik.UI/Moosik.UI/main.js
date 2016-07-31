@@ -69,7 +69,6 @@ electron.ipcMain.on('app-read-new-file', (event, arg) => {
             console.log("You didn't select the file");
             return;
         }
-        console.log();
         var mm = require('musicmetadata');
         var parser = mm(fs.createReadStream(fileName[0]), { duration: true }, function (err, metadata) {
             if (err) throw err;
@@ -80,7 +79,6 @@ electron.ipcMain.on('app-read-new-file', (event, arg) => {
 });
 
 electron.ipcMain.on('app-load-new-playlist', (event, arg) => {
-    console.log('app-load-new-playlist');
     dialog.showOpenDialog(null, { 'title': 'Choose new mp3 file(s) ', 'filters': [{ name: 'mp3', extensions: ['mp3'] }], 'properties': ['multiSelections'] }, function (fileName) {
         if (fileName === undefined) {
             console.log("You didn't select the file(s).");
