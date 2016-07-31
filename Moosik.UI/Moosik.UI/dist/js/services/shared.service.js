@@ -31,6 +31,13 @@ angular.module('MusicUI')
     self.previousTrackAvailable = false;
     self.nextTrackAvailable = false;
     self.darkTheme = false;
+    self.gainModes = [
+        { id: 1, value: -1, mute: true },
+        { id: 2, value: -0.33, mute: false },
+        { id: 3, value: 0.33, mute: false },
+        { id: 4, value: 1, mute: false }
+    ];
+    self.activeGainMode = 3;
     try {
         self.electron = require('electron');
     } catch (e) {
@@ -292,7 +299,7 @@ angular.module('MusicUI')
         self.settingsPaneShown = false;
     }
 
-    self.themeToggle = function() {
+    self.themeToggle = function () {
         console.log(self.darkTheme);
     }
 

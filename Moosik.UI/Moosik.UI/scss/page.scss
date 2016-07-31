@@ -1169,6 +1169,14 @@ body {
                     }
 
                     .track {
+
+                        &.active {
+                            .track-title,
+                            .track-duration {
+                                color: #d613b5;
+                            }
+                        }
+
                         .track-title {
                             color: #909090;
                         }

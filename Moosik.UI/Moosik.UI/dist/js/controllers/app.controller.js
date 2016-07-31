@@ -88,14 +88,9 @@ angular.module('MusicUI')
     }
 
     self.musicMuteUnmute = function () {
-        if (self.musicMuted == true) {
-            self.musicMuted = false;
-            self.gainNode.gain.value = 1;
-        }
-        else if (self.musicMuted == false) {
-            self.musicMuted = true;
-            self.gainNode.gain.value = -1;
-        }
+        self.shared.activeGainMode = self.shared.activeGainMode + 1 == self.shared.gainModes.length ? 0 : self.shared.activeGainMode + 1;
+        self.gainNode.gain.value = self.shared.gainModes[self.shared.activeGainMode].value;
+        self.musicMuted = self.shared.gainModes[self.shared.activeGainMode].mute;
     }
 
     self.maximizeMinimize = function () {

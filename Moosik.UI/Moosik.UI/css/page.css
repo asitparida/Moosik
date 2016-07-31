@@ -1220,6 +1220,10 @@ body {
 .lightThemed .full-screen-media-page .music-playlist-holder .tracks-holder .track-list .add-track-part label.add-track {
   color: #363636; }
 
+.lightThemed .full-screen-media-page .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
+.lightThemed .full-screen-media-page .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
+  color: #d613b5; }
+
 .lightThemed .full-screen-media-page .music-playlist-holder .tracks-holder .track-list .track .track-title {
   color: #909090; }
 
