@@ -178,7 +178,7 @@ angular.module('MusicUI')
            .attr('x', function (d, i) {
                return i * (svgWidth / self.frequencyData.length);
            })
-           .attr('width', 1);
+           .attr('width', 2);
     }
 
     angular.element($window).bind('resize', function () {
