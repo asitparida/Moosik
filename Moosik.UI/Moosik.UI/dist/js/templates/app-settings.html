@@ -9,17 +9,15 @@
         </div>
     </div>
     <div class="settings-panel-holder">
-        <div class="theme-switcher">
-            <label class="settings-label">Enable Dark Theme</label>
-            <md-switch ng-model="app.shared.darkTheme" ng-change="app.shared.themeToggle()" aria-label="Enable Dark Theme"></md-switch>
-        </div>
-        <div class="theme-switcher">
-            <label class="settings-label">Background Image</label>
-            <md-switch ng-model="app.shared.bgImage" ng-change="app.shared.bgImageToggle()" aria-label="Background Image"></md-switch>
-            <div class="settings-theme-bg" ng-show="app.shared.bgImage" style="background-image: url('{{app.shared.bgImgSrc}}')" ng-click="app.shared.chooseBg()" ng-class="{'hasShadow': app.shared.showBgSelection == false && app.shared.bgImageAvailable == true}">
-                <div class="icon-container" ng-show="app.shared.showBgSelection">
-                    <i class="icon-png media-add"></i>
-                </div>
+        <div class="theme-switcher accent-picker">
+            <label class="settings-label">Accent</label>
+            <div class="settings-color-picker" ng-show="app.shared.settingsPaneColorsInitalized">
+                <div class="color-originator"></div>
+                <div class="color-plate" ng-repeat="color in app.shared.shownColorModes" ng-style="{
+                'background-color':color.code,
+                'z-index': app.shared.shownColorModes.length - $index,
+                'transition':color.transition}" ng-attr-id="color_{{color.colorId}}"
+                     ng-click="app.shared.choseColor(color)"></div>
             </div>
         </div>
         <div class="theme-switcher opacity-changer">
@@ -28,15 +26,17 @@
                 <md-slider min="550" max="950" step="10" ng-model="app.shared.bgOpacity" aria-label="Opacity" id="opacity-slider"></md-slider>
             </md-slider-container>
         </div>
-        <div class="theme-switcher accent-picker">
-            <label class="settings-label">App Accent Color</label>
-            <div class="settings-color-picker">
-                <div class="color-originator"></div>
-                <div class="color-plate" ng-repeat="color in app.shared.shownColorModes" ng-style="{
-                'background-color':color.code,
-                'z-index': app.shared.shownColorModes.length - $index,
-                'transition':color.transition}" ng-attr-id="color_{{color.colorId}}"
-                     ng-click="app.shared.choseColor(color)"></div>
+        <div class="theme-switcher">
+            <label class="settings-label">Enable Dark Theme</label>
+            <md-switch ng-model="app.shared.darkTheme" ng-change="app.shared.themeToggle()" aria-label="Enable Dark Theme"></md-switch>
+        </div>
+        <div class="theme-switcher bgImage-changer">
+            <label class="settings-label">Background Image</label>
+            <md-switch ng-model="app.shared.bgImage" ng-change="app.shared.bgImageToggle()" aria-label="Background Image"></md-switch>
+            <div class="settings-theme-bg" ng-show="app.shared.bgImage" style="background-image: url('{{app.shared.bgImgSrc}}')" ng-click="app.shared.chooseBg()" ng-class="{'hasShadow': app.shared.showBgSelection == false && app.shared.bgImageAvailable == true}">
+                <div class="icon-container" ng-show="app.shared.showBgSelection">
+                    <i class="icon-png media-add"></i>
+                </div>
             </div>
         </div>
     </div>

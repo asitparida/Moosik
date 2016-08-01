@@ -14,7 +14,7 @@ $turquoise: #1abc9c;
 $emerland: #2ecc71;
 $peterRiver: #3498db;
 $amethyst: #9b59b6;
-$moosikPurple: #820EB8;
+$moosikPurple: #d613b5;
 $wetAsphalt: #34495e;
 $greenSea: #16a085;
 $nephritis: #27ae60;
@@ -107,6 +107,7 @@ $pomegranate: #c0392b;
                                 ._md-track {
                                     &._md-track-fill {
                                         background-color: $defcolor;
+                                        transition: background 0.3s linear;
                                     }
                                 }
                             }
@@ -116,10 +117,12 @@ $pomegranate: #c0392b;
                                 ._md-thumb::after {
                                     background-color: $defcolor;
                                     border-color: $defcolor;
+                                    transition: background 0.3s linear, border 0.3s linear;
                                 }
 
                                 ._md-focus-ring {
                                     background-color: rgba($defcolor, 0.5);
+                                    transition: background 0.3s linear;
                                 }
                             }
                         }
@@ -131,11 +134,13 @@ $pomegranate: #c0392b;
                         ._md-container {
                             ._md-bar {
                                 background-color: rgba($defcolor, 0.5);
+                                transition: background 0.3s linear;
                             }
                         }
 
                         ._md-thumb {
                             background-color: $defcolor;
+                            transition: background 0.3s linear;
                         }
                     }
                 }
@@ -151,7 +156,8 @@ $pomegranate: #c0392b;
                 .icon-container {
                     i {
                         &.icon-png {
-                            background: linear-gradient(to right, darken($defcolor, 10) 0%, lighten($defcolor, 30) 100%);
+                            background: linear-gradient(to right, $defcolor 0%, lighten($defcolor, 20) 100%);
+                            transition: background 0.3s linear;
                         }
                     }
                 }
@@ -165,12 +171,14 @@ $pomegranate: #c0392b;
                         .track-title,
                         .track-duration {
                             color: $defcolor;
+                            transition: color 0.3s linear;
                         }
                     }
 
                     .active-marker {
                         .mark {
                             background-color: $defcolor;
+                            transition: background 0.3s linear;
                         }
                     }
                 }
@@ -183,6 +191,7 @@ $pomegranate: #c0392b;
             .music-current-duration {
                 &.active {
                     color: $defcolor;
+                    transition: color 0.3s linear;
                 }
             }
 
@@ -192,6 +201,7 @@ $pomegranate: #c0392b;
                         ._md-track {
                             &._md-track-fill {
                                 background-color: $defcolor;
+                                transition: background 0.3s linear;
                             }
                         }
                     }
@@ -201,6 +211,7 @@ $pomegranate: #c0392b;
                         ._md-thumb::after {
                             background-color: $defcolor;
                             border-color: $defcolor;
+                            transition: background 0.3s linear, border 0.3s linear;
                         }
                     }
                 }
@@ -627,10 +638,15 @@ body {
 
             .theme-switcher {
                 width: 100%;
-                margin: 30px 0 50px 0;
+                margin: 30px 0;
                 padding: 0 15px;
 
+                &.bgImage-changer {
+                    margin: 15px 0 30px 0;
+                }
+
                 &.opacity-changer {
+                    margin: 30px 0 15px 0;
 
                     md-slider-container {
                         padding: 0;
@@ -758,7 +774,7 @@ body {
 
                 &.accent-picker {
                     height: 200px;
-                    margin: -15px 0 30px 0;
+                    margin: 15px 0 45px 0;
                     overflow: hidden;
 
                     .settings-color-picker {
@@ -1636,6 +1652,16 @@ body {
                             }
                         }
                     }
+
+                    &.accent-picker {
+
+                        .settings-color-picker {
+
+                            .color-plate {
+                                border: 2px solid #e0e0e0;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1825,7 +1851,7 @@ body {
     }
 }
 
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+@mixin scrollbars($size, $foreground-color, $background-color) {
     ::-webkit-scrollbar {
         width: $size;
         height: $size;
@@ -1847,7 +1873,15 @@ body {
     }
 }
 
-@include scrollbars(.5em, #909090);
+html {
+    &.light {
+        @include scrollbars(.5em, #C0C0C0, #e0e0e0);
+    }
+
+    &:not(.light) {
+        @include scrollbars(.5em, #666666, #262626);
+    }
+}
 
 @-webkit-keyframes double-bounce-anim {
     0%, 100% {

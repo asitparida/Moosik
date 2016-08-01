@@ -40,7 +40,7 @@ angular.module('MusicUI')
         { id: _.uniqueId('col'), colorId: "turquoise", name: "turquoise", code: "#1abc9c" },
         { id: _.uniqueId('col'), colorId: "emerland", name: "emerland", code: "#2ecc71" },
         { id: _.uniqueId('col'), colorId: "peterRiver", name: "peter river", code: "#3498db" },
-        { id: _.uniqueId('col'), colorId: "moosikPurple", name: "moosik purple", code: "#820EB8" },
+        { id: _.uniqueId('col'), colorId: "moosikPurple", name: "moosik purple", code: "#d613b5" },
         { id: _.uniqueId('col'), colorId: "wetAsphalt", name: "wet asphalt", code: "#34495e" },
         { id: _.uniqueId('col'), colorId: "nephritis", name: "nephritis", code: "#27ae60" },
         { id: _.uniqueId('col'), colorId: "sunDlower", name: "sun flower", code: "#f1c40f" },
@@ -310,8 +310,8 @@ angular.module('MusicUI')
     }
 
     self.openSettings = function () {
-        self.settingsPaneShown = !self.settingsPaneShown;
-        if (self.settingsPaneShown == true && self.settingsPaneColorsInitalized != true) {
+        if (self.settingsPaneShown == false) {
+            self.settingsPaneShown = true;
             self.settingsPaneColorsInitalized = true;
             self.shownColorModes = [];
             $timeout(function () {
@@ -327,14 +327,25 @@ angular.module('MusicUI')
                 });
             }, 100);
         }
+        else {
+            self.settingsPaneColorsInitalized = false;
+            self.settingsPaneShown = false;
+            self.shownColorModes = [];
+        }
     }
 
     self.closeSettings = function () {
+        self.settingsPaneColorsInitalized = false;
         self.settingsPaneShown = false;
+        self.shownColorModes = [];
     }
 
     self.themeToggle = function () {
-        console.log(self.darkTheme);
+        if (self.darkTheme == false) {
+            $('html').addClass('light');
+        } else {
+            $('html').removeClass('light');
+        }
     }
 
     self.bgImageToggle = function () {

@@ -457,464 +457,651 @@ body {
   color: #222222;
   overflow: hidden; }
   body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #1abc9c; }
+    background-color: #1abc9c;
+    transition: background 0.3s linear; }
   body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #1abc9c;
-    border-color: #1abc9c; }
+    border-color: #1abc9c;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(26, 188, 156, 0.5); }
+    background-color: rgba(26, 188, 156, 0.5);
+    transition: background 0.3s linear; }
   body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(26, 188, 156, 0.5); }
+    background-color: rgba(26, 188, 156, 0.5);
+    transition: background 0.3s linear; }
   body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #1abc9c; }
+    background-color: #1abc9c;
+    transition: background 0.3s linear; }
   body.turquoise .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #148f77 0%, #81eed8 100%); }
+    background: linear-gradient(to right, #1abc9c 0%, #55e7ca 100%);
+    transition: background 0.3s linear; }
   body.turquoise .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.turquoise .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #1abc9c; }
+    color: #1abc9c;
+    transition: color 0.3s linear; }
   body.turquoise .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #1abc9c; }
+    background-color: #1abc9c;
+    transition: background 0.3s linear; }
   body.turquoise .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #1abc9c; }
+    color: #1abc9c;
+    transition: color 0.3s linear; }
   body.turquoise .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #1abc9c; }
+    background-color: #1abc9c;
+    transition: background 0.3s linear; }
   body.turquoise .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.turquoise .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #1abc9c;
-    border-color: #1abc9c; }
+    border-color: #1abc9c;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #2ecc71; }
+    background-color: #2ecc71;
+    transition: background 0.3s linear; }
   body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #2ecc71;
-    border-color: #2ecc71; }
+    border-color: #2ecc71;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(46, 204, 113, 0.5); }
+    background-color: rgba(46, 204, 113, 0.5);
+    transition: background 0.3s linear; }
   body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(46, 204, 113, 0.5); }
+    background-color: rgba(46, 204, 113, 0.5);
+    transition: background 0.3s linear; }
   body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #2ecc71; }
+    background-color: #2ecc71;
+    transition: background 0.3s linear; }
   body.emerland .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #25a25a 0%, #a8ebc4 100%); }
+    background: linear-gradient(to right, #2ecc71 0%, #7ee2a8 100%);
+    transition: background 0.3s linear; }
   body.emerland .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.emerland .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #2ecc71; }
+    color: #2ecc71;
+    transition: color 0.3s linear; }
   body.emerland .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #2ecc71; }
+    background-color: #2ecc71;
+    transition: background 0.3s linear; }
   body.emerland .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #2ecc71; }
+    color: #2ecc71;
+    transition: color 0.3s linear; }
   body.emerland .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #2ecc71; }
+    background-color: #2ecc71;
+    transition: background 0.3s linear; }
   body.emerland .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.emerland .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #2ecc71;
-    border-color: #2ecc71; }
+    border-color: #2ecc71;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #3498db; }
+    background-color: #3498db;
+    transition: background 0.3s linear; }
   body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #3498db;
-    border-color: #3498db; }
+    border-color: #3498db;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(52, 152, 219, 0.5); }
+    background-color: rgba(52, 152, 219, 0.5);
+    transition: background 0.3s linear; }
   body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(52, 152, 219, 0.5); }
+    background-color: rgba(52, 152, 219, 0.5);
+    transition: background 0.3s linear; }
   body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #3498db; }
+    background-color: #3498db;
+    transition: background 0.3s linear; }
   body.peterRiver .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #217dbb 0%, #b6daf2 100%); }
+    background: linear-gradient(to right, #3498db 0%, #8bc4ea 100%);
+    transition: background 0.3s linear; }
   body.peterRiver .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.peterRiver .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #3498db; }
+    color: #3498db;
+    transition: color 0.3s linear; }
   body.peterRiver .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #3498db; }
+    background-color: #3498db;
+    transition: background 0.3s linear; }
   body.peterRiver .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #3498db; }
+    color: #3498db;
+    transition: color 0.3s linear; }
   body.peterRiver .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #3498db; }
+    background-color: #3498db;
+    transition: background 0.3s linear; }
   body.peterRiver .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.peterRiver .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #3498db;
-    border-color: #3498db; }
+    border-color: #3498db;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #9b59b6; }
+    background-color: #9b59b6;
+    transition: background 0.3s linear; }
   body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #9b59b6;
-    border-color: #9b59b6; }
+    border-color: #9b59b6;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(155, 89, 182, 0.5); }
+    background-color: rgba(155, 89, 182, 0.5);
+    transition: background 0.3s linear; }
   body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(155, 89, 182, 0.5); }
+    background-color: rgba(155, 89, 182, 0.5);
+    transition: background 0.3s linear; }
   body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #9b59b6; }
+    background-color: #9b59b6;
+    transition: background 0.3s linear; }
   body.amethyst .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #804399 0%, #dbc3e5 100%); }
+    background: linear-gradient(to right, #9b59b6 0%, #c6a0d5 100%);
+    transition: background 0.3s linear; }
   body.amethyst .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.amethyst .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #9b59b6; }
+    color: #9b59b6;
+    transition: color 0.3s linear; }
   body.amethyst .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #9b59b6; }
+    background-color: #9b59b6;
+    transition: background 0.3s linear; }
   body.amethyst .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #9b59b6; }
+    color: #9b59b6;
+    transition: color 0.3s linear; }
   body.amethyst .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #9b59b6; }
+    background-color: #9b59b6;
+    transition: background 0.3s linear; }
   body.amethyst .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.amethyst .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #9b59b6;
-    border-color: #9b59b6; }
+    border-color: #9b59b6;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #820EB8; }
+    background-color: #d613b5;
+    transition: background 0.3s linear; }
   body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
-    background-color: #820EB8;
-    border-color: #820EB8; }
+    background-color: #d613b5;
+    border-color: #d613b5;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(130, 14, 184, 0.5); }
+    background-color: rgba(214, 19, 181, 0.5);
+    transition: background 0.3s linear; }
   body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(130, 14, 184, 0.5); }
+    background-color: rgba(214, 19, 181, 0.5);
+    transition: background 0.3s linear; }
   body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #820EB8; }
+    background-color: #d613b5;
+    transition: background 0.3s linear; }
   body.moosikPurple .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #610a89 0%, #c86bf4 100%); }
+    background: linear-gradient(to right, #d613b5 0%, #f15ed8 100%);
+    transition: background 0.3s linear; }
   body.moosikPurple .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.moosikPurple .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #820EB8; }
+    color: #d613b5;
+    transition: color 0.3s linear; }
   body.moosikPurple .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #820EB8; }
+    background-color: #d613b5;
+    transition: background 0.3s linear; }
   body.moosikPurple .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #820EB8; }
+    color: #d613b5;
+    transition: color 0.3s linear; }
   body.moosikPurple .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #820EB8; }
+    background-color: #d613b5;
+    transition: background 0.3s linear; }
   body.moosikPurple .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.moosikPurple .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
-    background-color: #820EB8;
-    border-color: #820EB8; }
+    background-color: #d613b5;
+    border-color: #d613b5;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #34495e; }
+    background-color: #34495e;
+    transition: background 0.3s linear; }
   body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #34495e;
-    border-color: #34495e; }
+    border-color: #34495e;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(52, 73, 94, 0.5); }
+    background-color: rgba(52, 73, 94, 0.5);
+    transition: background 0.3s linear; }
   body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(52, 73, 94, 0.5); }
+    background-color: rgba(52, 73, 94, 0.5);
+    transition: background 0.3s linear; }
   body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #34495e; }
+    background-color: #34495e;
+    transition: background 0.3s linear; }
   body.wetAsphalt .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #22303d 0%, #7796b4 100%); }
+    background: linear-gradient(to right, #34495e 0%, #587ca0 100%);
+    transition: background 0.3s linear; }
   body.wetAsphalt .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.wetAsphalt .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #34495e; }
+    color: #34495e;
+    transition: color 0.3s linear; }
   body.wetAsphalt .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #34495e; }
+    background-color: #34495e;
+    transition: background 0.3s linear; }
   body.wetAsphalt .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #34495e; }
+    color: #34495e;
+    transition: color 0.3s linear; }
   body.wetAsphalt .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #34495e; }
+    background-color: #34495e;
+    transition: background 0.3s linear; }
   body.wetAsphalt .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.wetAsphalt .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #34495e;
-    border-color: #34495e; }
+    border-color: #34495e;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #16a085; }
+    background-color: #16a085;
+    transition: background 0.3s linear; }
   body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #16a085;
-    border-color: #16a085; }
+    border-color: #16a085;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(22, 160, 133, 0.5); }
+    background-color: rgba(22, 160, 133, 0.5);
+    transition: background 0.3s linear; }
   body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(22, 160, 133, 0.5); }
+    background-color: rgba(22, 160, 133, 0.5);
+    transition: background 0.3s linear; }
   body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #16a085; }
+    background-color: #16a085;
+    transition: background 0.3s linear; }
   body.greenSea .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #107360 0%, #65ead0 100%); }
+    background: linear-gradient(to right, #16a085 0%, #38e4c2 100%);
+    transition: background 0.3s linear; }
   body.greenSea .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.greenSea .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #16a085; }
+    color: #16a085;
+    transition: color 0.3s linear; }
   body.greenSea .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #16a085; }
+    background-color: #16a085;
+    transition: background 0.3s linear; }
   body.greenSea .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #16a085; }
+    color: #16a085;
+    transition: color 0.3s linear; }
   body.greenSea .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #16a085; }
+    background-color: #16a085;
+    transition: background 0.3s linear; }
   body.greenSea .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.greenSea .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #16a085;
-    border-color: #16a085; }
+    border-color: #16a085;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #27ae60; }
+    background-color: #27ae60;
+    transition: background 0.3s linear; }
   body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #27ae60;
-    border-color: #27ae60; }
+    border-color: #27ae60;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(39, 174, 96, 0.5); }
+    background-color: rgba(39, 174, 96, 0.5);
+    transition: background 0.3s linear; }
   body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(39, 174, 96, 0.5); }
+    background-color: rgba(39, 174, 96, 0.5);
+    transition: background 0.3s linear; }
   body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #27ae60; }
+    background-color: #27ae60;
+    transition: background 0.3s linear; }
   body.nephritis .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #1e8449 0%, #89e5b0 100%); }
+    background: linear-gradient(to right, #27ae60 0%, #60db94 100%);
+    transition: background 0.3s linear; }
   body.nephritis .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.nephritis .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #27ae60; }
+    color: #27ae60;
+    transition: color 0.3s linear; }
   body.nephritis .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #27ae60; }
+    background-color: #27ae60;
+    transition: background 0.3s linear; }
   body.nephritis .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #27ae60; }
+    color: #27ae60;
+    transition: color 0.3s linear; }
   body.nephritis .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #27ae60; }
+    background-color: #27ae60;
+    transition: background 0.3s linear; }
   body.nephritis .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.nephritis .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #27ae60;
-    border-color: #27ae60; }
+    border-color: #27ae60;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #2980b9; }
+    background-color: #2980b9;
+    transition: background 0.3s linear; }
   body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #2980b9;
-    border-color: #2980b9; }
+    border-color: #2980b9;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(41, 128, 185, 0.5); }
+    background-color: rgba(41, 128, 185, 0.5);
+    transition: background 0.3s linear; }
   body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(41, 128, 185, 0.5); }
+    background-color: rgba(41, 128, 185, 0.5);
+    transition: background 0.3s linear; }
   body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #2980b9; }
+    background-color: #2980b9;
+    transition: background 0.3s linear; }
   body.belizeHole .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #20638f 0%, #94c6e7 100%); }
+    background: linear-gradient(to right, #2980b9 0%, #6ab0de 100%);
+    transition: background 0.3s linear; }
   body.belizeHole .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.belizeHole .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #2980b9; }
+    color: #2980b9;
+    transition: color 0.3s linear; }
   body.belizeHole .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #2980b9; }
+    background-color: #2980b9;
+    transition: background 0.3s linear; }
   body.belizeHole .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #2980b9; }
+    color: #2980b9;
+    transition: color 0.3s linear; }
   body.belizeHole .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #2980b9; }
+    background-color: #2980b9;
+    transition: background 0.3s linear; }
   body.belizeHole .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.belizeHole .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #2980b9;
-    border-color: #2980b9; }
+    border-color: #2980b9;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #8e44ad; }
+    background-color: #8e44ad;
+    transition: background 0.3s linear; }
   body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #8e44ad;
-    border-color: #8e44ad; }
+    border-color: #8e44ad;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(142, 68, 173, 0.5); }
+    background-color: rgba(142, 68, 173, 0.5);
+    transition: background 0.3s linear; }
   body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(142, 68, 173, 0.5); }
+    background-color: rgba(142, 68, 173, 0.5);
+    transition: background 0.3s linear; }
   body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #8e44ad; }
+    background-color: #8e44ad;
+    transition: background 0.3s linear; }
   body.wisteria .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #703688 0%, #cfacde 100%); }
+    background: linear-gradient(to right, #8e44ad 0%, #ba87d0 100%);
+    transition: background 0.3s linear; }
   body.wisteria .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.wisteria .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #8e44ad; }
+    color: #8e44ad;
+    transition: color 0.3s linear; }
   body.wisteria .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #8e44ad; }
+    background-color: #8e44ad;
+    transition: background 0.3s linear; }
   body.wisteria .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #8e44ad; }
+    color: #8e44ad;
+    transition: color 0.3s linear; }
   body.wisteria .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #8e44ad; }
+    background-color: #8e44ad;
+    transition: background 0.3s linear; }
   body.wisteria .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.wisteria .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #8e44ad;
-    border-color: #8e44ad; }
+    border-color: #8e44ad;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #2c3e50; }
+    background-color: #2c3e50;
+    transition: background 0.3s linear; }
   body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #2c3e50;
-    border-color: #2c3e50; }
+    border-color: #2c3e50;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(44, 62, 80, 0.5); }
+    background-color: rgba(44, 62, 80, 0.5);
+    transition: background 0.3s linear; }
   body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(44, 62, 80, 0.5); }
+    background-color: rgba(44, 62, 80, 0.5);
+    transition: background 0.3s linear; }
   body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #2c3e50; }
+    background-color: #2c3e50;
+    transition: background 0.3s linear; }
   body.midnightBlue .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #1a252f 0%, #698bac 100%); }
+    background: linear-gradient(to right, #2c3e50 0%, #507192 100%);
+    transition: background 0.3s linear; }
   body.midnightBlue .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.midnightBlue .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #2c3e50; }
+    color: #2c3e50;
+    transition: color 0.3s linear; }
   body.midnightBlue .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #2c3e50; }
+    background-color: #2c3e50;
+    transition: background 0.3s linear; }
   body.midnightBlue .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #2c3e50; }
+    color: #2c3e50;
+    transition: color 0.3s linear; }
   body.midnightBlue .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #2c3e50; }
+    background-color: #2c3e50;
+    transition: background 0.3s linear; }
   body.midnightBlue .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.midnightBlue .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #2c3e50;
-    border-color: #2c3e50; }
+    border-color: #2c3e50;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #f1c40f; }
+    background-color: #f1c40f;
+    transition: background 0.3s linear; }
   body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #f1c40f;
-    border-color: #f1c40f; }
+    border-color: #f1c40f;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(241, 196, 15, 0.5); }
+    background-color: rgba(241, 196, 15, 0.5);
+    transition: background 0.3s linear; }
   body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(241, 196, 15, 0.5); }
+    background-color: rgba(241, 196, 15, 0.5);
+    transition: background 0.3s linear; }
   body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #f1c40f; }
+    background-color: #f1c40f;
+    transition: background 0.3s linear; }
   body.sunDlower .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #c29d0b 0%, #f9e8a0 100%); }
+    background: linear-gradient(to right, #f1c40f 0%, #f7dc6f 100%);
+    transition: background 0.3s linear; }
   body.sunDlower .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.sunDlower .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #f1c40f; }
+    color: #f1c40f;
+    transition: color 0.3s linear; }
   body.sunDlower .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #f1c40f; }
+    background-color: #f1c40f;
+    transition: background 0.3s linear; }
   body.sunDlower .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #f1c40f; }
+    color: #f1c40f;
+    transition: color 0.3s linear; }
   body.sunDlower .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #f1c40f; }
+    background-color: #f1c40f;
+    transition: background 0.3s linear; }
   body.sunDlower .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.sunDlower .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #f1c40f;
-    border-color: #f1c40f; }
+    border-color: #f1c40f;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #e67e22; }
+    background-color: #e67e22;
+    transition: background 0.3s linear; }
   body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #e67e22;
-    border-color: #e67e22; }
+    border-color: #e67e22;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(230, 126, 34, 0.5); }
+    background-color: rgba(230, 126, 34, 0.5);
+    transition: background 0.3s linear; }
   body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(230, 126, 34, 0.5); }
+    background-color: rgba(230, 126, 34, 0.5);
+    transition: background 0.3s linear; }
   body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #e67e22; }
+    background-color: #e67e22;
+    transition: background 0.3s linear; }
   body.carrot .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #bf6516 0%, #f6ceab 100%); }
+    background: linear-gradient(to right, #e67e22 0%, #f0b37e 100%);
+    transition: background 0.3s linear; }
   body.carrot .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.carrot .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #e67e22; }
+    color: #e67e22;
+    transition: color 0.3s linear; }
   body.carrot .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #e67e22; }
+    background-color: #e67e22;
+    transition: background 0.3s linear; }
   body.carrot .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #e67e22; }
+    color: #e67e22;
+    transition: color 0.3s linear; }
   body.carrot .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #e67e22; }
+    background-color: #e67e22;
+    transition: background 0.3s linear; }
   body.carrot .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.carrot .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #e67e22;
-    border-color: #e67e22; }
+    border-color: #e67e22;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #e74c3c; }
+    background-color: #e74c3c;
+    transition: background 0.3s linear; }
   body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #e74c3c;
-    border-color: #e74c3c; }
+    border-color: #e74c3c;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(231, 76, 60, 0.5); }
+    background-color: rgba(231, 76, 60, 0.5);
+    transition: background 0.3s linear; }
   body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(231, 76, 60, 0.5); }
+    background-color: rgba(231, 76, 60, 0.5);
+    transition: background 0.3s linear; }
   body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #e74c3c; }
+    background-color: #e74c3c;
+    transition: background 0.3s linear; }
   body.alizarin .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #d62c1a 0%, #f8c9c4 100%); }
+    background: linear-gradient(to right, #e74c3c 0%, #f29f97 100%);
+    transition: background 0.3s linear; }
   body.alizarin .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.alizarin .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #e74c3c; }
+    color: #e74c3c;
+    transition: color 0.3s linear; }
   body.alizarin .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #e74c3c; }
+    background-color: #e74c3c;
+    transition: background 0.3s linear; }
   body.alizarin .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #e74c3c; }
+    color: #e74c3c;
+    transition: color 0.3s linear; }
   body.alizarin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #e74c3c; }
+    background-color: #e74c3c;
+    transition: background 0.3s linear; }
   body.alizarin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.alizarin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #e74c3c;
-    border-color: #e74c3c; }
+    border-color: #e74c3c;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #f39c12; }
+    background-color: #f39c12;
+    transition: background 0.3s linear; }
   body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #f39c12;
-    border-color: #f39c12; }
+    border-color: #f39c12;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(243, 156, 18, 0.5); }
+    background-color: rgba(243, 156, 18, 0.5);
+    transition: background 0.3s linear; }
   body.orange .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(243, 156, 18, 0.5); }
+    background-color: rgba(243, 156, 18, 0.5);
+    transition: background 0.3s linear; }
   body.orange .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #f39c12; }
+    background-color: #f39c12;
+    transition: background 0.3s linear; }
   body.orange .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #c87f0a 0%, #fad9a4 100%); }
+    background: linear-gradient(to right, #f39c12 0%, #f8c573 100%);
+    transition: background 0.3s linear; }
   body.orange .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.orange .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #f39c12; }
+    color: #f39c12;
+    transition: color 0.3s linear; }
   body.orange .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #f39c12; }
+    background-color: #f39c12;
+    transition: background 0.3s linear; }
   body.orange .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #f39c12; }
+    color: #f39c12;
+    transition: color 0.3s linear; }
   body.orange .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #f39c12; }
+    background-color: #f39c12;
+    transition: background 0.3s linear; }
   body.orange .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.orange .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #f39c12;
-    border-color: #f39c12; }
+    border-color: #f39c12;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #d35400; }
+    background-color: #d35400;
+    transition: background 0.3s linear; }
   body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #d35400;
-    border-color: #d35400; }
+    border-color: #d35400;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(211, 84, 0, 0.5); }
+    background-color: rgba(211, 84, 0, 0.5);
+    transition: background 0.3s linear; }
   body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(211, 84, 0, 0.5); }
+    background-color: rgba(211, 84, 0, 0.5);
+    transition: background 0.3s linear; }
   body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #d35400; }
+    background-color: #d35400;
+    transition: background 0.3s linear; }
   body.pumpkin .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #a04000 0%, #ffa76d 100%); }
+    background: linear-gradient(to right, #d35400 0%, #ff883a 100%);
+    transition: background 0.3s linear; }
   body.pumpkin .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.pumpkin .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #d35400; }
+    color: #d35400;
+    transition: color 0.3s linear; }
   body.pumpkin .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #d35400; }
+    background-color: #d35400;
+    transition: background 0.3s linear; }
   body.pumpkin .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #d35400; }
+    color: #d35400;
+    transition: color 0.3s linear; }
   body.pumpkin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #d35400; }
+    background-color: #d35400;
+    transition: background 0.3s linear; }
   body.pumpkin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.pumpkin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #d35400;
-    border-color: #d35400; }
+    border-color: #d35400;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #c0392b; }
+    background-color: #c0392b;
+    transition: background 0.3s linear; }
   body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #c0392b;
-    border-color: #c0392b; }
+    border-color: #c0392b;
+    transition: background 0.3s linear, border 0.3s linear; }
   body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-focus-ring {
-    background-color: rgba(192, 57, 43, 0.5); }
+    background-color: rgba(192, 57, 43, 0.5);
+    transition: background 0.3s linear; }
   body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-container ._md-bar {
-    background-color: rgba(192, 57, 43, 0.5); }
+    background-color: rgba(192, 57, 43, 0.5);
+    transition: background 0.3s linear; }
   body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher md-switch.md-checked ._md-thumb {
-    background-color: #c0392b; }
+    background-color: #c0392b;
+    transition: background 0.3s linear; }
   body.pomegranate .music-playlist-holder .music-playlist-controls .actions-holder .icon-container i.icon-png {
-    background: linear-gradient(to right, #962d22 0%, #e9a39b 100%); }
+    background: linear-gradient(to right, #c0392b 0%, #df7c72 100%);
+    transition: background 0.3s linear; }
   body.pomegranate .music-playlist-holder .tracks-holder .track-list .track.active .track-title,
   body.pomegranate .music-playlist-holder .tracks-holder .track-list .track.active .track-duration {
-    color: #c0392b; }
+    color: #c0392b;
+    transition: color 0.3s linear; }
   body.pomegranate .music-playlist-holder .tracks-holder .track-list .track .active-marker .mark {
-    background-color: #c0392b; }
+    background-color: #c0392b;
+    transition: background 0.3s linear; }
   body.pomegranate .music-play-unit .music-slider-holder .music-current-duration.active {
-    color: #c0392b; }
+    color: #c0392b;
+    transition: color 0.3s linear; }
   body.pomegranate .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #c0392b; }
+    background-color: #c0392b;
+    transition: background 0.3s linear; }
   body.pomegranate .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.pomegranate .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
     background-color: #c0392b;
-    border-color: #c0392b; }
+    border-color: #c0392b;
+    transition: background 0.3s linear, border 0.3s linear; }
   body .h100 {
     height: 100%; }
   body.start {
@@ -1185,18 +1372,22 @@ body {
       -ms-overflow-style: -ms-autohiding-scrollbar; }
       .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher {
         width: 100%;
-        margin: 30px 0 50px 0;
+        margin: 30px 0;
         padding: 0 15px; }
-        .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container {
-          padding: 0; }
-          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track:not(._md-track-fill) {
-            background-color: #303030; }
-          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-            background-color: #940fd1; }
-          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
-          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
-            background-color: #940fd1;
-            border-color: #940fd1; }
+        .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.bgImage-changer {
+          margin: 15px 0 30px 0; }
+        .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer {
+          margin: 30px 0 15px 0; }
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container {
+            padding: 0; }
+            .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track:not(._md-track-fill) {
+              background-color: #303030; }
+            .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
+              background-color: #940fd1; }
+            .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb,
+            .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
+              background-color: #940fd1;
+              border-color: #940fd1; }
         .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher label.settings-label {
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           font-weight: 100;
@@ -1268,7 +1459,7 @@ body {
               float: none; }
         .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.accent-picker {
           height: 200px;
-          margin: -15px 0 30px 0;
+          margin: 15px 0 45px 0;
           overflow: hidden; }
           .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.accent-picker .settings-color-picker {
             margin: 0;
@@ -1894,6 +2085,8 @@ body {
     opacity: 1; }
   .lightThemed .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track:not(._md-track-fill) {
     background-color: #B6b6b6; }
+  .lightThemed .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.accent-picker .settings-color-picker .color-plate {
+    border: 2px solid #e0e0e0; }
 
 .lightThemed .full-screen-media-page .opaque-screen {
   background: #fff; }
@@ -1997,21 +2190,37 @@ body {
 .lightThemed .icon-png.app-close {
   background-image: url(../../images/icons/app-close-dark.png); }
 
-::-webkit-scrollbar {
+html.light ::-webkit-scrollbar {
   width: 0.5em;
   height: 0.5em; }
 
-::-webkit-scrollbar-thumb {
-  background: #909090; }
+html.light ::-webkit-scrollbar-thumb {
+  background: #C0C0C0; }
 
-::-webkit-scrollbar-track {
-  background: #c8c8c8; }
+html.light ::-webkit-scrollbar-track {
+  background: #e0e0e0; }
 
-body {
-  -ms-scrollbar-face-color: #909090;
-  scrollbar-face-color: #909090;
-  -ms-scrollbar-track-color: #c8c8c8;
-  scrollbar-track-color: #c8c8c8; }
+html.light body {
+  -ms-scrollbar-face-color: #C0C0C0;
+  scrollbar-face-color: #C0C0C0;
+  -ms-scrollbar-track-color: #e0e0e0;
+  scrollbar-track-color: #e0e0e0; }
+
+html:not(.light) ::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em; }
+
+html:not(.light) ::-webkit-scrollbar-thumb {
+  background: #666666; }
+
+html:not(.light) ::-webkit-scrollbar-track {
+  background: #262626; }
+
+html:not(.light) body {
+  -ms-scrollbar-face-color: #666666;
+  scrollbar-face-color: #666666;
+  -ms-scrollbar-track-color: #262626;
+  scrollbar-track-color: #262626; }
 
 @-webkit-keyframes double-bounce-anim {
   0%, 100% {

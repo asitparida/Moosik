@@ -36,6 +36,11 @@ angular.module('MusicUI')
         $timeout(function () {
             self.processSvg();
         }, 500)
+        if (self.shared.darkTheme == false) {
+            $('html').addClass('light');
+        } else {
+            $('html').removeClass('light');
+        }
     }, 2000);
 
     self.closeApp = function () {
