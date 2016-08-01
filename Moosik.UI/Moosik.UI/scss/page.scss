@@ -526,7 +526,7 @@ body {
     position: absolute;
     top: 0;
     right: 10px;
-    width: 240px;
+    width: 100%;
     height: 60px;
     z-index: 8;
 
@@ -2098,9 +2098,14 @@ html {
 @media (max-width: 630px) {
 
     .app-top-window-controls {
+        right: 0;
 
         .xsHidden {
             display: none;
+        }
+
+        .xsLeft {
+            float: left;
         }
     }
 
