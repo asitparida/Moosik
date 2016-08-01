@@ -525,14 +525,14 @@ body {
 .app-top-window-controls {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 192px;
-    height: 48px;
+    right: 10px;
+    width: 240px;
+    height: 60px;
     z-index: 8;
 
     .icon-container {
-        width: 48px;
-        height: 48px;
+        width: 60px;
+        height: 60px;
         float: right;
         background: transparent;
 
@@ -541,16 +541,13 @@ body {
         }
 
         .icon-png {
-            width: 48px;
-            height: 48px;
+            width: 60px;
+            height: 60px;
             opacity: 0.75;
-
-            &.media-back-to-window,
-            &.media-maximize,
-            &.app-settings {
-                background-size: 36px;
-                background-position: 9px 6px;
-            }
+            -webkit-mask-size: 48px;
+            mask-size: 48px;
+            -webkit-mask-position: 6px;
+            mask-position: 6px;
         }
 
         @include focus-states();
@@ -591,34 +588,29 @@ body {
 
         .settings-header {
             width: 100%;
-            height: 48px;
+            height: 60px;
 
             .icon-container {
+                width: 60px;
+                height: 60px;
                 outline: none;
+                opacity: 0.60;
 
                 i.icon-png {
                     outline: none;
-
-                    &.app-settings {
-                        background-size: 36px;
-                        background-position: 6px;
-                        opacity: 0.60;
-                    }
-
-                    &.app-close {
-                        background-size: 24px;
-                        background-position-x: 12px;
-                    }
+                    -webkit-mask-size: 48px;
+                    mask-size: 48px;
+                    -webkit-mask-position: 6px;
+                    mask-position: 6px;
                 }
             }
 
             label {
-                line-height: 48px;
-                height: 48px;
-                width: 80px;
+                line-height: 60px;
+                height: 60px;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: 400;
-                font-size: small;
+                font-size: medium;
                 padding-left: 0;
                 margin: 0;
                 letter-spacing: 1px;
@@ -631,7 +623,7 @@ body {
 
         .settings-panel-holder {
             width: 100%;
-            height: calc(100vh - 48px);
+            height: calc(100vh - 60px);
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -763,9 +755,9 @@ body {
                         transition: all linear 0.3s;
 
                         i.icon-png {
-                            width: 48px;
-                            height: 48px;
-                            margin: 76px auto;
+                            width: 60px;
+                            height: 60px;
+                            margin: 70px auto;
                             display: block;
                             float: none;
                         }
@@ -851,22 +843,27 @@ body {
         }
 
         .music-playlist-label {
-            height: 48px;
-            background: #262626;
-            line-height: 48px;
+            height: 60px;
+            background: #000;
+            line-height: 60px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 300;
             font-size: medium;
             margin: 0;
             text-transform: uppercase;
 
+            i.icon-png {
+                height: 60px;
+                width: 60px;
+                -webkit-mask-size: 48px;
+                mask-size: 48px;
+                -webkit-mask-position: 6px;
+                mask-position: 6px;
+                opacity: 0.6;
+            }
+
             i.media-playlist {
-                height: 48px;
-                width: 48px;
-                background-size: 36px;
-                background-position: 3px 6px;
                 float: left;
-                opacity: 0.60;
             }
 
             i.playlist-action {
@@ -878,10 +875,9 @@ body {
                 }
 
                 &.app-close {
-                    width: 48px;
-                    height: 48px;
-                    background-size: 24px;
-                    background-position-x: 12px;
+                    width: 60px;
+                    height: 60px;
+                    opacity: 0.60;
                 }
 
                 &:active {
@@ -895,12 +891,11 @@ body {
 
             label {
                 float: left;
-                line-height: 48px;
-                height: 48px;
-                width: 80px;
+                line-height: 60px;
+                height: 60px;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: 400;
-                font-size: small;
+                font-size: large;
                 padding-left: 0;
                 margin: 0;
                 letter-spacing: 1px;
@@ -912,7 +907,7 @@ body {
         }
 
         .tracks-holder {
-            height: calc(100% - 48px);
+            height: calc(100% - 60px);
             width: 100%;
             position: relative;
 
@@ -927,32 +922,31 @@ body {
             }
 
             .music-playlist-controls {
-                top: calc(100vh - 96px);
+                top: calc(100vh - 120px);
                 left: 0;
                 width: calc(100% - 8px);
-                height: 42px;
+                height: 60px;
                 z-index: 15;
                 position: absolute;
 
                 .actions-holder {
                     width: 100%;
-                    height: 48px;
+                    height: 60px;
                     position: relative;
                     z-index: 16;
 
-
                     .icon-container {
-                        height: 48px;
+                        height: 60px;
 
                         i {
                             &.icon-png {
                                 width: 24px;
                                 height: 24px;
-                                top: 6px;
+                                top: 20px;
                                 left: 6px;
 
                                 &.playlist-shuffle {
-                                    top: 12px;
+                                    top: 24px;
                                 }
                             }
                         }
@@ -986,8 +980,8 @@ body {
 
             .track-list {
                 width: 100%;
-                height: calc(100vh - 48px);
-                padding-bottom: 48px;
+                height: calc(100vh - 60px);
+                padding-bottom: 60px;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -1040,8 +1034,8 @@ body {
                         text-align: center;
 
                         .media-add {
-                            width: 48px;
-                            height: 48px;
+                            width: 60px;
+                            height: 60px;
                             display: block;
                             margin: 0 auto;
                         }
@@ -1065,7 +1059,7 @@ body {
 
                 .track {
                     width: 100%;
-                    height: 48px;
+                    height: 60px;
                     outline: none;
                     -moz-transition: all 0.3s linear 0s;
                     -o-transition: all 0.3s linear 0s;
@@ -1124,32 +1118,36 @@ body {
                     }
 
                     .icon-container {
-                        height: 48px;
-                        width: 48px;
+                        height: 60px;
+                        width: 60px;
                         float: left;
 
                         i {
-                            height: 36px;
-                            width: 36px;
-                            top: 6px;
+                            height: 60px;
+                            width: 60px;
+                            opacity: 0.60;
+                            -webkit-mask-size: 48px;
+                            mask-size: 48px;
+                            -webkit-mask-position: 6px;
+                            mask-position: 6px;
                         }
                     }
 
                     .active-marker {
                         width: 18px;
-                        height: 36px;
+                        height: 48px;
                         position: relative;
-                        left: 16px;
+                        left: 22px;
 
                         .mark {
                             height: 0;
                             width: 3px;
                             background-color: #d613b5;
                             border-radius: 2%;
-                            -moz-animation: anim_up_down_fill 1s linear infinite;
-                            -o-animation: anim_up_down_fill 1s linear infinite;
-                            -webkit-animation: anim_up_down_fill 1s linear infinite;
-                            animation: anim_up_down_fill 1s linear infinite;
+                            -moz-animation: anim_up_down_fill_36 1s linear infinite;
+                            -o-animation: anim_up_down_fill_36 1s linear infinite;
+                            -webkit-animation: anim_up_down_fill_36 1s linear infinite;
+                            animation: anim_up_down_fill_36 1s linear infinite;
                             position: absolute;
                             left: 0;
                             bottom: 0;
@@ -1175,14 +1173,14 @@ body {
 
 
                     .track-title {
-                        height: 48px;
-                        width: calc(100% - 110px);
+                        height: 60px;
+                        width: calc(100% - 115px);
                         float: left;
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                         font-weight: 500;
                         font-size: small;
                         color: #909090;
-                        line-height: 48px;
+                        line-height: 60px;
                         -ms-text-overflow: ellipsis;
                         -o-text-overflow: ellipsis;
                         text-overflow: ellipsis;
@@ -1191,15 +1189,74 @@ body {
                     }
 
                     .track-duration {
-                        height: 48px;
+                        height: 60px;
                         width: 50px;
                         float: left;
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                         font-weight: 500;
                         font-size: small;
                         color: #909090;
-                        line-height: 48px;
-                        text-align: right;
+                        line-height: 60px;
+                        text-align: center;
+                    }
+                }
+
+                &.large {
+                    .track {
+                        height: 48px;
+
+                        .icon-container {
+                            height: 48px;
+                            width: 60px;
+
+                            i {
+                                height: 48px;
+                                width: 48px;
+                                -webkit-mask-size: 36px;
+                                mask-size: 36px;
+                                -webkit-mask-position: 8px;
+                                mask-position: 8px;
+                            }
+                        }
+
+                        .active-marker {
+                            height: 36px;
+                            left: 22px;
+
+                            .mark {
+                                -moz-animation: anim_up_down_fill_24 1s linear infinite;
+                                -o-animation: anim_up_down_fill_24 1s linear infinite;
+                                -webkit-animation: anim_up_down_fill_24 1s linear infinite;
+                                animation: anim_up_down_fill_24 1s linear infinite;
+
+                                &:nth-child(1) {
+                                    -moz-animation-delay: 0.3s;
+                                    -o-animation-delay: 0.3s;
+                                    -webkit-animation-delay: 0.3s;
+                                    animation-delay: 0.3s;
+                                    left: 6px;
+                                }
+
+                                &:nth-child(2) {
+                                    -moz-animation-delay: 0.6s;
+                                    -o-animation-delay: 0.6s;
+                                    -webkit-animation-delay: 0.6s;
+                                    animation-delay: 0.6s;
+                                    left: 12px;
+                                }
+                            }
+                        }
+
+                        .track-title {
+                            width: calc(100% - 110px);
+                            line-height: 48px;
+                            height: 48px;
+                        }
+
+                        .track-duration {
+                            height: 48px;
+                            line-height: 48px;
+                        }
                     }
                 }
             }
@@ -1208,7 +1265,7 @@ body {
                 width: 100%;
                 height: 100%;
                 position: absolute;
-                top: calc(100vh - 53px);
+                top: -2px;
                 left: 0;
                 z-index: 15;
                 width: 100%;
@@ -1306,6 +1363,7 @@ body {
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 position: absolute;
+                color: #909090;
             }
 
             .music-current-duration {
@@ -1351,14 +1409,60 @@ body {
 
         .music-play-controls {
             width: 100%;
-            height: 48px;
+            height: 60px;
             margin-top: -15px;
 
+            &.large {
+                .icon-container {
+                    i.icon-png {
+                        &:not(.xl) {
+                            -webkit-mask-size: 48px;
+                            mask-size: 48px;
+                            -webkit-mask-position: 6px;
+                            mask-position: 6px;
+                        }
+
+                        &.media-play {
+                            &.xl {
+                                -webkit-mask: url(../../images/actions/media-play-48.png);
+                                mask: url(../../images/actions/media-play-48.png);
+                            }
+                        }
+
+                        &.media-pause {
+                            &.xl {
+                                -webkit-mask: url(../../images/actions/media-pause-48.png);
+                                mask: url(../../images/actions/media-pause-48.png);
+                            }
+                        }
+                    }
+                }
+            }
+
             .icon-container {
-                width: 48px;
-                height: 48px;
+                width: 60px;
+                height: 60px;
                 float: none;
                 display: inline-block;
+
+                i.icon-png {
+                    width: 60px;
+                    height: 60px;
+
+                    &.media-play {
+                        &.xl {
+                            -webkit-mask: url(../../images/actions/media-play-60.png);
+                            mask: url(../../images/actions/media-play-60.png);
+                        }
+                    }
+
+                    &.media-pause {
+                        &.xl {
+                            -webkit-mask: url(../../images/actions/media-pause-60.png);
+                            mask: url(../../images/actions/media-pause-60.png);
+                        }
+                    }
+                }
 
                 &.disabled {
                     cursor: none;
@@ -1479,12 +1583,13 @@ body {
 }
 
 .icon-png {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
     display: inline-block;
+    background: #fff;
 
     &.playlist-add {
         width: 24px;
@@ -1508,104 +1613,108 @@ body {
     }
 
     &.media-back-to-window {
-        background-image: url(../../images/icons/media-back-to-window.png);
-        background-size: 36px 36px;
-        background-position: 6px 6px;
+        -webkit-mask: url(../../images/actions/media-back-to-window-36.png);
+        mask: url(../../images/actions/media-back-to-window-36.png);
     }
 
     &.media-maximize {
-        background-image: url(../../images/icons/media-maximize.png);
-        background-size: 36px 36px;
-        background-position: 6px 6px;
+        -webkit-mask: url(../../images/actions/media-maximize-36.png);
+        mask: url(../../images/actions/media-maximize-36.png);
     }
 
-    &.media-mute {
-        background-image: url(../../images/icons/media-mute.png);
+    &.media-volume-0 {
+        -webkit-mask: url(../../images/actions/media-volume-0.png);
+        mask: url(../../images/actions/media-volume-0.png);
     }
 
-    &.media-unmute {
-        background-image: url(../../images/icons/media-unmute.png);
+    &.media-volume-1 {
+        -webkit-mask: url(../../images/actions/media-volume-1.png);
+        mask: url(../../images/actions/media-volume-1.png);
+    }
+
+    &.media-volume-2 {
+        -webkit-mask: url(../../images/actions/media-volume-2.png);
+        mask: url(../../images/actions/media-volume-2.png);
+    }
+
+    &.media-volume-3 {
+        -webkit-mask: url(../../images/actions/media-volume-3.png);
+        mask: url(../../images/actions/media-volume-3.png);
     }
 
     &.media-prev {
-        background-image: url(../../images/icons/media-prev.png);
+        -webkit-mask: url(../../images/actions/media-prev-36.png);
+        mask: url(../../images/actions/media-prev-36.png);
     }
 
-    &.media-playlist-add {
-        background-image: url(../../images/icons/media-playlist-add.png);
+    &.media-repeat-1 {
+        -webkit-mask: url(../../images/actions/media-repeat-1.png);
+        mask: url(../../images/actions/media-repeat-1.png);
     }
 
-    &.media-playlist-clear {
-        background-image: url(../../images/icons/media-playlist-clear.png);
+    &.media-repeat-all {
+        -webkit-mask: url(../../images/actions/media-repeat-all.png);
+        mask: url(../../images/actions/media-repeat-all.png);
     }
 
-    &.media-repeat1 {
-        background-image: url(../../images/icons/media-repeat-1.png);
-        background-size: 36px 36px;
-        background-position: 6px 6px;
+    &.media-repeat-none {
+        -webkit-mask: url(../../images/actions/media-repeat-none.png);
+        mask: url(../../images/actions/media-repeat-none.png);
     }
 
     &.media-next {
-        background-image: url(../../images/icons/media-next.png);
-    }
-
-    &.media-add {
-        background-image: url(../../images/icons/media-add.png);
-    }
-
-    &.media-search {
-        background-image: url(../../images/icons/media-search.png);
-        background-size: 36px 36px;
-        background-position: 6px 6px;
-
-        &.big {
-            background-image: url(../../images/icons/media-search-big.png);
-            width: 72px;
-            height: 72px;
-            opacity: 0.60;
-        }
-    }
-
-    &.media-shuffle {
-        background-image: url(../../images/icons/media-shuffle.png);
-        background-size: 42px 42px;
-        background-position: 2px 2px;
+        -webkit-mask: url(../../images/actions/media-next-36.png);
+        mask: url(../../images/actions/media-next-36.png);
     }
 
     &.media-playlist {
-        background-image: url(../../images/icons/media-playlist.png);
-        background-size: 42px 42px;
-        background-position: 2px 2px;
+        -webkit-mask: url(../../images/actions/media-playlist-36.png);
+        mask: url(../../images/actions/media-playlist-36.png);
     }
 
     &.media-play {
-        background-image: url(../../images/icons/media-play-24.png);
+        -webkit-mask: url(../../images/actions/media-play-36.png);
+        mask: url(../../images/actions/media-play-36.png);
 
-        &.x36 {
-            background-image: url(../../images/icons/media-play-36.png);
+        &.xl {
+            -webkit-mask: url(../../images/actions/media-play-48.png);
+            mask: url(../../images/actions/media-play-48.png);
         }
     }
 
     &.media-pause {
-        background-image: url(../../images/icons/media-pause-24.png);
+        -webkit-mask: url(../../images/actions/media-pause-36.png);
+        mask: url(../../images/actions/actions-pause-36.png);
+    }
 
-        &.x36 {
-            background-image: url(../../images/icons/media-pause-36.png);
-        }
+    &.media-search {
+        -webkit-mask: url(../../images/actions/media-search-36.png);
+        mask: url(../../images/actions/media-pause-36.png);
     }
 
     &.app-settings {
-        background-image: url(../../images/icons/app-settings.png);
+        -webkit-mask: url(../../images/actions/app-settings-36.png);
+        mask: url(../../images/actions/app-settings-36.png);
     }
 
     &.app-move {
-        background-image: url(../../images/icons/app-move.png);
+        -webkit-mask: url(../../images/actions/app-move-36.png);
+        mask: url(../../images/actions/app-move-36.png);
+    }
+
+    &.app-shutdown {
+        -webkit-mask: url(../../images/actions/app-shutdown-36.png);
+        mask: url(../../images/actions/app-shutdown-36.png);
     }
 
     &.app-close {
-        background-image: url(../../images/icons/app-close.png);
-        background-size: 30px;
-        background-position: 9px;
+        -webkit-mask: url(../../images/actions/app-close-36.png);
+        mask: url(../../images/actions/app-close-36.png);
+    }
+
+    &.media-add {
+        -webkit-mask: url(../../images/icons/media-add.png);
+        mask: url(../../images/icons/media-add.png);
     }
 }
 
@@ -1624,7 +1733,7 @@ body {
 
             .settings-header {
                 width: 100%;
-                height: 48px;
+                height: 60px;
 
                 label {
                     color: #161616;
@@ -1764,90 +1873,7 @@ body {
     }
 
     .icon-png {
-
-        &.media-back-to-window {
-            background-image: url(../../images/icons/media-back-to-window-dark.png);
-        }
-
-        &.media-maximize {
-            background-image: url(../../images/icons/media-maximize-dark.png);
-        }
-
-        &.media-mute {
-            background-image: url(../../images/icons/media-mute-dark.png);
-        }
-
-        &.media-unmute {
-            background-image: url(../../images/icons/media-unmute-dark.png);
-        }
-
-        &.media-prev {
-            background-image: url(../../images/icons/media-prev-dark.png);
-        }
-
-        &.media-playlist-add {
-            background-image: url(../../images/icons/media-playlist-add-dark.png);
-        }
-
-        &.media-playlist-clear {
-            background-image: url(../../images/icons/media-playlist-clear-dark.png);
-        }
-
-        &.media-repeat1 {
-            background-image: url(../../images/icons/media-repeat-1-dark.png);
-        }
-
-        &.media-next {
-            background-image: url(../../images/icons/media-next-dark.png);
-        }
-
-        &.media-add {
-            background-image: url(../../images/icons/media-add-dark.png);
-        }
-
-        &.media-search {
-            background-image: url(../../images/icons/media-search-dark.png);
-
-            &.big {
-                background-image: url(../../images/icons/media-search-big-dark.png);
-            }
-        }
-
-        &.media-shuffle {
-            background-image: url(../../images/icons/media-shuffle-dark.png);
-        }
-
-        &.media-playlist {
-            background-image: url(../../images/icons/media-playlist-dark.png);
-        }
-
-        &.media-play {
-            background-image: url(../../images/icons/media-play-24-dark.png);
-
-            &.x36 {
-                background-image: url(../../images/icons/media-play-36-dark.png);
-            }
-        }
-
-        &.media-pause {
-            background-image: url(../../images/icons/media-pause-24-dark.png);
-
-            &.x36 {
-                background-image: url(../../images/icons/media-pause-36-dark.png);
-            }
-        }
-
-        &.app-settings {
-            background-image: url(../../images/icons/app-settings-dark.png);
-        }
-
-        &.app-move {
-            background-image: url(../../images/icons/app-move-dark.png);
-        }
-
-        &.app-close {
-            background-image: url(../../images/icons/app-close-dark.png);
-        }
+        background: #363636;
     }
 }
 
@@ -2039,7 +2065,17 @@ html {
     }
 }
 
-@keyframes anim_up_down_fill {
+@keyframes anim_up_down_fill_36 {
+    0%, 100% {
+        height: 0;
+    }
+
+    50% {
+        height: 36px;
+    }
+}
+
+@keyframes anim_up_down_fill_24 {
     0%, 100% {
         height: 0;
     }
@@ -2049,9 +2085,9 @@ html {
     }
 }
 
-@media (min-width: 581px) {
+@media (min-width: 631px) {
     .music-play-unit {
-        width: 550px;
+        width: 600px;
 
         .music-play-title {
             font-size: xx-large;
@@ -2059,7 +2095,7 @@ html {
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 630px) {
 
     .app-top-window-controls {
 
@@ -2093,7 +2129,7 @@ html {
     }
 }
 
-@media (min-width: 881px) {
+@media (min-width: 931px) {
     .music-play-unit-holder.playListActivated {
         width: calc(100% - 330px);
     }
@@ -2107,7 +2143,7 @@ html {
     }
 }
 
-@media (max-width: 881px) {
+@media (max-width: 930px) {
     .music-play-unit-holder.playListActivated {
         width: 100%;
         z-index: 5;

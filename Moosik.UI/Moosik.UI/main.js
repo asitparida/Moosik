@@ -12,7 +12,6 @@ function createMainWindow(color, skipShades) {
     activeColor = color || '#262626';
     skipShades = skipShades || false;
     let waSize = electron.screen.getPrimaryDisplay().workAreaSize;
-
     let appWidth = waSize.width - 60;
     let appHeight = waSize.height - 60;
     let multipler = 1;
@@ -27,7 +26,8 @@ function createMainWindow(color, skipShades) {
 
     mainWindow = new BrowserWindow({ width: appWidth * multipler, height: appHeight * multipler, icon: 'images/icon@4x.ico', resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, title: 'Music', show: false, fullscreen: false });
     mainWindow.loadURL('file://' + __dirname + '/index.html')
-    mainWindow.webContents.openDevTools()
+    mainWindow.type = waSize.width >= 1600 ? 'large' : 'small';
+    //mainWindow.webContents.openDevTools()
     mainWindow.on('closed', function () {
         mainWindow = null;
         app.quit();

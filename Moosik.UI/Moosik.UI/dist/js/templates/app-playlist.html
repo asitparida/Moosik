@@ -2,10 +2,10 @@
     <div class="music-playlist-label">
         <i class="icon-png media-playlist"></i>
         <label>PLaylist</label>
-        <i class="icon-png playlist-action app-close pull-right" ng-click="app.closePlaylist()"></i>
+        <i class="icon-png app-close pull-right" ng-click="app.closePlaylist()"></i>
     </div>
     <div class="tracks-holder">
-        <div class="track-list">
+        <div class="track-list" ng-class="{'large': !app.shared.screenTypeIsSmall}">
             <div class="add-track-part" ng-show="app.shared.playlistIntialized == false && app.shared.loadPlaylistInProgress != true" ng-click="app.shared.loadPlaylist()">
                 <div class="icon-container">
                     <i class="icon-png media-add"></i>

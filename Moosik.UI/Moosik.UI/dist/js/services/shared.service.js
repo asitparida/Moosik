@@ -9,11 +9,16 @@ String.prototype.toPath = function () {
 }
 
 var _moosikImgArray = {};
-var _emulate = true;
+var _emulate = false;
 
 angular.module('MusicUI')
 .service("SharedService", ["$http", "$q", "$uibModal", "$window", "$resource", "$state", "$timeout", "$sce", function ($http, $q, $uibModal, $window, $resource, $state, $timeout, $sce) {
     var self = this;
+    try {
+        self.screenTypeIsSmall = require('electron').remote.getCurrentWindow().type == 'small' ? true : false;
+    } catch (e) {
+
+    }
     self.activeColor = '#262626';
     self.maximized = false;
     self.uibModal = $uibModal;
@@ -34,7 +39,7 @@ angular.module('MusicUI')
     self.bgImage = false;
     self.bgImgSrc = null;
     self.bgImageAvailable = false;
-    self.bgOpacity = 900
+    self.bgOpacity = 750;
     self.colorModes =
     [
         { id: _.uniqueId('col'), colorId: "turquoise", name: "turquoise", code: "#1abc9c" },
@@ -51,11 +56,17 @@ angular.module('MusicUI')
     self.activeColorMode = self.colorModes[3];
     self.gainModes = [
         { id: 1, value: -1, mute: true },
-        { id: 2, value: -0.33, mute: false },
-        { id: 3, value: 0.33, mute: false },
+        { id: 2, value: -0.80, mute: false },
+        { id: 3, value: 0.10, mute: false },
         { id: 4, value: 1, mute: false }
     ];
     self.activeGainMode = 1;
+    self.repeatModes = [
+            { id: 1, value: 0, repeat: false },
+            { id: 2, value: 1, repeat: true },
+            { id: 3, value: 2, repeat: true }
+    ];
+    self.activeRepeatMode = 0;
     try {
         self.electron = require('electron');
     } catch (e) {
@@ -186,8 +197,7 @@ angular.module('MusicUI')
                     _activeIndex = iter;
                     self.currentActiveIndex = _activeIndex;
                     tr.playing = false;
-                    if (_initialMusicPlayedState)
-                        self.playTrack(tr);
+                    self.playTrack(tr, true);
                 }
                 else {
                     tr.active = false;
@@ -325,7 +335,7 @@ angular.module('MusicUI')
                         _elem.style.transform = 'rotate(' + (-150 + (iter * 18)) + 'deg)';
                     }, 400);
                 });
-            }, 100);
+            }, 400);
         }
         else {
             self.settingsPaneColorsInitalized = false;
