@@ -82,6 +82,7 @@ angular.module('MusicUI')
         else if (self.shared.musicPlayed == false) {
             self.shared.musicPlayed = true;
             self.audioElement.play();
+            self.gainNode.gain.value = self.shared.gainModes[self.shared.activeGainMode].value;
             self.shared.musicIsPlaying(self.trackMetaData);
             if (!self.renderCharted) {
                 renderChart();
@@ -128,6 +129,7 @@ angular.module('MusicUI')
                         self.trackMetaData.path = data.filePath.replaceAll(' ', '%20');
                     self.shared.musicPlayed = false;
                     self.musicAvailable = true;
+                    self.loadImages(data.album);
                     self.processConnectAnlayser();
                     if (!self.shared.intialized)
                         self.shared.intialized = true;
@@ -226,11 +228,18 @@ angular.module('MusicUI')
         self.audioCtx.suspend();
     }
 
-    self.shared.playTrack = function (track) {
+    self.shared.playTrack = function (track, flag) {
         self.shared.musicPlayed = true;
         self.audioElement.play();
+        self.gainNode.gain.value = self.shared.gainModes[self.shared.activeGainMode].value;
         self.shared.musicIsPlaying(self.trackMetaData);
         self.audioCtx.resume();
+        if (flag) {
+            if (!self.renderCharted) {
+                renderChart();
+                updateTime();
+            }
+        }
     }
 
     function updateTime() {

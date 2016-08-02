@@ -13,14 +13,14 @@
                     </md-slider>
                 </md-slider-container>
             </div>
-            <div class="music-play-controls">
+            <div class="music-play-controls" ng-class="{'large': !app.shared.screenTypeIsSmall}">
                 <div class="pull-left controls-left">
                     <div class="icon-container" ng-class="{'disabled': app.shared.previousTrackAvailable == false}" ng-click="app.shared.loadPreviousTrack()">
                         <i class="icon-png media-prev"></i>
                     </div>
                     <div class="icon-container" ng-click="app.musicPlayPause()" ng-class="{'disabled': app.musicAvailable == false}">
-                        <i class="icon-png media-play x36" ng-show="!app.shared.musicPlayed"></i>
-                        <i class="icon-png media-pause x36" ng-show="app.shared.musicPlayed"></i>
+                        <i class="icon-png media-play xl" ng-show="!app.shared.musicPlayed"></i>
+                        <i class="icon-png media-pause xl" ng-show="app.shared.musicPlayed"></i>
                     </div>
                     <div class="icon-container" ng-class="{'disabled': app.shared.nextTrackAvailable == false}" ng-click="app.shared.loadNextTrack()">
                         <i class="icon-png media-next"></i>
@@ -28,11 +28,15 @@
                 </div>
                 <div class="pull-right controls-right">
                     <div class="icon-container" ng-click="app.musicMuteUnmute()" ng-class="{'disabled': app.musicAvailable == false}">
-                        <i class="icon-png media-mute" ng-show="app.musicMuted"></i>
-                        <i class="icon-png media-unmute" ng-show="!app.musicMuted"></i>
+                        <i class="icon-png media-volume-0" ng-show="app.shared.activeGainMode == 0"></i>
+                        <i class="icon-png media-volume-1" ng-show="app.shared.activeGainMode == 1"></i>
+                        <i class="icon-png media-volume-2" ng-show="app.shared.activeGainMode == 2"></i>
+                        <i class="icon-png media-volume-3" ng-show="app.shared.activeGainMode == 3"></i>
                     </div>
                     <div class="icon-container disabled">
-                        <i class="icon-png media-repeat1"></i>
+                        <i class="icon-png media-repeat-none" ng-show="app.shared.activeRepeatMode == 0"></i>
+                        <i class="icon-png media-repeat-1" ng-show="app.shared.activeRepeatMode == 1"></i>
+                        <i class="icon-png media-repeat-all" ng-show="app.shared.activeRepeatMode == 2"></i>
                     </div>
                     <div class="icon-container" ng-click="app.maximizeMinimize()">
                         <i class="icon-png media-back-to-window" ng-show="app.shared.maximized"></i>
