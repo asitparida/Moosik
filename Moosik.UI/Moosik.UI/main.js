@@ -16,6 +16,7 @@ function createMainWindow(color, skipShades) {
     let appWidth = waSize.width - 60;
     let appHeight = waSize.height - 60;
     let multipler = 1;
+
     if (appWidth >= 1920)
         multipler = 0.50;
     else if (appWidth >= 1600)
