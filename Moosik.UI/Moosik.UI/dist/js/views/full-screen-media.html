@@ -15,14 +15,14 @@
             </div>
             <div class="music-play-controls" ng-class="{'large': !app.shared.screenTypeIsSmall}">
                 <div class="pull-left controls-left">
-                    <div class="icon-container" ng-class="{'disabled': app.shared.previousTrackAvailable == false}" ng-click="app.shared.loadPreviousTrack()">
+                    <div class="icon-container xxsHidden" ng-class="{'disabled': app.shared.previousTrackAvailable == false}" ng-click="app.shared.loadPreviousTrack()">
                         <i class="icon-png media-prev"></i>
                     </div>
                     <div class="icon-container" ng-click="app.musicPlayPause()" ng-class="{'disabled': app.musicAvailable == false}">
                         <i class="icon-png media-play xl" ng-show="!app.shared.musicPlayed"></i>
                         <i class="icon-png media-pause xl" ng-show="app.shared.musicPlayed"></i>
                     </div>
-                    <div class="icon-container" ng-class="{'disabled': app.shared.nextTrackAvailable == false}" ng-click="app.shared.loadNextTrack()">
+                    <div class="icon-container xxsHidden" ng-class="{'disabled': app.shared.nextTrackAvailable == false}" ng-click="app.shared.loadNextTrack()">
                         <i class="icon-png media-next"></i>
                     </div>
                 </div>

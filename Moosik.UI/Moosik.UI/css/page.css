@@ -456,6 +456,12 @@ body {
   background: #fff;
   color: #222222;
   overflow: hidden; }
+  body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #1abc9c; }
+  body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #1abc9c; }
+  body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(26, 188, 156, 0.5); }
   body.turquoise .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #1abc9c;
     transition: background 0.3s linear; }
@@ -494,6 +500,12 @@ body {
     background-color: #1abc9c;
     border-color: #1abc9c;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #2ecc71; }
+  body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #2ecc71; }
+  body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(46, 204, 113, 0.5); }
   body.emerland .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #2ecc71;
     transition: background 0.3s linear; }
@@ -532,6 +544,12 @@ body {
     background-color: #2ecc71;
     border-color: #2ecc71;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #3498db; }
+  body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #3498db; }
+  body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(52, 152, 219, 0.5); }
   body.peterRiver .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #3498db;
     transition: background 0.3s linear; }
@@ -570,6 +588,12 @@ body {
     background-color: #3498db;
     border-color: #3498db;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #9b59b6; }
+  body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #9b59b6; }
+  body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(155, 89, 182, 0.5); }
   body.amethyst .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #9b59b6;
     transition: background 0.3s linear; }
@@ -608,6 +632,12 @@ body {
     background-color: #9b59b6;
     border-color: #9b59b6;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #d613b5; }
+  body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #d613b5; }
+  body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(214, 19, 181, 0.5); }
   body.moosikPurple .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #d613b5;
     transition: background 0.3s linear; }
@@ -646,6 +676,12 @@ body {
     background-color: #d613b5;
     border-color: #d613b5;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #34495e; }
+  body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #34495e; }
+  body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(52, 73, 94, 0.5); }
   body.wetAsphalt .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #34495e;
     transition: background 0.3s linear; }
@@ -684,6 +720,12 @@ body {
     background-color: #34495e;
     border-color: #34495e;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #16a085; }
+  body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #16a085; }
+  body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(22, 160, 133, 0.5); }
   body.greenSea .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #16a085;
     transition: background 0.3s linear; }
@@ -722,6 +764,12 @@ body {
     background-color: #16a085;
     border-color: #16a085;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #27ae60; }
+  body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #27ae60; }
+  body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(39, 174, 96, 0.5); }
   body.nephritis .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #27ae60;
     transition: background 0.3s linear; }
@@ -760,6 +808,12 @@ body {
     background-color: #27ae60;
     border-color: #27ae60;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #2980b9; }
+  body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #2980b9; }
+  body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(41, 128, 185, 0.5); }
   body.belizeHole .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #2980b9;
     transition: background 0.3s linear; }
@@ -798,6 +852,12 @@ body {
     background-color: #2980b9;
     border-color: #2980b9;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #8e44ad; }
+  body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #8e44ad; }
+  body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(142, 68, 173, 0.5); }
   body.wisteria .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #8e44ad;
     transition: background 0.3s linear; }
@@ -836,6 +896,12 @@ body {
     background-color: #8e44ad;
     border-color: #8e44ad;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #2c3e50; }
+  body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #2c3e50; }
+  body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(44, 62, 80, 0.5); }
   body.midnightBlue .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #2c3e50;
     transition: background 0.3s linear; }
@@ -874,6 +940,12 @@ body {
     background-color: #2c3e50;
     border-color: #2c3e50;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #f1c40f; }
+  body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #f1c40f; }
+  body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(241, 196, 15, 0.5); }
   body.sunDlower .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #f1c40f;
     transition: background 0.3s linear; }
@@ -912,6 +984,12 @@ body {
     background-color: #f1c40f;
     border-color: #f1c40f;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #e67e22; }
+  body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #e67e22; }
+  body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(230, 126, 34, 0.5); }
   body.carrot .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #e67e22;
     transition: background 0.3s linear; }
@@ -950,6 +1028,12 @@ body {
     background-color: #e67e22;
     border-color: #e67e22;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #e74c3c; }
+  body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #e74c3c; }
+  body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(231, 76, 60, 0.5); }
   body.alizarin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #e74c3c;
     transition: background 0.3s linear; }
@@ -988,6 +1072,12 @@ body {
     background-color: #e74c3c;
     border-color: #e74c3c;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #f39c12; }
+  body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #f39c12; }
+  body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(243, 156, 18, 0.5); }
   body.orange .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #f39c12;
     transition: background 0.3s linear; }
@@ -1026,6 +1116,12 @@ body {
     background-color: #f39c12;
     border-color: #f39c12;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #d35400; }
+  body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #d35400; }
+  body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(211, 84, 0, 0.5); }
   body.pumpkin .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #d35400;
     transition: background 0.3s linear; }
@@ -1064,6 +1160,12 @@ body {
     background-color: #d35400;
     border-color: #d35400;
     transition: background 0.3s linear, border 0.3s linear; }
+  body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-on {
+    background-color: #c0392b; }
+  body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-button.md-checked ._md-off {
+    border-color: #c0392b; }
+  body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group.md-focused md-radio-button.md-checked ._md-container:before {
+    background-color: rgba(192, 57, 43, 0.5); }
   body.pomegranate .full-screen-media-page .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
     background-color: #c0392b;
     transition: background 0.3s linear; }
@@ -1376,6 +1478,22 @@ body {
         padding: 0 15px; }
         .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.bgImage-changer {
           margin: 15px 0 30px 0; }
+        .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.win-size-switcher {
+          height: 100px; }
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.win-size-switcher label.settings-label {
+            margin-bottom: 20px; }
+          .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group md-radio-button {
+            width: 33%;
+            float: left; }
+            .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group md-radio-button ._md-label {
+              margin-left: 27px; }
+            .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group md-radio-button i.icon-png {
+              width: 48px;
+              height: 48px;
+              -webkit-mask-size: 48px;
+              mask-size: 48px;
+              background: #fff;
+              opacity: 0.6; }
         .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer {
           margin: 30px 0 15px 0; }
           .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container {
@@ -1393,6 +1511,7 @@ body {
           font-weight: 100;
           font-size: large;
           color: #fff;
+          width: 100%;
           padding: 0;
           margin: 0;
           text-transform: capitalize;
@@ -2138,6 +2257,17 @@ body {
   .icon-png.media-add {
     -webkit-mask: url(../../images/icons/media-add.png);
     mask: url(../../images/icons/media-add.png); }
+  .icon-png.media-win-0 {
+    -webkit-mask: url(../../images/icons/media-win-size-0.png) no-repeat;
+    mask: url(../../images/icons/media-win-size-0.png) no-repeat;
+    -webkit-mask-position: -10px;
+    mask-position: -10px; }
+  .icon-png.media-win-1 {
+    -webkit-mask: url(../../images/icons/media-win-size-1.png) no-repeat;
+    mask: url(../../images/icons/media-win-size-1.png) no-repeat; }
+  .icon-png.media-win-2 {
+    -webkit-mask: url(../../images/icons/media-win-size-2.png) no-repeat;
+    mask: url(../../images/icons/media-win-size-2.png) no-repeat; }
 
 .lightThemed .app-top-window-controls .icon-container:hover {
   background: #e6e6e6; }
@@ -2153,6 +2283,8 @@ body {
   .lightThemed .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher label.settings-label {
     color: #161616;
     opacity: 1; }
+  .lightThemed .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.win-size-switcher md-radio-group md-radio-button i.icon-png {
+    background: #161616; }
   .lightThemed .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.opacity-changer md-slider-container md-slider ._md-track-container ._md-track:not(._md-track-fill) {
     background-color: #B6b6b6; }
   .lightThemed .full-screen-media-page .app-settings-holder .settings-panel-holder .theme-switcher.accent-picker .settings-color-picker .color-plate {
@@ -2369,13 +2501,45 @@ html:not(.light) body {
   50% {
     height: 24px; } }
 
-@media (min-width: 631px) {
-  .music-play-unit {
-    width: 600px; }
-    .music-play-unit .music-play-title {
-      font-size: xx-large; } }
+@media (max-width: 300px) {
+  .app-top-window-controls {
+    right: 0; }
+    .app-top-window-controls .icon-container {
+      width: 48px;
+      height: 48px; }
+      .app-top-window-controls .icon-container i.icon-png {
+        width: 48px;
+        height: 48px;
+        -webkit-mask-size: 36px;
+        mask-size: 36px; }
+    .app-top-window-controls .xsHidden {
+      display: none; }
+    .app-top-window-controls .xsLeft {
+      float: left; }
+  .full-screen-media-page svg {
+    opacity: 0.60; }
+  .full-screen-media-page .music-play-unit {
+    width: calc(100% - 30px);
+    height: 60px;
+    margin: calc(0.5 * (100vh - 60px)) auto; }
+    .full-screen-media-page .music-play-unit .music-play-desc,
+    .full-screen-media-page .music-play-unit .music-slider-holder {
+      display: none; }
+    .full-screen-media-page .music-play-unit .music-play-controls {
+      margin-top: 0; }
+      .full-screen-media-page .music-play-unit .music-play-controls .icon-container.xxsHidden,
+      .full-screen-media-page .music-play-unit .music-play-controls .controls-right {
+        display: none; }
+      .full-screen-media-page .music-play-unit .music-play-controls .controls-left {
+        width: 100%;
+        text-align: center; }
+    .full-screen-media-page .music-play-unit .music-play-title {
+      font-size: large;
+      text-align: center; }
+    .full-screen-media-page .music-play-unit .music-play-desc {
+      text-align: center; } }
 
-@media (max-width: 630px) {
+@media (min-width: 301px) and (max-width: 630px) {
   .app-top-window-controls {
     right: 0; }
     .app-top-window-controls .xsHidden {
@@ -2395,15 +2559,21 @@ html:not(.light) body {
     .music-play-unit .music-play-desc {
       text-align: center; } }
 
-@media (min-width: 931px) {
-  .music-play-unit-holder.playListActivated {
-    width: calc(100% - 330px); }
-  .music-playlist-holder .tracks-holder .track-opaqueHolder {
-    opacity: 0.95; } }
+@media (min-width: 631px) {
+  .music-play-unit {
+    width: 600px; }
+    .music-play-unit .music-play-title {
+      font-size: xx-large; } }
 
 @media (max-width: 930px) {
   .music-play-unit-holder.playListActivated {
     width: 100%;
     z-index: 5; }
+  .music-playlist-holder .tracks-holder .track-opaqueHolder {
+    opacity: 0.95; } }
+
+@media (min-width: 931px) {
+  .music-play-unit-holder.playListActivated {
+    width: calc(100% - 330px); }
   .music-playlist-holder .tracks-holder .track-opaqueHolder {
     opacity: 0.95; } }

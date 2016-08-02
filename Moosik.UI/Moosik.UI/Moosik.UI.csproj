@@ -129,6 +129,9 @@
     <Content Include="images\icon%404x.png" />
     <Content Include="images\icons\media-add.png" />
     <Content Include="images\icons\media-search-big.png" />
+    <Content Include="images\icons\media-win-size-0.png" />
+    <Content Include="images\icons\media-win-size-1.png" />
+    <Content Include="images\icons\media-win-size-2.png" />
     <Content Include="images\icons\moosik_200_blank.png" />
     <Content Include="images\icons\playlist-add.png" />
     <Content Include="images\icons\playlist-clear.png" />

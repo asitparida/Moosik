@@ -4,7 +4,7 @@
             <i class="icon-png app-settings"></i>
         </div>
         <label>Settings</label>
-        <div class="icon-container pull-right">
+        <div class="icon-container pull-right"> 
             <i class="icon-png playlist-action app-close" ng-click="app.shared.closeSettings()"></i>
         </div>
     </div>
@@ -19,6 +19,26 @@
                 'transition':color.transition}" ng-attr-id="color_{{color.colorId}}"
                      ng-click="app.shared.choseColor(color)"></div>
             </div>
+        </div>
+        <div class="theme-switcher win-size-switcher">
+            <label class="settings-label">Dock Size</label>
+            <md-radio-group ng-model="app.shared.winSize" ng-change="app.shared.winSizeChange()">
+                <md-radio-button ng-value="2" aria-label="Large">
+                    <div class="icon-container">
+                        <i class="icon-png media-win-2"></i>
+                    </div>
+                </md-radio-button>
+                <md-radio-button ng-value="1" aria-label="Medium">
+                    <div class="icon-container">
+                        <i class="icon-png media-win-1"></i>
+                    </div>
+                </md-radio-button>
+                <md-radio-button ng-value="0" aria-label="Small">
+                    <div class="icon-container">
+                        <i class="icon-png media-win-0"></i>
+                    </div>
+                </md-radio-button>
+            </md-radio-group>
         </div>
         <div class="theme-switcher opacity-changer">
             <label class="settings-label">Background Opacity</label>

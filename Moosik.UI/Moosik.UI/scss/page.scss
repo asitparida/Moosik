@@ -100,6 +100,24 @@ $pomegranate: #c0392b;
     .full-screen-media-page {
         .settings-panel-holder {
             .theme-switcher {
+
+                &.win-size-switcher {
+
+                    md-radio-button.md-checked ._md-on {
+                        background-color: $defcolor;
+                    }
+
+                    md-radio-button.md-checked ._md-off {
+                        border-color: $defcolor;
+                    }
+
+                    md-radio-group.md-focused {
+                        md-radio-button.md-checked ._md-container:before {
+                            background-color: rgba($defcolor, 0.5);
+                        }
+                    }
+                }
+
                 &.opacity-changer {
                     md-slider-container {
                         md-slider {
@@ -637,6 +655,34 @@ body {
                     margin: 15px 0 30px 0;
                 }
 
+                &.win-size-switcher {
+                    height: 100px;
+
+                    label.settings-label {
+                        margin-bottom: 20px;
+                    }
+
+                    md-radio-group {
+                        md-radio-button {
+                            width: 33%;
+                            float: left;
+
+                            ._md-label {
+                                margin-left: 27px;
+                            }
+
+                            i.icon-png {
+                                width: 48px;
+                                height: 48px;
+                                -webkit-mask-size: 48px;
+                                mask-size: 48px;
+                                background: #fff;
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+
                 &.opacity-changer {
                     margin: 30px 0 15px 0;
 
@@ -672,6 +718,7 @@ body {
                     font-weight: 100;
                     font-size: large;
                     color: #fff;
+                    width: 100%;
                     padding: 0;
                     margin: 0;
                     text-transform: capitalize;
@@ -1716,6 +1763,23 @@ body {
         -webkit-mask: url(../../images/icons/media-add.png);
         mask: url(../../images/icons/media-add.png);
     }
+
+    &.media-win-0 {
+        -webkit-mask: url(../../images/icons/media-win-size-0.png) no-repeat;
+        mask: url(../../images/icons/media-win-size-0.png) no-repeat;
+        -webkit-mask-position: -10px;
+        mask-position: -10px;
+    }
+
+    &.media-win-1 {
+        -webkit-mask: url(../../images/icons/media-win-size-1.png) no-repeat;
+        mask: url(../../images/icons/media-win-size-1.png) no-repeat;
+    }
+
+    &.media-win-2 {
+        -webkit-mask: url(../../images/icons/media-win-size-2.png) no-repeat;
+        mask: url(../../images/icons/media-win-size-2.png) no-repeat;
+    }
 }
 
 .lightThemed {
@@ -1746,6 +1810,16 @@ body {
                     label.settings-label {
                         color: #161616;
                         opacity: 1;
+                    }
+
+                    &.win-size-switcher {
+                        md-radio-group {
+                            md-radio-button {
+                                i.icon-png {
+                                    background: #161616;
+                                }
+                            }
+                        }
                     }
 
                     &.opacity-changer {
@@ -2085,17 +2159,76 @@ html {
     }
 }
 
-@media (min-width: 631px) {
-    .music-play-unit {
-        width: 600px;
+@media (max-width: 300px) {
 
-        .music-play-title {
-            font-size: xx-large;
+    .app-top-window-controls {
+        right: 0;
+
+        .icon-container {
+            width: 48px;
+            height: 48px;
+
+            i.icon-png {
+                width: 48px;
+                height: 48px;
+                -webkit-mask-size: 36px;
+                mask-size: 36px;
+            }
+        }
+
+        .xsHidden {
+            display: none;
+        }
+
+        .xsLeft {
+            float: left;
+        }
+    }
+
+    .full-screen-media-page {
+
+        svg {
+            opacity: 0.60;
+        }
+
+        .music-play-unit {
+            width: calc(100% - 30px);
+            height: 60px;
+            margin: calc(0.5 * (100vh - 60px)) auto;
+
+            .music-play-desc,
+            .music-slider-holder {
+                display: none;
+            }
+
+            .music-play-controls {
+                margin-top: 0;
+
+                .icon-container.xxsHidden,
+                .controls-right {
+                    display: none;
+                }
+
+                .controls-left {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            .music-play-title {
+                font-size: large;
+                text-align: center;
+            }
+
+            .music-play-desc {
+                text-align: center;
+            }
         }
     }
 }
 
-@media (max-width: 630px) {
+
+@media (min-width: 301px) and (max-width: 630px) {
 
     .app-top-window-controls {
         right: 0;
@@ -2134,9 +2267,20 @@ html {
     }
 }
 
-@media (min-width: 931px) {
+@media (min-width: 631px) {
+    .music-play-unit {
+        width: 600px;
+
+        .music-play-title {
+            font-size: xx-large;
+        }
+    }
+}
+
+@media (max-width: 930px) {
     .music-play-unit-holder.playListActivated {
-        width: calc(100% - 330px);
+        width: 100%;
+        z-index: 5;
     }
 
     .music-playlist-holder {
@@ -2148,10 +2292,11 @@ html {
     }
 }
 
-@media (max-width: 930px) {
+
+
+@media (min-width: 931px) {
     .music-play-unit-holder.playListActivated {
-        width: 100%;
-        z-index: 5;
+        width: calc(100% - 330px);
     }
 
     .music-playlist-holder {

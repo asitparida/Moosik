@@ -16,6 +16,7 @@ angular.module('MusicUI')
     var self = this;
     try {
         self.screenTypeIsSmall = require('electron').remote.getCurrentWindow().type == 'small' ? true : false;
+        self.winSize = require('electron').remote.getCurrentWindow().winSize;
     } catch (e) {
 
     }
@@ -40,8 +41,7 @@ angular.module('MusicUI')
     self.bgImgSrc = null;
     self.bgImageAvailable = false;
     self.bgOpacity = 750;
-    self.colorModes =
-    [
+    self.colorModes = [
         { id: _.uniqueId('col'), colorId: "turquoise", name: "turquoise", code: "#1abc9c" },
         { id: _.uniqueId('col'), colorId: "emerland", name: "emerland", code: "#2ecc71" },
         { id: _.uniqueId('col'), colorId: "peterRiver", name: "peter river", code: "#3498db" },
@@ -387,6 +387,18 @@ angular.module('MusicUI')
 
     self.choseColor = function (colorBar) {
         self.activeColorMode = colorBar;
+    }
+
+    self.winSizeChange = function () {
+        self.maximized = false;
+        self.closeSettings();
+        try {
+            if (self.electron != null) {
+                self.electron.ipcRenderer.send('app-change-win-size', self.winSize);
+            }
+
+        } catch (e) {
+        }
     }
 
     self.initPlaylist = function () { }
