@@ -493,7 +493,7 @@ body {
     color: #1abc9c;
     transition: color 0.3s linear; }
   body.turquoise .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #1abc9c;
+    background: linear-gradient(to right, #148f77 0%, #1abc9c 100%);
     transition: background 0.3s linear; }
   body.turquoise .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.turquoise .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -537,7 +537,7 @@ body {
     color: #2ecc71;
     transition: color 0.3s linear; }
   body.emerland .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #2ecc71;
+    background: linear-gradient(to right, #25a25a 0%, #2ecc71 100%);
     transition: background 0.3s linear; }
   body.emerland .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.emerland .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -581,7 +581,7 @@ body {
     color: #3498db;
     transition: color 0.3s linear; }
   body.peterRiver .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #3498db;
+    background: linear-gradient(to right, #217dbb 0%, #3498db 100%);
     transition: background 0.3s linear; }
   body.peterRiver .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.peterRiver .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -625,7 +625,7 @@ body {
     color: #9b59b6;
     transition: color 0.3s linear; }
   body.amethyst .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #9b59b6;
+    background: linear-gradient(to right, #804399 0%, #9b59b6 100%);
     transition: background 0.3s linear; }
   body.amethyst .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.amethyst .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -669,7 +669,7 @@ body {
     color: #d613b5;
     transition: color 0.3s linear; }
   body.moosikPurple .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #d613b5;
+    background: linear-gradient(to right, #a70f8d 0%, #d613b5 100%);
     transition: background 0.3s linear; }
   body.moosikPurple .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.moosikPurple .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -713,7 +713,7 @@ body {
     color: #34495e;
     transition: color 0.3s linear; }
   body.wetAsphalt .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #34495e;
+    background: linear-gradient(to right, #22303d 0%, #34495e 100%);
     transition: background 0.3s linear; }
   body.wetAsphalt .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.wetAsphalt .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -757,7 +757,7 @@ body {
     color: #16a085;
     transition: color 0.3s linear; }
   body.greenSea .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #16a085;
+    background: linear-gradient(to right, #107360 0%, #16a085 100%);
     transition: background 0.3s linear; }
   body.greenSea .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.greenSea .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -801,7 +801,7 @@ body {
     color: #27ae60;
     transition: color 0.3s linear; }
   body.nephritis .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #27ae60;
+    background: linear-gradient(to right, #1e8449 0%, #27ae60 100%);
     transition: background 0.3s linear; }
   body.nephritis .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.nephritis .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -845,7 +845,7 @@ body {
     color: #2980b9;
     transition: color 0.3s linear; }
   body.belizeHole .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #2980b9;
+    background: linear-gradient(to right, #20638f 0%, #2980b9 100%);
     transition: background 0.3s linear; }
   body.belizeHole .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.belizeHole .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -889,7 +889,7 @@ body {
     color: #8e44ad;
     transition: color 0.3s linear; }
   body.wisteria .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #8e44ad;
+    background: linear-gradient(to right, #703688 0%, #8e44ad 100%);
     transition: background 0.3s linear; }
   body.wisteria .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.wisteria .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -933,7 +933,7 @@ body {
     color: #2c3e50;
     transition: color 0.3s linear; }
   body.midnightBlue .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #2c3e50;
+    background: linear-gradient(to right, #1a252f 0%, #2c3e50 100%);
     transition: background 0.3s linear; }
   body.midnightBlue .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.midnightBlue .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -977,7 +977,7 @@ body {
     color: #f1c40f;
     transition: color 0.3s linear; }
   body.sunDlower .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #f1c40f;
+    background: linear-gradient(to right, #c29d0b 0%, #f1c40f 100%);
     transition: background 0.3s linear; }
   body.sunDlower .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.sunDlower .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -1021,7 +1021,7 @@ body {
     color: #e67e22;
     transition: color 0.3s linear; }
   body.carrot .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #e67e22;
+    background: linear-gradient(to right, #bf6516 0%, #e67e22 100%);
     transition: background 0.3s linear; }
   body.carrot .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.carrot .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -1065,7 +1065,7 @@ body {
     color: #e74c3c;
     transition: color 0.3s linear; }
   body.alizarin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #e74c3c;
+    background: linear-gradient(to right, #d62c1a 0%, #e74c3c 100%);
     transition: background 0.3s linear; }
   body.alizarin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.alizarin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -1109,7 +1109,7 @@ body {
     color: #f39c12;
     transition: color 0.3s linear; }
   body.orange .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #f39c12;
+    background: linear-gradient(to right, #c87f0a 0%, #f39c12 100%);
     transition: background 0.3s linear; }
   body.orange .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.orange .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -1153,7 +1153,7 @@ body {
     color: #d35400;
     transition: color 0.3s linear; }
   body.pumpkin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #d35400;
+    background: linear-gradient(to right, #a04000 0%, #d35400 100%);
     transition: background 0.3s linear; }
   body.pumpkin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.pumpkin .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {
@@ -1197,7 +1197,7 @@ body {
     color: #c0392b;
     transition: color 0.3s linear; }
   body.pomegranate .music-play-unit .music-slider-holder md-slider-container md-slider ._md-track-container ._md-track._md-track-fill {
-    background-color: #c0392b;
+    background: linear-gradient(to right, #962d22 0%, #c0392b 100%);
     transition: background 0.3s linear; }
   body.pomegranate .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb,
   body.pomegranate .music-play-unit .music-slider-holder md-slider-container md-slider ._md-thumb-container ._md-thumb::after {

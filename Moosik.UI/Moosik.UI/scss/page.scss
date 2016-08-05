@@ -218,7 +218,7 @@ $pomegranate: #c0392b;
                     ._md-track-container {
                         ._md-track {
                             &._md-track-fill {
-                                background-color: $defcolor;
+                                background: linear-gradient(to right, darken($defcolor, 10) 0%, $defcolor 100%);
                                 transition: background 0.3s linear;
                             }
                         }
