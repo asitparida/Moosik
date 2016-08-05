@@ -12,10 +12,10 @@ function createMainWindow(color, skipShades) {
     activeColor = color || '#262626';
     skipShades = skipShades || false;
     let waSize = electron.screen.getPrimaryDisplay().workAreaSize;
-
     let appWidth = waSize.width - 60;
     let appHeight = waSize.height - 60;
     let multipler = 1;
+
     if (appWidth >= 1920)
         multipler = 0.50;
     else if (appWidth >= 1600)
@@ -27,7 +27,9 @@ function createMainWindow(color, skipShades) {
 
     mainWindow = new BrowserWindow({ width: appWidth * multipler, height: appHeight * multipler, icon: 'images/icon@4x.ico', resizable: true, movable: true, minimizable: true, maximizable: true, alwaysOnTop: false, frame: false, title: 'Music', show: false, fullscreen: false });
     mainWindow.loadURL('file://' + __dirname + '/index.html')
-    //mainWindow.webContents.openDevTools()
+    mainWindow.type = waSize.width >= 1600 ? 'large' : 'small';
+    mainWindow.winSize = 2;
+    mainWindow.webContents.openDevTools()
     mainWindow.on('closed', function () {
         mainWindow = null;
         app.quit();
@@ -98,6 +100,38 @@ electron.ipcMain.on('app-load-new-bg', (event, arg) => {
         }
     });
 });
+
+electron.ipcMain.on('app-change-win-size', (event, arg) => {
+    if (arg != mainWindow.winSize) {
+        var _bounds = mainWindow.getBounds();
+        mainWindow.hide();
+        mainWindow.unmaximize();
+        let waSize = electron.screen.getPrimaryDisplay().workAreaSize;
+        let appWidth = waSize.width - 60;
+        let appHeight = waSize.height - 60;
+        if (arg == 1) {
+            appWidth = 600;
+            appHeight = 300;
+        }
+        else if (arg == 0) {
+            appWidth = 150;
+            appHeight = 150;
+        }
+        _bounds.width = appWidth;
+        _bounds.height = appHeight;
+        let posX = 0.5 * (waSize.width - _bounds.width);
+        posX = posX < 0 ? 0 : posX;
+        let posY = 0.5 * (waSize.height - _bounds.height);
+        posY = posY < 0 ? 0 : posY;
+        _bounds.x = posX;
+        _bounds.y = posY;
+        mainWindow.setBounds(_bounds);
+        mainWindow.winSize = arg;
+        mainWindow.show();
+    }
+});
+
+//app-change-win-size
 
 /* COLOR EXTARCTION SNIPPET FROM FLATUI */
 //var colors = [];

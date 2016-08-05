@@ -4,16 +4,53 @@
             <i class="icon-png app-settings"></i>
         </div>
         <label>Settings</label>
-        <div class="icon-container pull-right">
+        <div class="icon-container pull-right"> 
             <i class="icon-png playlist-action app-close" ng-click="app.shared.closeSettings()"></i>
         </div>
     </div>
     <div class="settings-panel-holder">
+        <div class="theme-switcher accent-picker">
+            <label class="settings-label">Accent</label>
+            <div class="settings-color-picker" ng-show="app.shared.settingsPaneColorsInitalized">
+                <div class="color-originator"></div>
+                <div class="color-plate" ng-repeat="color in app.shared.shownColorModes" ng-style="{
+                'background-color':color.code,
+                'z-index': app.shared.shownColorModes.length - $index,
+                'transition':color.transition}" ng-attr-id="color_{{color.colorId}}"
+                     ng-click="app.shared.choseColor(color)"></div>
+            </div>
+        </div>
+        <div class="theme-switcher win-size-switcher">
+            <label class="settings-label">Dock Size</label>
+            <md-radio-group ng-model="app.shared.winSize" ng-change="app.shared.winSizeChange()">
+                <md-radio-button ng-value="2" aria-label="Large">
+                    <div class="icon-container">
+                        <i class="icon-png media-win-2"></i>
+                    </div>
+                </md-radio-button>
+                <md-radio-button ng-value="1" aria-label="Medium">
+                    <div class="icon-container">
+                        <i class="icon-png media-win-1"></i>
+                    </div>
+                </md-radio-button>
+                <md-radio-button ng-value="0" aria-label="Small">
+                    <div class="icon-container">
+                        <i class="icon-png media-win-0"></i>
+                    </div>
+                </md-radio-button>
+            </md-radio-group>
+        </div>
+        <div class="theme-switcher opacity-changer">
+            <label class="settings-label">Background Opacity</label>
+            <md-slider-container>
+                <md-slider min="550" max="950" step="10" ng-model="app.shared.bgOpacity" aria-label="Opacity" id="opacity-slider"></md-slider>
+            </md-slider-container>
+        </div>
         <div class="theme-switcher">
             <label class="settings-label">Enable Dark Theme</label>
             <md-switch ng-model="app.shared.darkTheme" ng-change="app.shared.themeToggle()" aria-label="Enable Dark Theme"></md-switch>
         </div>
-        <div class="theme-switcher">
+        <div class="theme-switcher bgImage-changer">
             <label class="settings-label">Background Image</label>
             <md-switch ng-model="app.shared.bgImage" ng-change="app.shared.bgImageToggle()" aria-label="Background Image"></md-switch>
             <div class="settings-theme-bg" ng-show="app.shared.bgImage" style="background-image: url('{{app.shared.bgImgSrc}}')" ng-click="app.shared.chooseBg()" ng-class="{'hasShadow': app.shared.showBgSelection == false && app.shared.bgImageAvailable == true}">
@@ -22,22 +59,9 @@
                 </div>
             </div>
         </div>
-        <div class="theme-switcher opacity-changer">
-            <label class="settings-label">Background Opacity</label>
-            <md-slider-container>
-                <md-slider min="550" max="950" step="10" ng-model="app.shared.bgOpacity" aria-label="Opacity" id="opacity-slider"></md-slider>
-            </md-slider-container>
-        </div>
-        <div class="theme-switcher accent-picker">
-            <label class="settings-label">App Accent Color</label>
-            <div class="settings-color-picker">
-                <div class="color-originator"></div>
-                <div class="color-plate" ng-repeat="color in app.shared.shownColorModes" ng-style="{
-                'background-color':color.code,
-                'z-index': app.shared.shownColorModes.length - $index,
-                'transition':color.transition}" ng-attr-id="color_{{color.colorId}}"
-                     ng-click="app.shared.choseColor(color)"></div>
-            </div>
+        <div class="theme-switcher">
+            <label class="settings-label"><span style="font-size:small">A</span><span style="font-size:x-large;margin-left:3px;">A</span></label>
+            <md-switch ng-model="app.shared.screenTypeIsSmall" aria-label="Enable larger Fonts"></md-switch>
         </div>
     </div>
 </div>
