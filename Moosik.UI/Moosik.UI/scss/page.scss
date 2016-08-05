@@ -174,7 +174,7 @@ $pomegranate: #c0392b;
                 .icon-container {
                     i {
                         &.icon-png {
-                            background: linear-gradient(to right, $defcolor 0%, lighten($defcolor, 20) 100%);
+                            background: linear-gradient(to right, darken($defcolor, 10) 0%, $defcolor 100%);
                             transition: background 0.3s linear;
                         }
                     }
